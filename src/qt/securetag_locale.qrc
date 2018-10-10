@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/securetag_bg.qm</file>
+        <file alias="de">locale/securetag_de.qm</file>
+        <file alias="en">locale/securetag_en.qm</file>
+        <file alias="es">locale/securetag_es.qm</file>
+        <file alias="fi">locale/securetag_fi.qm</file>
+        <file alias="fr">locale/securetag_fr.qm</file>
+        <file alias="it">locale/securetag_it.qm</file>
+        <file alias="ja">locale/securetag_ja.qm</file>
+        <file alias="pl">locale/securetag_pl.qm</file>
+        <file alias="pt">locale/securetag_pt.qm</file>
+        <file alias="ru">locale/securetag_ru.qm</file>
+        <file alias="sk">locale/securetag_sk.qm</file>
+        <file alias="sv">locale/securetag_sv.qm</file>
+        <file alias="vi">locale/securetag_vi.qm</file>
+        <file alias="zh_CN">locale/securetag_zh_CN.qm</file>
+        <file alias="zh_TW">locale/securetag_zh_TW.qm</file>
+    </qresource>
+</RCC>
