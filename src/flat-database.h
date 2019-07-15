@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2018 The SecureTag developers
+// Copyright (c) 2014-2017 The SecureTag Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -216,7 +216,7 @@ public:
             }
         }
 
-        LogPrintf("Writting info to %s...\n", strFilename);
+        LogPrintf("Writing info to %s...\n", strFilename);
         Write(objToSave);
         LogPrintf("%s dump finished  %dms\n", strFilename, GetTimeMillis() - nStart);
 

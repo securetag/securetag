@@ -1,7 +1,7 @@
 #ifndef MASTERNODELIST_H
 #define MASTERNODELIST_H
 
-#include "masternode.h"
+#include "primitives/transaction.h"
 #include "platformstyle.h"
 #include "sync.h"
 #include "util.h"
@@ -36,6 +36,7 @@ public:
 
     void setClientModel(ClientModel *clientModel);
     void setWalletModel(WalletModel *walletModel);
+    void ShowQRCode(std::string strAlias);
     void StartAlias(std::string strAlias);
     void StartAll(std::string strCommand = "start-all");
 
@@ -45,11 +46,12 @@ private:
     bool fFilterUpdated;
 
 public Q_SLOTS:
-    void updateMyMasternodeInfo(QString strAlias, QString strAddr, masternode_info_t& infoMn);
+    void updateMyMasternodeInfo(QString strAlias, QString strAddr, const COutPoint& outpoint);
     void updateMyNodeList(bool fForce = false);
     void updateNodeList();
 
 Q_SIGNALS:
+    void doubleClicked(const QModelIndex&);
 
 private:
     QTimer *timer;
@@ -68,6 +70,7 @@ private:
 private Q_SLOTS:
     void showContextMenu(const QPoint &);
     void on_filterLineEdit_textChanged(const QString &strFilterIn);
+    void on_QRButton_clicked();
     void on_startButton_clicked();
     void on_startAllButton_clicked();
     void on_startMissingButton_clicked();

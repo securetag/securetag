@@ -1,4 +1,4 @@
-###What is it about###
+### What is it about
 
 More info regarding KeePass: http://keepass.info/
 
@@ -10,7 +10,11 @@ The implementation is dependent on the following:
  - OpenSSL for base64 encoding. regular util.h libraries were not used for base64 encoding/decoding since they do not use secure allocation.
  - JSON Spirit for reading / writing RPC communications
 
-###What's new###
+### A note about security
+
+Every connection to KeePassHTTP server is done via plain HTTP and even though protocol uses some internal encryption it should not be considered to be a highly secure one. This protocol has certain flaw which allow an attacker to decrypt your passwords when they manage to intercept communication between a KeePassHTTP server over a network connection (see [here](https://github.com/pfn/keepasshttp/issues/258) and [here](https://github.com/keepassxreboot/keepassxc/issues/147)). SecureTag Core therefore strictly limits communication between itself and KeePassHttp to your local computer. As long as your computer is not compromised, your wallet passphrase is as safe as if you would enter it directly.
+
+### What's new
 
 The following new options are available for securetagd and securetag-qt:
  - _-keepass_ Use KeePass 2 integration using KeePassHttp plugin (default: 0)
@@ -25,7 +29,7 @@ The following rpc commands are available:
  - _keepass init_: sets up the association between securetagd and keepass by generating an AES key and sending an association message to KeePassHttp. This will trigger KeePass to ask for an Id for the association. Returns the association and the base64 encoded string for the AES key.
  - _keepass setpassphrase_: updates the passphrase in KeePassHttp to a new value. This should match the passphrase you intend to use for the wallet. Please note that the standard RPC commands _walletpassphrasechange_ and the wallet encrption from the QT GUI already send the updates to KeePassHttp, so this is only necessary for manual manipulation of the password.
 
-###How to setup###
+### How to setup
 
 Sample initialization flow from _securetag-qt_ console (this needs to be done only once to set up the association):
 
@@ -51,4 +55,4 @@ At this point, the association is made. The next action depends on your particul
 
 At this point, the passphrase is stored in KeePassHttp. When Unlocking the wallet, one can use _keepass_ as the passphrase to trigger retrieval of the password. This works from the RPC commands as well as the GUI.
 
-Extended guide with screenshots is also available: https://securetagtalk.org/threads/keepass-integration.3620/
+Extended guide with screenshots is also available: https://www.securetagpay.org/forum/threads/keepass-integration.3620/

@@ -1,0 +1,6 @@
+usr/local/bin/securetag-qt usr/bin
+share/pixmaps/securetag32.xpm usr/share/pixmaps
+share/pixmaps/securetag16.xpm usr/share/pixmaps
+share/pixmaps/securetag128.png usr/share/pixmaps
+debian/securetag-qt.desktop usr/share/applications
+debian/securetag-qt.protocol usr/share/kde4/services/

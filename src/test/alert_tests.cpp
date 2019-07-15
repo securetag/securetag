@@ -9,18 +9,16 @@
 #include "chainparams.h"
 #include "clientversion.h"
 #include "data/alertTests.raw.h"
-#include "main.h" // For PartitionCheck
 #include "serialize.h"
 #include "streams.h"
-#include "util.h"
 #include "utilstrencodings.h"
 
+#include "test/testutil.h"
 #include "test/test_securetag.h"
 
 #include <fstream>
 
 #include <boost/filesystem/operations.hpp>
-#include <boost/foreach.hpp>
 #include <boost/test/unit_test.hpp>
 
 //
@@ -101,7 +99,7 @@ void GenerateAlertTests()
 
     ++alert.nID;
     alert.nMinVer = 0;
-    alert.nMaxVer = 999999;
+    alert.nMaxVer = 2412699;
     alert.strStatusBar  = "Evil Alert'; /bin/ls; echo '";
     alert.setSubVer.clear();
     SignAndSave(alert);
@@ -111,7 +109,7 @@ struct ReadAlerts : public TestingSetup
 {
     ReadAlerts()
     {
-        std::vector<unsigned char> vch(alert_tests::alertTests, alert_tests::alertTests + sizeof(alert_tests::alertTests));
+        std::vector<unsigned char> vch(raw_tests::alertTests, raw_tests::alertTests + sizeof(raw_tests::alertTests));
         CDataStream stream(vch, SER_DISK, CLIENT_VERSION);
         try {
             while (!stream.eof())
@@ -163,7 +161,7 @@ BOOST_AUTO_TEST_CASE(AlertApplies)
     SetMockTime(11);
     const std::vector<unsigned char>& alertKey = Params(CBaseChainParams::MAIN).AlertKey();
 
-    BOOST_FOREACH(const CAlert& alert, alerts)
+    for (const auto& alert : alerts)
     {
         BOOST_CHECK(alert.CheckSignature(alertKey));
     }
@@ -207,9 +205,9 @@ BOOST_AUTO_TEST_CASE(AlertNotify)
     boost::filesystem::path temp = GetTempPath() /
         boost::filesystem::unique_path("alertnotify-%%%%.txt");
 
-    mapArgs["-alertnotify"] = std::string("echo %s >> ") + temp.string();
+    ForceSetArg("-alertnotify", std::string("echo %s >> ") + temp.string());
 
-    BOOST_FOREACH(CAlert alert, alerts)
+    for (const auto& alert : alerts)
         alert.ProcessAlert(alertKey, false);
 
     std::vector<std::string> r = read_lines(temp);
@@ -230,67 +228,6 @@ BOOST_AUTO_TEST_CASE(AlertNotify)
     BOOST_CHECK_EQUAL(r[3], "'Evil Alert; /bin/ls; echo ' ");
 #endif
     boost::filesystem::remove(temp);
-
-    SetMockTime(0);
-}
-
-static bool falseFunc() { return false; }
-
-BOOST_AUTO_TEST_CASE(PartitionAlert)
-{
-    // Test PartitionCheck
-    CCriticalSection csDummy;
-    CBlockIndex indexDummy[100];
-    CChainParams& params = Params(CBaseChainParams::MAIN);
-    int64_t nPowTargetSpacing = params.GetConsensus().nPowTargetSpacing;
-
-    // Generate fake blockchain timestamps relative to
-    // an arbitrary time:
-    int64_t now = 1427379054;
-    SetMockTime(now);
-    for (int i = 0; i < 100; i++)
-    {
-        indexDummy[i].phashBlock = NULL;
-        if (i == 0) indexDummy[i].pprev = NULL;
-        else indexDummy[i].pprev = &indexDummy[i-1];
-        indexDummy[i].nHeight = i;
-        indexDummy[i].nTime = now - (100-i)*nPowTargetSpacing;
-        // Other members don't matter, the partition check code doesn't
-        // use them
-    }
-
-    strMiscWarning = "";
-
-    // Test 1: chain with blocks every nPowTargetSpacing seconds,
-    // as normal, no worries:
-    PartitionCheck(falseFunc, csDummy, &indexDummy[99], nPowTargetSpacing);
-    BOOST_CHECK_MESSAGE(strMiscWarning.empty(), strMiscWarning);
-
-    // Test 2: go 52.5 minutes without a block, expect a warning:
-    now += (3*60*60+30*60)/4; // we have 4x faster blocks
-    SetMockTime(now);
-    PartitionCheck(falseFunc, csDummy, &indexDummy[99], nPowTargetSpacing);
-    BOOST_CHECK(!strMiscWarning.empty());
-    BOOST_TEST_MESSAGE(std::string("Got alert text: ")+strMiscWarning);
-    strMiscWarning = "";
-
-    // Test 3: test the "partition alerts only go off once per day"
-    // code:
-    now += 60*10;
-    SetMockTime(now);
-    PartitionCheck(falseFunc, csDummy, &indexDummy[99], nPowTargetSpacing);
-    BOOST_CHECK(strMiscWarning.empty());
-
-    // Test 4: get 2.5 times as many blocks as expected:
-    now += 60*60*24; // Pretend it is a day later
-    SetMockTime(now);
-    int64_t quickSpacing = nPowTargetSpacing*2/5;
-    for (int i = 0; i < 100; i++) // Tweak chain timestamps:
-        indexDummy[i].nTime = now - (100-i)*quickSpacing;
-    PartitionCheck(falseFunc, csDummy, &indexDummy[99], nPowTargetSpacing);
-    BOOST_CHECK(!strMiscWarning.empty());
-    BOOST_TEST_MESSAGE(std::string("Got alert text: ")+strMiscWarning);
-    strMiscWarning = "";
 
     SetMockTime(0);
 }

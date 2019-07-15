@@ -132,14 +132,6 @@
         <translation>Въведете новата парола повторно</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>Служи да изключи изпращането на средства, когато акаунта на Операционната система е компрометиран. Не предоставя реална сигурност. </translation>
-    </message>
-    <message>
-        <source>Only for mixing via PrivateSend</source>
-        <translation>Само за миксиране с PrivateSend</translation>
-    </message>
-    <message>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Въведете нова парола за портфейла.&lt;br/&gt;Моля използвайте &lt;b&gt;поне 10 случайни символа&lt;/b&gt; или &lt;b&gt;8, или повече думи&lt;/b&gt;.</translation>
     </message>
@@ -150,6 +142,10 @@
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>Тази операция изисква Вашата парола за отключване на портфейла.</translation>
+    </message>
+    <message>
+        <source>Unlock wallet for mixing only</source>
+        <translation>Отключете портфейла само за миксиране</translation>
     </message>
     <message>
         <source>Unlock wallet</source>
@@ -168,12 +164,16 @@
         <translation>Смяна на паролата</translation>
     </message>
     <message>
+        <source>Enter the old passphrase and new passphrase to the wallet.</source>
+        <translation>Въведете старата парола и нова парола за портфейла.</translation>
+    </message>
+    <message>
         <source>Confirm wallet encryption</source>
         <translation>Потвърдете на шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR STG&lt;/b&gt;!</source>
-        <translation>Внимание: Ако шифрирате вашия портфейл и загубите паролата си,  &lt;b&gt;ЩЕ ЗАГУБИТЕ ВСИЧКИ STG МОНЕТИ!&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SECURETAG&lt;/b&gt;!</source>
+        <translation>Внимание: Ако шифрирате вашия портфейл и загубите паролата си,  &lt;b&gt;ЩЕ ЗАГУБИТЕ ВСИЧКИ SECURETAG МОНЕТИ!&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -184,12 +184,12 @@
         <translation>Портфейлът е шифриран</translation>
     </message>
     <message>
-        <source>Enter the old passphrase and new passphrase to the wallet.</source>
-        <translation>Въведете старата парола и нова парола за портфейла.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your funds from being stolen by malware infecting your computer.</source>
+        <translation>%1  ще се затвори сега, за да завърши процеса на шифроване. Не забравяйте, че шифроването на портфейла Ви не може напълно да предпази средствата ви да бъдат откраднати от злонамерен софтуер, който е заразил компютъра Ви.</translation>
     </message>
     <message>
-        <source>SecureTag will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your securetags from being stolen by malware infecting your computer.</source>
-        <translation>SecureTag ще се затвори за да завърши процеса на криптиране. Запомнете, това криптира вашият портфейл, но не може да защити вашите SecureTag от вируси заразили  компютъра Ви.</translation>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. Previous backups of the unencrypted wallet file contain the same HD seed and still have full access to all your funds just like the new, encrypted wallet.</source>
+        <translation>ВАЖНО: Всички предишни архиви, които сте направили от файла на портфейла, трябва да бъдат заменени с новоиздадения, шифрован файл на портфейла. Предишните архиви на нешифрования файл с портфейли съдържат едно и също HD сиид и все още имат пълен достъп до всичките ви средства, точно като новия криптиран портфейл.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -242,7 +242,11 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>SecureTag</source>
+        <source>A fatal error occurred. SecureTag Core can no longer continue safely and will quit.</source>
+        <translation>Възникна фатална грешка. SecureTag Core не може да продължи безопасно и ще се изключи.</translation>
+    </message>
+    <message>
+        <source>SecureTag Core</source>
         <translation>SecureTag Ядро</translation>
     </message>
     <message>
@@ -302,12 +306,8 @@
         <translation>Изход от приложението</translation>
     </message>
     <message>
-        <source>&amp;About SecureTag</source>
-        <translation>&amp;За SecureTag ядрото</translation>
-    </message>
-    <message>
-        <source>Show information about SecureTag</source>
-        <translation>Покаци информация за SecureTag</translation>
+        <source>Show information about SecureTag Core</source>
+        <translation>Покаци информация за SecureTag Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -320,6 +320,14 @@
     <message>
         <source>&amp;Options...</source>
         <translation>&amp;Опции...</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Относно %1</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Промяна на опциите за конфигурация на %1</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -422,8 +430,20 @@
         <translation>Покажи опции за възстановяване на портфейла</translation>
     </message>
     <message>
+        <source>Open Wallet &amp;Configuration File</source>
+        <translation>Отвори Портфейл &amp;Конфигурационен файл</translation>
+    </message>
+    <message>
         <source>Open configuration file</source>
         <translation>Отвори конфигурационния файл</translation>
+    </message>
+    <message>
+        <source>Open &amp;Masternode Configuration File</source>
+        <translation>Отвори &amp;Masternode конфигурационен файл</translation>
+    </message>
+    <message>
+        <source>Open Masternode configuration file</source>
+        <translation>Отвори Masternode конфигурационен файл</translation>
     </message>
     <message>
         <source>Show Automatic &amp;Backups</source>
@@ -462,12 +482,20 @@
         <translation>&amp;Опции на командния ред</translation>
     </message>
     <message>
-        <source>SecureTag client</source>
-        <translation>SecureTag клиент</translation>
+        <source>Show the %1 help message to get a list with possible SecureTag command-line options</source>
+        <translation>Покажи %1 помощното съобщение за да получите списък с възможни SecureTag команди</translation>
     </message>
     <message>
-        <source>Synchronizing additional data: %p%</source>
-        <translation>Синхронизиране на допълнителни данни: %p%</translation>
+        <source>%1 client</source>
+        <translation>%1 клиент</translation>
+    </message>
+    <message>
+        <source>&amp;PrivateSend information</source>
+        <translation>&amp;PrivateSend информация</translation>
+    </message>
+    <message>
+        <source>Show the PrivateSend basic information</source>
+        <translation>Показване на базова информация на PrivateSend </translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -494,76 +522,36 @@
         <translation><numerusform>%n активни връзки към SecureTag мрежата</numerusform><numerusform>%n активни връзки към SecureTag мрежата</numerusform></translation>
     </message>
     <message>
+        <source>Network activity disabled</source>
+        <translation>Мрежова активност изключена</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Синхронизиране на Headers (%1%)...</translation>
+    </message>
+    <message>
         <source>Synchronizing with network...</source>
         <translation>Синхронизиране с мрежата...</translation>
     </message>
     <message>
-        <source>Importing blocks from disk...</source>
-        <translation>Въвеждат се блокове от диска...</translation>
+        <source>Indexing blocks on disk...</source>
+        <translation>Индексиране блоковете на диска ...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Обработване блоковете на диска...</translation>
     </message>
     <message>
         <source>Reindexing blocks on disk...</source>
         <translation>Преиндексиране на блокове на диска...</translation>
     </message>
     <message>
-        <source>No block source available...</source>
-        <translation>Няма източник на блокове...</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Синхронизиран</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n часа</numerusform><numerusform>%n часа</numerusform></translation>
-    </message>
-    <message>
-        <source>Modify configuration options for SecureTag</source>
-        <translation>Промяна опциите за конфигуриране на SecureTag</translation>
-    </message>
-    <message>
-        <source>Open Wallet &amp;Configuration File</source>
-        <translation>Отвори Портфейл &amp;Конфигурационен файл</translation>
-    </message>
-    <message>
-        <source>Open &amp;Masternode Configuration File</source>
-        <translation>Отвори &amp;Masternode конфигурационен файл</translation>
-    </message>
-    <message>
-        <source>Open Masternode configuration file</source>
-        <translation>Отвори Masternode конфигурационен файл</translation>
-    </message>
-    <message>
-        <source>Show the SecureTag help message to get a list with possible SecureTag command-line options</source>
-        <translation>Покажи съобщението за помощ на SecureTag за да получите списък с възможните опции за командния ред на SecureTag</translation>
-    </message>
-    <message>
-        <source>&amp;PrivateSend information</source>
-        <translation>&amp;PrivateSend информация</translation>
-    </message>
-    <message>
-        <source>Show the PrivateSend basic information</source>
-        <translation>Показване на базова информация на PrivateSend </translation>
+        <source>Connecting to peers...</source>
+        <translation>Свързване към пиъри...</translation>
     </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation><numerusform>Обработени %n блок(а) от историята на транзакциите.</numerusform><numerusform>Обработени %n блока от историята на транзакциите.</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n дни</numerusform><numerusform>%n дни</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n седмици</numerusform><numerusform>%n седмици</numerusform></translation>
-    </message>
-    <message>
-        <source>%1 and %2</source>
-        <translation>%1 и %2</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n години</numerusform><numerusform>%n години</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -580,6 +568,14 @@
     <message>
         <source>Transactions after this will not yet be visible.</source>
         <translation>Транзакции след това, все още няма да се виждат.</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Синхронизиран</translation>
+    </message>
+    <message>
+        <source>Synchronizing additional data: %p%</source>
+        <translation>Синхронизиране на допълнителни данни: %p%</translation>
     </message>
     <message>
         <source>Error</source>
@@ -632,12 +628,20 @@
         <translation>Входяща транзакция</translation>
     </message>
     <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</source>
-        <translation>Портфеилът е &lt;b&gt;криптиран&lt;/b&gt; и в момента &lt;b&gt;е отключен&lt;/b&gt; само за миксиране</translation>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>HD ключ генератора е &lt;b&gt;включен&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>HD ключ генератора е &lt;b&gt;изключен&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Портфейлът е &lt;b&gt;криптиран&lt;/b&gt; и в момента &lt;b&gt;отключен&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</source>
+        <translation>Портфеилът е &lt;b&gt;криптиран&lt;/b&gt; и в момента &lt;b&gt;е отключен&lt;/b&gt; само за миксиране</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
@@ -668,10 +672,6 @@
     <message>
         <source>Amount:</source>
         <translation>Сума:</translation>
-    </message>
-    <message>
-        <source>Priority:</source>
-        <translation>Приоритет:</translation>
     </message>
     <message>
         <source>Fee:</source>
@@ -742,10 +742,6 @@
         <translation>Потвърдени</translation>
     </message>
     <message>
-        <source>Priority</source>
-        <translation>Приоритет</translation>
-    </message>
-    <message>
         <source>Copy address</source>
         <translation>Копирай адрес</translation>
     </message>
@@ -786,10 +782,6 @@
         <translation>Копирай байтовете</translation>
     </message>
     <message>
-        <source>Copy priority</source>
-        <translation>Копирай приоритета</translation>
-    </message>
-    <message>
         <source>Copy dust</source>
         <translation>Копирай остатъка</translation>
     </message>
@@ -806,68 +798,8 @@
         <translation>Избран е не анонимизиран вход. &lt;b&gt;PrivateSend ще бъде изключен.&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ако все още желаете да използвате PrivateSend, моля отмаркирайте всички не анонимизирани входове и след това изберете PrivateSend опцията отново.</translation>
     </message>
     <message>
-        <source>highest</source>
-        <translation>най-висок</translation>
-    </message>
-    <message>
-        <source>higher</source>
-        <translation>по-висок</translation>
-    </message>
-    <message>
-        <source>high</source>
-        <translation>висок</translation>
-    </message>
-    <message>
-        <source>medium-high</source>
-        <translation>средно-висок</translation>
-    </message>
-    <message>
-        <source>This label turns red if the transaction size is greater than 1000 bytes.</source>
-        <translation>Този етикет  става червен, ако размера на транзакцията е повече от 1000 байта.</translation>
-    </message>
-    <message>
-        <source>This label turns red if the priority is smaller than "medium".</source>
-        <translation>Този етикет става червен ако приоритета е по-малък от "среден".</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than %1.</source>
-        <translation>Този етикет става червен, ако всеки получател получи количество по малко от %1.</translation>
-    </message>
-    <message>
-        <source>Can vary +/- %1 duff(s) per input.</source>
-        <translation>Може да варира +/- %1 duff(s) за вход.</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>няма такъв</translation>
-    </message>
-    <message>
-        <source>medium</source>
-        <translation>среден</translation>
-    </message>
-    <message>
-        <source>low-medium</source>
-        <translation>средно-нисък</translation>
-    </message>
-    <message>
-        <source>low</source>
-        <translation>нисък</translation>
-    </message>
-    <message>
-        <source>lower</source>
-        <translation>по-нисък</translation>
-    </message>
-    <message>
-        <source>lowest</source>
-        <translation>най-нисък</translation>
-    </message>
-    <message>
         <source>(%1 locked)</source>
         <translation>(%1 заключен)</translation>
-    </message>
-    <message>
-        <source>none</source>
-        <translation>липсва</translation>
     </message>
     <message>
         <source>yes</source>
@@ -878,16 +810,12 @@
         <translation>не</translation>
     </message>
     <message>
-        <source>This means a fee of at least %1 per kB is required.</source>
-        <translation>Това означава, че е нужна такса поне %1 за кБ.</translation>
+        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
+        <translation>Този етикет става червен, ако получателят получи сума, по-малка от прага за незначителен остатък.</translation>
     </message>
     <message>
-        <source>Can vary +/- 1 byte per input.</source>
-        <translation>Може да варира +/- 1 байта за вход.</translation>
-    </message>
-    <message>
-        <source>Transactions with higher priority are more likely to get included into a block.</source>
-        <translation>Транзакции с по-висок приоритет е по-вероятно да бъдат включени в блок.</translation>
+        <source>Can vary +/- %1 politoshi(s) per input.</source>
+        <translation>Може да варира +/- %1 politoshi(s) за вход.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -900,6 +828,10 @@
     <message>
         <source>(change)</source>
         <translation>(ресто)</translation>
+    </message>
+    <message>
+        <source>n/a</source>
+        <translation>няма такъв</translation>
     </message>
 </context>
 <context>
@@ -925,28 +857,28 @@
         <translation>Моля изберете ниво на сигурност.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Използване на 2 различни masternodes за смесване на средства до 1000 STG</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Използване на 2 различни masternodes за смесване на средства до 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Използване на 8 различни masternodes за смесване на средства до 1000 STG</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Използване на 8 различни masternodes за смесване на средства до 1000 SECURETAG</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
-        <translation>Използване на 16 различни masternodes за смесване на средства до 1000 STG</translation>
+        <translation>Използване на 16 различни masternodes за смесване на средства до 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 STG to anonymize 1000 STG</source>
-        <translation>Това е най-бързият вариант, анонимизиране на 1000 STG ще ви струва около 0.025 STG</translation>
+        <source>This option is the quickest and will cost about ~0.025 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>Това е най-бързият вариант, анонимизиране на 1000 SECURETAG ще ви струва около 0.025 SECURETAG</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 STG to anonymize 1000 STG</source>
-        <translation>Това е средно бърз вариант, анонимизиране на 1000 STG ще ви струва около 0.05 STG</translation>
+        <source>This option is moderately fast and will cost about 0.05 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>Това е средно бърз вариант, анонимизиране на 1000 SECURETAG ще ви струва около 0.05 SECURETAG</translation>
     </message>
     <message>
-        <source>0.1 STG per 1000 STG you anonymize.</source>
-        <translation>0.1 STG за всеки 1000 STG които анонимизирате.</translation>
+        <source>0.1 SECURETAG per 1000 SECURETAG you anonymize.</source>
+        <translation>0.1 SECURETAG за всеки 1000 SECURETAG които анонимизирате.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1050,10 +982,6 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag ядро</translation>
-    </message>
-    <message>
         <source>version</source>
         <translation>версия</translation>
     </message>
@@ -1062,8 +990,8 @@
         <translation>(%1-битов)</translation>
     </message>
     <message>
-        <source>About SecureTag</source>
-        <translation>За SecureTag ядрото</translation>
+        <source>About %1</source>
+        <translation>Относно %1</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1086,22 +1014,6 @@
         <translation>Изберете директория за данни при стартиране (по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Show splash screen on startup (default: %u)</source>
-        <translation>Покажи начален екран при стартиране (по подразбиране: %u)</translation>
-    </message>
-    <message>
-        <source>Reset all settings changes made over the GUI</source>
-        <translation>Нулиране на всички настройки направени чрез GUI</translation>
-    </message>
-    <message>
-        <source>PrivateSend information</source>
-        <translation>PrivateSend информация</translation>
-    </message>
-    <message>
-        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 STG, 0.1 STG, 1 STG and 10 STG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
-        <translation>&lt;h3&gt;PrivateSend основни понятия&lt;/h3&gt; PrivateSend ви дава истинска финансова независимост чрез скриване произхода на средствата ви. Всички SecureTag монети в портфейла ви са съставени от различни "входове" които можете да приемете като отделни дискретни монети&lt;br&gt; PrivateSend използва иновативен процес като смесва вашите входове с входовете на други двама души без монетите да напускат изобщо портфейла ви. Имате пълен контрол върху парите си през цялото време. &lt;hr&gt; &lt;b&gt; PrivateSend процесът работи по следния начин:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend започва чрез разделяне на транзакцията ви до стандартни деноминации. Тези деноминации са 0.01 STG, 0.1 STG, 1 STG и 10 STG --подобно на стандартните пари, които ползваме ежедневно.&lt;/li&gt; &lt;li&gt;Вашия портфейл изпраща запитване към специално конфигурираните софтуерни възли в мрежата, наречени "masternodes." Тези masternodes са информирани, че се интересувате от смесване на определена деноминация. Никаква идентификационна информация не се изпраща към   masternodes, така, че те никога не знаят "кой" сте.&lt;/li&gt; &lt;li&gt;Когато други двама души изпратят подобни съобщения, обозначаващи, че искат да смесят същата деноминация, смесващата сесия започва. Masternode смесват входовете и инструктират портфейлите на тримата потребители да платят новотрансформираните входове обратно към притежателите им. Вашият портфейл плаща деноминацията директно на себе си, но с различен адрес (наричан сменен адрес).  &lt;/li&gt; &lt;li&gt;С цел напълно скриване на доходите ви, вашият портфейл трябва да повтори този процес няколко пъти във всяка деноминация.  Всеки път завършеният процес се нарича "цикъл." Всеки цикъл на PrivateSend прави откриването на първоначалния източник на вашите средства напълно непроследим.&lt;/li&gt; &lt;li&gt;Този смесващ процес се случва като процес на заден фон без никаква намеса от ваша страна. Когато искате да направите транзакция, вашите средства са винаги анонимни. Не е необходимо допълнително изчакване. &lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;ВАЖНО:&lt;/b&gt; Вашият портфейл съдържа само 1000 от тези "сменяеми адреси". Всеки път когато се случва смесването до 9 от вашите адреси се ползват.  Това означава, че тези 1000 адреси се миксират в около 100 смесващи събития. Когато 900 се използват, вашия портфейл трябва да създаде повече адреси. Това може да стане само ако имате автоматично архивиране.&lt;br&gt; Следователно, потребителите, на които е изключено автоматичното архивиране, нямат и  PrivateSend включено. &lt;hr&gt;За повече информация вижте&lt;a href="https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
-    </message>
-    <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
         <translation>Задаване на език, например "de_DE" (по подразбиране: какъвто е от системата)</translation>
     </message>
@@ -1113,6 +1025,22 @@
         <source>Set SSL root certificates for payment request (default: -system-)</source>
         <translation>Задай SSL основен сертификат при искане за плащане (по подразбиране: -system-)</translation>
     </message>
+    <message>
+        <source>Show splash screen on startup (default: %u)</source>
+        <translation>Покажи начален екран при стартиране (по подразбиране: %u)</translation>
+    </message>
+    <message>
+        <source>Reset all settings changed in the GUI</source>
+        <translation>Нулиране на всички настройки направени чрез GUI</translation>
+    </message>
+    <message>
+        <source>PrivateSend information</source>
+        <translation>PrivateSend информация</translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 SECURETAG, 0.1 SECURETAG, 1 SECURETAG and 10 SECURETAG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
+        <translation>&lt;h3&gt;PrivateSend основни понятия&lt;/h3&gt; PrivateSend ви дава истинска финансова независимост чрез скриване произхода на средствата ви. Всички SecureTag монети в портфейла ви са съставени от различни "входове" които можете да приемете като отделни дискретни монети&lt;br&gt; PrivateSend използва иновативен процес като смесва вашите входове с входовете на други двама души без монетите да напускат изобщо портфейла ви. Имате пълен контрол върху парите си през цялото време. &lt;hr&gt; &lt;b&gt; PrivateSend процесът работи по следния начин:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend започва чрез разделяне на транзакцията ви до стандартни деноминации. Тези деноминации са 0.01 SECURETAG, 0.1 SECURETAG, 1 SECURETAG и 10 SECURETAG --подобно на стандартните пари, които ползваме ежедневно.&lt;/li&gt; &lt;li&gt;Вашия портфейл изпраща запитване към специално конфигурираните софтуерни възли в мрежата, наречени "masternodes." Тези masternodes са информирани, че се интересувате от смесване на определена деноминация. Никаква идентификационна информация не се изпраща към   masternodes, така, че те никога не знаят "кой" сте.&lt;/li&gt; &lt;li&gt;Когато други двама души изпратят подобни съобщения, обозначаващи, че искат да смесят същата деноминация, смесващата сесия започва. Masternode смесват входовете и инструктират портфейлите на тримата потребители да платят новотрансформираните входове обратно към притежателите им. Вашият портфейл плаща деноминацията директно на себе си, но с различен адрес (наричан сменен адрес).  &lt;/li&gt; &lt;li&gt;С цел напълно скриване на доходите ви, вашият портфейл трябва да повтори този процес няколко пъти във всяка деноминация.  Всеки път завършеният процес се нарича "цикъл." Всеки цикъл на PrivateSend прави откриването на първоначалния източник на вашите средства напълно непроследим.&lt;/li&gt; &lt;li&gt;Този смесващ процес се случва като процес на заден фон без никаква намеса от ваша страна. Когато искате да направите транзакция, вашите средства са винаги анонимни. Не е необходимо допълнително изчакване. &lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;ВАЖНО:&lt;/b&gt; Вашият портфейл съдържа само 1000 от тези "сменяеми адреси". Всеки път когато се случва смесването до 9 от вашите адреси се ползват.  Това означава, че тези 1000 адреси се миксират в около 100 смесващи събития. Когато 900 се използват, вашия портфейл трябва да създаде повече адреси. Това може да стане само ако имате автоматично архивиране.&lt;br&gt; Следователно, потребителите, на които е изключено автоматичното архивиране, нямат и  PrivateSend включено. &lt;hr&gt;За повече информация вижте&lt;a href="https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
+    </message>
 </context>
 <context>
     <name>Intro</name>
@@ -1121,16 +1049,16 @@
         <translation>Добре дошли</translation>
     </message>
     <message>
-        <source>Welcome to SecureTag.</source>
-        <translation>Добре дошли в ядрото на SecureTag.</translation>
+        <source>Welcome to %1.</source>
+        <translation>Добре дошли в %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where SecureTag will store its data.</source>
-        <translation>Тъй като програмата се стартира за първи път вие може да изберете къде SecureTag да съхранява своята информация.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Тъй като това е първият път, когато програмата се стартира, можете да изберете къде %1 да съхранява данните си.</translation>
     </message>
     <message>
-        <source>SecureTag will download and store a copy of the SecureTag block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>SecureTag ще свали и съхрани копие на SecureTag регистъра на блокове. Информацията ще заеме поне %1ГБ  пространство и ще нараства с времето. В тази папка ще бъде съхранен и портфейла. </translation>
+        <source>%1 will download and store a copy of the SecureTag block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 ще свали и съхрани копие на SecureTag регистъра на блокове. Най-малко %2GB от информацията ще се съхрани в тази директория и ще нараства с времето.  Портфейлът също ще бъде съхранен в тази директория. </translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1139,10 +1067,6 @@
     <message>
         <source>Use a custom data directory:</source>
         <translation>Определете папка по ваш избор:</translation>
-    </message>
-    <message>
-        <source>SecureTag</source>
-        <translation>SecureTag ядро</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1220,6 +1144,14 @@
         <translation>&amp;Обнови статус</translation>
     </message>
     <message>
+        <source>Show additional Masternode information</source>
+        <translation>Покажи допълнителна Masternode информация</translation>
+    </message>
+    <message>
+        <source>Show &amp;Info...</source>
+        <translation>Показва &amp;информация...</translation>
+    </message>
+    <message>
         <source>Status will be updated automatically in (sec):</source>
         <translation>Статуса ще бъде обновен автоматично след (сек):</translation>
     </message>
@@ -1278,6 +1210,89 @@
     <message>
         <source>Are you sure you want to start MISSING masternodes?</source>
         <translation>Сигурен ли сте, че искате стартирането на ЛИПСВАЩИТЕ masternodes? </translation>
+    </message>
+    <message>
+        <source>Additional information for Masternode %1</source>
+        <translation>Допълнителна информация за Masternode %1</translation>
+    </message>
+    <message>
+        <source>Masternode Private Key</source>
+        <translation>Masternode Личен ключ</translation>
+    </message>
+    <message>
+        <source>Private Key</source>
+        <translation>Частен ключ</translation>
+    </message>
+    <message>
+        <source>Collateral</source>
+        <translation>Обезпечаване</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation>Версия</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Неизвестен</translation>
+    </message>
+    <message>
+        <source>Sentinel</source>
+        <translation>Sentinel</translation>
+    </message>
+</context>
+<context>
+    <name>ModalOverlay</name>
+    <message>
+        <source>Form</source>
+        <translation>Форма</translation>
+    </message>
+    <message>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the SecureTag network, as detailed below.</source>
+        <translation>Скорошните транзакции може да не са видими, поради което салдото на портфейла Ви може да е неправилно. Тази информация ще бъде правилна, след като портфейлът ви е завършил синхронизиране с SecureTag мрежата, както е описано по-долу.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend SecureTag that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Опита да похарчите SecureTag, които са  от не визуализирани транзакции няма да бъде приет от мрежата.</translation>
+    </message>
+    <message>
+        <source>Number of blocks left</source>
+        <translation>Оставащ брой блокове</translation>
+    </message>
+    <message>
+        <source>Unknown...</source>
+        <translation>Неизвестни...</translation>
+    </message>
+    <message>
+        <source>Last block time</source>
+        <translation>Време на последния блок</translation>
+    </message>
+    <message>
+        <source>Progress</source>
+        <translation>Прогрес</translation>
+    </message>
+    <message>
+        <source>Progress increase per hour</source>
+        <translation>Увеличаване напредъка за час</translation>
+    </message>
+    <message>
+        <source>calculating...</source>
+        <translation>изчисляване...</translation>
+    </message>
+    <message>
+        <source>Estimated time left until synced</source>
+        <translation>Оставащо време до синхронизиране</translation>
+    </message>
+    <message>
+        <source>Hide</source>
+        <translation>Скрий</translation>
+    </message>
+    <message>
+        <source>Unknown. Syncing Headers (%1)...</source>
+        <translation>Неизвестен. Синхронизиране на Headers (%1) ...</translation>
     </message>
 </context>
 <context>
@@ -1338,20 +1353,16 @@
         <translation>П&amp;ортфейл</translation>
     </message>
     <message>
-        <source>Automatically start SecureTag after logging in to the system.</source>
-        <translation>Автоматично стартиране на SecureTag след влизане в системата.</translation>
-    </message>
-    <message>
-        <source>&amp;Start SecureTag on system login</source>
-        <translation>&amp;Стартиране на SecureTag при влизане</translation>
-    </message>
-    <message>
         <source>Show additional tab listing all your masternodes in first sub-tab&lt;br/&gt;and all masternodes on the network in second sub-tab.</source>
         <translation>Показване на допълнителен раздел показваш всичките Ви masternodes  в първият подраздел&lt;br/&gt;и всички masternodes в мрежата във вторият подраздел.</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
         <translation>Показване на раздел Masternodes </translation>
+    </message>
+    <message>
+        <source>Show Governance Tab</source>
+        <translation>Показване на раздел Governance </translation>
     </message>
     <message>
         <source>Show additional information and buttons for PrivateSend on overview screen.</source>
@@ -1390,8 +1401,8 @@
         <translation>Тази сума действа като лимит, за да се изключи PrivateSend, когато веднъж бъде достигнат.</translation>
     </message>
     <message>
-        <source>Automatically open the SecureTag client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваря порта за SecureTag клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
+        <source>Automatically open the SecureTag Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваря порта за SecureTag Core клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1414,10 +1425,6 @@
         <translation>При затваряне на прозореца приложението остава минимизирано. Ако изберете тази опция, приложението може да се затвори само чрез Изход в менюто.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting SecureTag.</source>
-        <translation>Тук можете да промените езика на потребителския изглед. Настройката ще влезе в сила след рестартиране на SecureTag. </translation>
-    </message>
-    <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items.&lt;br/&gt;%s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URL адреси на трети страни (например block Explorer), които се появяват в раздела с транзакции, като елементи от контекстното меню. %s в URL е заменен с хеша на транзакцията. Отделните URL адреси са разделени с вертикална линия |.</translation>
     </message>
@@ -1432,6 +1439,14 @@
     <message>
         <source>Whether to show coin control features or not.</source>
         <translation>Да покаже или скрие възможностите за контрол на монетата.</translation>
+    </message>
+    <message>
+        <source>Automatically start %1 after logging in to the system.</source>
+        <translation>Автоматично стартиране %1 след влизане в системата.</translation>
+    </message>
+    <message>
+        <source>&amp;Start %1 on system login</source>
+        <translation>&amp;Стартиране %1 при влизане в системата</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1498,6 +1513,14 @@
         <translation>&amp;Прозорец</translation>
     </message>
     <message>
+        <source>&amp;Hide the icon from the system tray.</source>
+        <translation>&amp;Скрии иконата от системният трей.</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>Скрий try иконата</translation>
+    </message>
+    <message>
         <source>Show only a tray icon after minimizing the window.</source>
         <translation>След минимизиране ще е видима само иконата в системния трей.</translation>
     </message>
@@ -1516,6 +1539,10 @@
     <message>
         <source>User Interface &amp;language:</source>
         <translation>Език на потребителски &amp;изглед :</translation>
+    </message>
+    <message>
+        <source>The user interface language can be set here. This setting will take effect after restarting %1.</source>
+        <translation>Тук можете да промените езика на потребителския изглед. Настройката ще влезе в сила след рестартиране %1.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1699,8 +1726,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Количество и цикли:</translation>
     </message>
     <message>
-        <source>0 STG / 0 Rounds</source>
-        <translation>0 STG / 0 Цикъла</translation>
+        <source>0 SECURETAG / 0 Rounds</source>
+        <translation>0 SECURETAG / 0 Цикъла</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -1743,8 +1770,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>несинхронизиран</translation>
     </message>
     <message>
-        <source>Disabled</source>
-        <translation>Неактивно</translation>
+        <source>Automatic backups are disabled, no mixing available!</source>
+        <translation>Автоматичното архивиране е изключено, няма миксиране на разположение!</translation>
+    </message>
+    <message>
+        <source>Start Mixing</source>
+        <translation>Стартирай миксиране</translation>
+    </message>
+    <message>
+        <source>Stop Mixing</source>
+        <translation>Спри миксиране</translation>
     </message>
     <message>
         <source>No inputs detected</source>
@@ -1753,6 +1788,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message numerus="yes">
         <source>%n Rounds</source>
         <translation><numerusform>%n Цикли</numerusform><numerusform>%n Цикли</numerusform></translation>
+    </message>
+    <message>
+        <source>Found enough compatible inputs to anonymize %1</source>
+        <translation>Намерени са достатъчно съвместими постъпления за анонимизиране %1</translation>
     </message>
     <message>
         <source>Not enough compatible inputs to anonymize &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style='color:red;'&gt;%2&lt;/span&gt; instead</source>
@@ -1767,6 +1806,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Деноминирани</translation>
     </message>
     <message>
+        <source>Mixed</source>
+        <translation>Смесени</translation>
+    </message>
+    <message>
         <source>Anonymized</source>
         <translation>Анонимизирани</translation>
     </message>
@@ -1775,28 +1818,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation><numerusform>Деноминирани входове имат %5 от %n цикъла средно</numerusform><numerusform>Деноминирани входове имат %5 от %n цикъла средно</numerusform></translation>
     </message>
     <message>
-        <source>Found enough compatible inputs to anonymize %1</source>
-        <translation>Намерени са достатъчно съвместими постъпления за анонимизиране %1</translation>
-    </message>
-    <message>
-        <source>Automatic backups are disabled, no mixing available!</source>
-        <translation>Автоматичното архивиране е изключено, няма миксиране на разположение!</translation>
-    </message>
-    <message>
-        <source>Start Mixing</source>
-        <translation>Стартирай миксиране</translation>
-    </message>
-    <message>
-        <source>Stop Mixing</source>
-        <translation>Спри миксиране</translation>
-    </message>
-    <message>
-        <source>Mixed</source>
-        <translation>Смесени</translation>
-    </message>
-    <message>
         <source>keys left: %1</source>
         <translation>оставащи ключове: %1</translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translation>Неактивно</translation>
     </message>
     <message>
         <source>Very low number of keys left since last automatic backup!</source>
@@ -1807,7 +1834,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Ние ще направим нов автоматичен архив за вас, въпреки това &lt;span style='color:red;'&gt; винаги трябва да сте сигурни, че имате архив запазен на сигурно място&lt;/span&gt;!</translation>
     </message>
     <message>
-        <source>Note: You turn this message off in options.</source>
+        <source>Note: You can turn this message off in options.</source>
         <translation>Бележка:  Може да изключите това съобщение в опциите.</translation>
     </message>
     <message>
@@ -1841,6 +1868,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
 </translation>
     </message>
     <message>
+        <source>N/A</source>
+        <translation>N/A</translation>
+    </message>
+    <message>
         <source>PrivateSend was successfully reset.</source>
         <translation>PrivateSend беше успешно нулиран.</translation>
     </message>
@@ -1855,10 +1886,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Wallet is locked and user declined to unlock. Disabling PrivateSend.</source>
         <translation>Портфейлът е заключен и потребителя отказва отключване. PrivateSend е деактивиран.</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>N/A</translation>
     </message>
 </context>
 <context>
@@ -1880,20 +1907,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Неправилен URL на заявка за плащане: %1</translation>
     </message>
     <message>
-        <source>Payment request file handling</source>
-        <translation>Обработка на файл със заявка за плащане</translation>
-    </message>
-    <message>
-        <source>Payment request expired.</source>
-        <translation>Заявката за плащане е изтекла</translation>
-    </message>
-    <message>
         <source>Invalid payment address %1</source>
         <translation>Невалиден адрес за плащане %1</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid SecureTag address or malformed URI parameters.</source>
         <translation>Грешка при анализ на URI! Това може да е следствие от неправилен SecureTag адрес или неправилно зададени URI параметри.</translation>
+    </message>
+    <message>
+        <source>Payment request file handling</source>
+        <translation>Обработка на файл със заявка за плащане</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1906,6 +1929,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Payment request network doesn't match client network.</source>
         <translation>Заявка за плащане на мрежата не съвпада с клиентската мрежа.</translation>
+    </message>
+    <message>
+        <source>Payment request expired.</source>
+        <translation>Заявката за плащане е изтекла</translation>
     </message>
     <message>
         <source>Payment request is not initialized.</source>
@@ -1955,20 +1982,36 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>PeerTableModel</name>
     <message>
-        <source>User Agent</source>
-        <translation>Потребителски агент</translation>
-    </message>
-    <message>
-        <source>Ping Time</source>
-        <translation>Време пинг</translation>
+        <source>NodeId</source>
+        <translation>Node Id</translation>
     </message>
     <message>
         <source>Node/Service</source>
         <translation>Възел/Услуга</translation>
     </message>
+    <message>
+        <source>User Agent</source>
+        <translation>Потребителски агент</translation>
+    </message>
+    <message>
+        <source>Ping</source>
+        <translation>Пинг</translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
+    <message>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
+    </message>
+    <message>
+        <source>%1 didn't yet exit safely...</source>
+        <translation>%1 все още не е излязъл безопастно...</translation>
+    </message>
+    <message>
+        <source>Error reading masternode configuration file: %1</source>
+        <translation>Грешка при четене конфигурационният файл на masternode : %1</translation>
+    </message>
     <message>
         <source>Amount</source>
         <translation>Сума</translation>
@@ -2004,6 +2047,91 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>%1 ms</source>
         <translation>%1 милисекунди</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n second(s)</source>
+        <translation><numerusform>%n секунди</numerusform><numerusform>%n секунди</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n минути</numerusform><numerusform>%n минути</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n часа</numerusform><numerusform>%n часа</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n day(s)</source>
+        <translation><numerusform>%n дни</numerusform><numerusform>%n days</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n week(s)</source>
+        <translation><numerusform>%n седмици</numerusform><numerusform>%n weeks</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n year(s)</source>
+        <translation><numerusform>%n години</numerusform><numerusform>%n years</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 and %2</source>
+        <translation>%1 и %2</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>неизвестен</translation>
+    </message>
+</context>
+<context>
+    <name>QObject::QObject</name>
+    <message>
+        <source>Error: Specified data directory "%1" does not exist.</source>
+        <translation>Грешка:Избраната директория за данни "%1" не съществува.</translation>
+    </message>
+    <message>
+        <source>Error: Cannot parse configuration file: %1. Only use key=value syntax.</source>
+        <translation>Грешка: Не може да се анализира конфигурационния файл: %1. Използвайте само синтаксис key=value .</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>Грешка: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QRDialog</name>
+    <message>
+        <source>QR-Code Title</source>
+        <translation>QR-Code Title</translation>
+    </message>
+    <message>
+        <source>QR Code</source>
+        <translation>QR Код</translation>
+    </message>
+    <message>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Запиши изображение...</translation>
+    </message>
+    <message>
+        <source>Error creating QR Code.</source>
+        <translation>Грешно създаден QR Код.</translation>
+    </message>
+</context>
+<context>
+    <name>QRGeneralImageWidget</name>
+    <message>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Запиши изображение...</translation>
+    </message>
+    <message>
+        <source>&amp;Copy Image</source>
+        <translation>&amp;Копирай изображение</translation>
+    </message>
+    <message>
+        <source>Save QR Code</source>
+        <translation>Запази QR Код</translation>
+    </message>
+    <message>
+        <source>PNG Image (*.png)</source>
+        <translation>PNG изображение (*.png)</translation>
     </message>
 </context>
 <context>
@@ -2044,10 +2172,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Име</translation>
     </message>
     <message>
-        <source>Client name</source>
-        <translation>Име на клиента</translation>
-    </message>
-    <message>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
@@ -2074,10 +2198,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Debug log file</source>
         <translation>Лог-файл за откриване на грешки</translation>
-    </message>
-    <message>
-        <source>Build date</source>
-        <translation>Дата на създаване</translation>
     </message>
     <message>
         <source>Current number of blocks</source>
@@ -2110,10 +2230,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Memory usage</source>
         <translation>Използвана памет</translation>
-    </message>
-    <message>
-        <source>Open the SecureTag debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Отваря файла за откриване на грешки на SecureTag от текущата папка.  За по-големите файлове това може да отнеме няколко секунди.</translation>
     </message>
     <message>
         <source>&amp;Console</source>
@@ -2188,6 +2304,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Потребителски агент</translation>
     </message>
     <message>
+        <source>Datadir</source>
+        <translation>Datadir</translation>
+    </message>
+    <message>
+        <source>Open the %1 debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Отваря %1 файла за откриване на грешки от текущата папка. Това може да отнеме няколко секунди при по-големи файлове.</translation>
+    </message>
+    <message>
+        <source>Decrease font size</source>
+        <translation>Намаляване размера на шрифта</translation>
+    </message>
+    <message>
+        <source>Increase font size</source>
+        <translation>Увеличаване размера на шрифта</translation>
+    </message>
+    <message>
         <source>Services</source>
         <translation>Услуги</translation>
     </message>
@@ -2218,6 +2350,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Ping Wait</source>
         <translation>Изчакване пинг</translation>
+    </message>
+    <message>
+        <source>Min Ping</source>
+        <translation>Min Ping</translation>
     </message>
     <message>
         <source>Time Offset</source>
@@ -2284,20 +2420,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>-reindex: Възстановява блок индекс веригата от настоящия blk000??.dat файл.</translation>
     </message>
     <message>
-        <source>In:</source>
-        <translation>Вход:</translation>
+        <source>&amp;Disconnect</source>
+        <translation>&amp;Прекъсване</translation>
     </message>
     <message>
-        <source>Out:</source>
-        <translation>Изход:</translation>
-    </message>
-    <message>
-        <source>&amp;Disconnect Node</source>
-        <translation>&amp;Прекъсване Node</translation>
-    </message>
-    <message>
-        <source>Ban Node for</source>
-        <translation>Бан на Node за</translation>
+        <source>Ban for</source>
+        <translation>Бан на за</translation>
     </message>
     <message>
         <source>1 &amp;hour</source>
@@ -2316,12 +2444,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>1 &amp;година</translation>
     </message>
     <message>
-        <source>&amp;Unban Node</source>
-        <translation>&amp;Премахване на бан за Node</translation>
+        <source>&amp;Unban</source>
+        <translation>&amp;Премахване на бан</translation>
     </message>
     <message>
-        <source>Welcome to the SecureTag RPC console.</source>
-        <translation>Добре дошли в SecureTag RPC конзолата.</translation>
+        <source>Welcome to the %1 RPC console.</source>
+        <translation>Добре дошли в %1 RPC конзолата.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2330,6 +2458,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Напишете &lt;b&gt;help&lt;/b&gt;, за да прегледате възможните команди.</translation>
+    </message>
+    <message>
+        <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramification of a command.</source>
+        <translation>ВНИМАНИЕ: Измамниците са били активни, казвайки на потребителите да въвеждат команди тук, като крадат съдържанието на портфейла им. Не използвайте тази конзола, без да разберете напълно значението на командата.</translation>
+    </message>
+    <message>
+        <source>In:</source>
+        <translation>Вход:</translation>
+    </message>
+    <message>
+        <source>Out:</source>
+        <translation>Изход:</translation>
+    </message>
+    <message>
+        <source>Network activity disabled</source>
+        <translation>Мрежова активност изключена</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -2459,6 +2603,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Премахване</translation>
     </message>
     <message>
+        <source>Copy URI</source>
+        <translation>Копирай URI</translation>
+    </message>
+    <message>
         <source>Copy label</source>
         <translation>Копирай наименование</translation>
     </message>
@@ -2522,6 +2670,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>InstantSend</translation>
     </message>
     <message>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Не</translation>
+    </message>
+    <message>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
         <translation>Получения URI е твърде дълъг, опитайте да съкратите текста на наименованието / съобщението.</translation>
     </message>
@@ -2545,10 +2701,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Съобщение</translation>
     </message>
     <message>
-        <source>Amount</source>
-        <translation>Сума</translation>
-    </message>
-    <message>
         <source>(no label)</source>
         <translation>(няма наименование)</translation>
     </message>
@@ -2557,8 +2709,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(няма съобщение)</translation>
     </message>
     <message>
-        <source>(no amount)</source>
-        <translation>(липсва сума)</translation>
+        <source>(no amount requested)</source>
+        <translation>(липсва заявена сума)</translation>
+    </message>
+    <message>
+        <source>Requested</source>
+        <translation>Заявени</translation>
     </message>
 </context>
 <context>
@@ -2596,24 +2752,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Сума:</translation>
     </message>
     <message>
-        <source>Priority:</source>
-        <translation>Приоритет:</translation>
-    </message>
-    <message>
-        <source>medium</source>
-        <translation>среден</translation>
-    </message>
-    <message>
         <source>Fee:</source>
         <translation>Такса:</translation>
     </message>
     <message>
         <source>Dust:</source>
         <translation>Незначителен остатък:</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation>не</translation>
     </message>
     <message>
         <source>After Fee:</source>
@@ -2640,8 +2784,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Избери...</translation>
     </message>
     <message>
+        <source>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until your have validated the complete chain.</source>
+        <translation>Използването на fallbackfee може да доведе до изпращане на транзакция, което ще отнеме няколко часа или дни (или никога), за да потвърдите. Помислете дали да изберете вашата такса ръчно или изчакате, докато валидирате пълната верига.</translation>
+    </message>
+    <message>
+        <source>Warning: Fee estimation is currently not possible.</source>
+        <translation>Внимание: В момента е невъзможно изчисляването на таксата</translation>
+    </message>
+    <message>
         <source>collapse fee-settings</source>
         <translation>Показване настройки за такса</translation>
+    </message>
+    <message>
+        <source>Confirmation time target:</source>
+        <translation>Целево време за потвърждение:</translation>
     </message>
     <message>
         <source>PrivateSend</source>
@@ -2652,12 +2808,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>InstantSend</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 duffs in fee,&lt;br /&gt;while "at least" pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако променената такса е 1000 duffs и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 duffs,,&lt;br /&gt; тогава"за последно" заплаща 1000 duffs. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
+        <source>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then "per kilobyte" only pays 250 tags in fee,&lt;br /&gt;while "at least" pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако променената такса е 1000 tags и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 tags,,&lt;br /&gt; тогава"за последно" заплаща 1000 tags. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 duffs in fee,&lt;br /&gt;while "total at least" pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако променената такса е 1000 duffs и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 duffs,&lt;br /&gt; тогава"за последно" заплаща 1000 duffs. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
+        <source>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then "per kilobyte" only pays 250 tags in fee,&lt;br /&gt;while "total at least" pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако променената такса е 1000 tags и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 tags,&lt;br /&gt; тогава"за последно" заплаща 1000 tags. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for securetag transactions than the network can process.</source>
@@ -2692,24 +2848,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(Смарт таксата не е разпозната все още.Това ще отнеме няколко блока... )</translation>
     </message>
     <message>
-        <source>Confirmation time:</source>
-        <translation>Време за потвърждение:</translation>
-    </message>
-    <message>
         <source>normal</source>
         <translation>нормално</translation>
     </message>
     <message>
         <source>fast</source>
         <translation>бързо</translation>
-    </message>
-    <message>
-        <source>Send as zero-fee transaction if possible</source>
-        <translation>Изпрати с нулева такса за транзакция ако е възможно</translation>
-    </message>
-    <message>
-        <source>(confirmation may take longer)</source>
-        <translation>(потвърждението може да отнеме повече време)</translation>
     </message>
     <message>
         <source>Confirm the send action</source>
@@ -2760,10 +2904,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Копирай байтовете</translation>
     </message>
     <message>
-        <source>Copy priority</source>
-        <translation>Копирай приоритета</translation>
-    </message>
-    <message>
         <source>Copy dust</source>
         <translation>Копирай остатъка</translation>
     </message>
@@ -2792,22 +2932,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>и InstantSend</translation>
     </message>
     <message>
-        <source>Duplicate address found: addresses should only be used once each.</source>
-        <translation>Намерен е дублиран адрес:адресите трябва да се използват по веднъж всеки.</translation>
-    </message>
-    <message>
-        <source>A fee higher than %1 is considered an absurdly high fee.</source>
-        <translation>Такса по-висока от %1 се смята за абсурдно висока.</translation>
-    </message>
-    <message>
-        <source>Payment request expired.</source>
-        <translation>Заявката за плащане е изтекла</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Плати само задължителната такса от %1</translation>
-    </message>
-    <message>
         <source>%1 to %2</source>
         <translation>%1 до %2</translation>
     </message>
@@ -2824,16 +2948,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Обща сума = &lt;b&gt;%1&lt;/b&gt;&lt;br /&gt;= %2</translation>
     </message>
     <message>
-        <source>Confirm send coins</source>
-        <translation>Потвърди изпращането на монетите</translation>
-    </message>
-    <message numerus="yes">
-        <source>Estimated to begin confirmation within %n block(s).</source>
-        <translation><numerusform>Очаква се да започне потвърждение в %n блока.</numerusform><numerusform>Очаква се да започне потвърждение в %n блока.</numerusform></translation>
-    </message>
-    <message>
         <source>&lt;b&gt;(%1 of %2 entries displayed)&lt;/b&gt;</source>
         <translation>&lt;b&gt;(%1 of %2 показани записи)&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Confirm send coins</source>
+        <translation>Потвърди изпращането на монетите</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -2852,12 +2972,36 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Общият сбор надхвърля вашия баланс, когато се добави  %1 такса за операцията.</translation>
     </message>
     <message>
+        <source>Duplicate address found: addresses should only be used once each.</source>
+        <translation>Намерен е дублиран адрес:адресите трябва да се използват по веднъж всеки.</translation>
+    </message>
+    <message>
         <source>Transaction creation failed!</source>
         <translation>Грешка при създаването на транзакция!</translation>
     </message>
     <message>
-        <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Транзакцията беше отхвърлена! Това може да се случи, ако някои от монетите в портфейла ви, вече са изразходвани, например ако се използва копие от wallet.dat и монетите са изразходвани в копието, но не са отбелязани като изразходвани тук.</translation>
+        <source>The transaction was rejected with the following reason: %1</source>
+        <translation>Транзакцията беше отхвърлена със следната причина: %1</translation>
+    </message>
+    <message>
+        <source>A fee higher than %1 is considered an absurdly high fee.</source>
+        <translation>Такса по-висока от %1 се смята за абсурдно висока.</translation>
+    </message>
+    <message>
+        <source>Payment request expired.</source>
+        <translation>Заявката за плащане е изтекла</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n block(s)</source>
+        <translation><numerusform>%n блокове</numerusform><numerusform>%n блокове </numerusform></translation>
+    </message>
+    <message>
+        <source>Pay only the required fee of %1</source>
+        <translation>Плати само задължителната такса от %1</translation>
+    </message>
+    <message numerus="yes">
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation><numerusform>Очаква се да започне потвърждение в %n блока.</numerusform><numerusform>Очаква се да започне потвърждение в %n блока.</numerusform></translation>
     </message>
     <message>
         <source>Warning: Invalid SecureTag address</source>
@@ -2866,6 +3010,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Warning: Unknown change address</source>
         <translation>Внимание: Непознат адрес за ресто</translation>
+    </message>
+    <message>
+        <source>Confirm custom change address</source>
+        <translation>Потвърдете смяна на клиентски адрес</translation>
+    </message>
+    <message>
+        <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
+        <translation>Адресът, който сте избрали за промяна не е част от този портфейл. Някаква част или всички средства от Вашия портфейл могат да бъдат изпратени до този адрес. Сигурни ли сте? </translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2956,10 +3108,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
 </context>
 <context>
+    <name>SendConfirmationDialog</name>
+    <message>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+</context>
+<context>
     <name>ShutdownWindow</name>
     <message>
-        <source>SecureTag is shutting down...</source>
-        <translation>SecureTag ядрото се изключва...</translation>
+        <source>%1 is shutting down...</source>
+        <translation>%1 се изключва...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -3108,24 +3267,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag Ядро</translation>
+        <source>[testnet]</source>
+        <translation>[testnet]</translation>
     </message>
     <message>
         <source>Version %1</source>
         <translation>Версия %1</translation>
-    </message>
-    <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Водещи Bitcoin разработчици</translation>
-    </message>
-    <message>
-        <source>The SecureTag developers</source>
-        <translation>Водещи SecureTag разработчици</translation>
-    </message>
-    <message>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
     </message>
 </context>
 <context>
@@ -3152,6 +3299,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>%1/offline</source>
         <translation>%1/офлайн</translation>
+    </message>
+    <message>
+        <source>0/unconfirmed, %1</source>
+        <translation>0/непотвърдени, %1</translation>
+    </message>
+    <message>
+        <source>in memory pool</source>
+        <translation>В memory pool</translation>
+    </message>
+    <message>
+        <source>not in memory pool</source>
+        <translation>Извън memory pool</translation>
+    </message>
+    <message>
+        <source>abandoned</source>
+        <translation>изоставен</translation>
     </message>
     <message>
         <source>%1/unconfirmed</source>
@@ -3266,6 +3429,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>ID на транзакцията</translation>
     </message>
     <message>
+        <source>Output index</source>
+        <translation>Изходящ индекс</translation>
+    </message>
+    <message>
+        <source>Transaction total size</source>
+        <translation>Краен размер на транзакцията</translation>
+    </message>
+    <message>
         <source>Merchant</source>
         <translation>Търговец</translation>
     </message>
@@ -3301,12 +3472,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>TransactionDescDialog</name>
     <message>
-        <source>Transaction details</source>
-        <translation>Транзакция</translation>
-    </message>
-    <message>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Описание на транзакцията</translation>
+    </message>
+    <message>
+        <source>Details for %1</source>
+        <translation>Детайли за %1</translation>
     </message>
 </context>
 <context>
@@ -3338,6 +3509,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Unconfirmed</source>
         <translation>Непотвърдено</translation>
+    </message>
+    <message>
+        <source>Abandoned</source>
+        <translation>Изоставен</translation>
     </message>
     <message>
         <source>Confirming (%1 of %2 recommended confirmations)</source>
@@ -3376,6 +3551,18 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Получени чрез PrivateSend</translation>
     </message>
     <message>
+        <source>Sent to</source>
+        <translation>Изпратени на</translation>
+    </message>
+    <message>
+        <source>Payment to yourself</source>
+        <translation>Плащане към себе си</translation>
+    </message>
+    <message>
+        <source>Mined</source>
+        <translation>Емитирани</translation>
+    </message>
+    <message>
         <source>PrivateSend Denominate</source>
         <translation>PrivateSend деноминиране</translation>
     </message>
@@ -3396,28 +3583,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>PrivateSend</translation>
     </message>
     <message>
-        <source>User-defined intent/purpose of the transaction.</source>
-        <translation>Дефинирани от потребителя намерение/цели на сделката.</translation>
-    </message>
-    <message>
-        <source>Sent to</source>
-        <translation>Изпратени на</translation>
-    </message>
-    <message>
-        <source>Payment to yourself</source>
-        <translation>Плащане към себе си</translation>
-    </message>
-    <message>
-        <source>Mined</source>
-        <translation>Емитирани</translation>
-    </message>
-    <message>
         <source>watch-only</source>
         <translation>наблюдавани</translation>
     </message>
     <message>
         <source>(n/a)</source>
         <translation>(n/a)</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(без наименование)</translation>
     </message>
     <message>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
@@ -3434,6 +3609,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Whether or not a watch-only address is involved in this transaction.</source>
         <translation>Дали има или не наблюдаван/watch-only адрес участващ в тази транзакция.</translation>
+    </message>
+    <message>
+        <source>User-defined intent/purpose of the transaction.</source>
+        <translation>Дефинирани от потребителя намерение/цели на сделката.</translation>
     </message>
     <message>
         <source>Amount removed from or added to balance.</source>
@@ -3523,6 +3702,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Минимална сума</translation>
     </message>
     <message>
+        <source>Abandon transaction</source>
+        <translation>Изоставена транзакция</translation>
+    </message>
+    <message>
         <source>Copy address</source>
         <translation>Копирай адрес</translation>
     </message>
@@ -3541,6 +3724,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Copy raw transaction</source>
         <translation>Копира необработена транзакция</translation>
+    </message>
+    <message>
+        <source>Copy full transaction details</source>
+        <translation>Копирай всички детайли за транзакцията</translation>
     </message>
     <message>
         <source>Edit label</source>
@@ -3632,8 +3819,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Изпращане</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 STG.</source>
-        <translation>InstantSend не поддържа толкова високи стойности за изпращане все още. Транзакциите в момента са ограничени до %1 STG.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</source>
+        <translation>InstantSend не поддържа толкова високи стойности за изпращане все още. Транзакциите в момента са ограничени до %1 SECURETAG.</translation>
     </message>
     <message>
         <source>Used way too many inputs (&gt;%1) for this InstantSend transaction, fees could be huge.</source>
@@ -3686,10 +3873,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Свързва се с посочения адрес и винаги слуша за него. Използвайте [хост]:порт за изписване при IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. SecureTag is probably already running.</source>
-        <translation>Не може да се заключи дата директорията %s. SecureTag ядрото вече работи.</translation>
-    </message>
-    <message>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>
         <translation>Грешка: Очакването на входящи връзки е неуспешно (върната грешка %s)</translation>
     </message>
@@ -3710,10 +3893,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Име за създаване на URL за KeePass входа , който съхранява паролата за портфейла</translation>
     </message>
     <message>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>Заявка за адреси на пиъри чрез DNS справка, ако адресите са недостатъчно (по-подразбиране: 1 освен ако -свързан)</translation>
-    </message>
-    <message>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
         <translation>Определя максималния размер на висок приоритет/ниска такса за транзакция в байтове (по подразбиране: %d)</translation>
     </message>
@@ -3726,10 +3905,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Това е предварителна тест версия - използвайте я на ваша отговорност - не използвайте за копане или за търговски приложения.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. SecureTag is probably already running.</source>
-        <translation>Не може да се свърже с %s на този компютър. SecureTag ядрото най-вероятно вече работи.</translation>
-    </message>
-    <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Внимание! Изглежда няма пълно съгласуване в мрежата! Някой копачи изглежда изпитват проблеми.</translation>
     </message>
@@ -3738,20 +3913,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Внимание: Не е намерена пълна съвместимост с останалите в мрежата ! Може би се нуждаете от обновяване , или някой от другите нодове се нуждае от обновяване .</translation>
     </message>
     <message>
-        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Внимание: wallet.dat  е развален, данните са спасени! Оригиналния wallet.dat е запазен като wallet.{timestamp}.bak в %s; ако твоят баланс или транзакции са неверни трябва да възстановите от резервното копие.</translation>
-    </message>
-    <message>
         <source>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</source>
         <translation>Трябва да посочите masternodeprivkey в конфигурацията. Моля прочетете документацията за помощ.</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Приемай команден ред и JSON-RPC команди</translation>
-    </message>
-    <message>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Приемай връзки отвън (по подразбиране: 1, ако няма  -proxy или -connect)</translation>
     </message>
     <message>
         <source>Add a node to connect to and attempt to keep the connection open</source>
@@ -3770,20 +3937,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Опции за създаване на блок:</translation>
     </message>
     <message>
-        <source>Can't denominate: no compatible inputs left.</source>
-        <translation>Не може да бъде деноминирано: няма останали съвместими входящи средства.</translation>
-    </message>
-    <message>
         <source>Cannot downgrade wallet</source>
         <translation>Връщане към по-стара версия на портфейла е невъзможно</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -bind address: '%s'</source>
-        <translation>Не може да установи -bind адрес: '%s'</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -externalip address: '%s'</source>
-        <translation>Не може да установи -externalip адрес: '%s'</translation>
     </message>
     <message>
         <source>Cannot write default address</source>
@@ -3792,10 +3947,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Collateral not valid.</source>
         <translation>Обезпечението невалидно.</translation>
-    </message>
-    <message>
-        <source>Connect only to the specified node(s)</source>
-        <translation>Свързване само към определена възлова точка(и)</translation>
     </message>
     <message>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
@@ -3842,14 +3993,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Грешка при зареждане на блок базата данни</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat</source>
-        <translation>Грешка при зареждане на wallet.dat</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Грешка при зареждане на wallet.dat: портфейлът е повреден</translation>
-    </message>
-    <message>
         <source>Error opening block database</source>
         <translation>Грешка при отваряне на блок базата данни</translation>
     </message>
@@ -3874,16 +4017,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(1 =запазва tx meta data напр.акаунта на собственика и информация за искането за плащане,  2 = отпада tx meta data)</translation>
     </message>
     <message>
-        <source>-fallbackfee is set very high! This is the transaction fee you may pay when fee estimates are not available.</source>
-        <translation>-fallbackfee е настроен много високо! Това е таксата за транзакция и може да се плати, ако оценките на таксите не са налични.</translation>
-    </message>
-    <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>-maxtxfee  е с много голяма зададена стойност! Това е транзакционната такса, която ще платите ако направите единична транзакция.</translation>
-    </message>
-    <message>
-        <source>-paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>-paytxfee е с много голяма зададена стойност! Това е транзакционната такса, която ще платите ако направите транзакция.</translation>
     </message>
     <message>
         <source>A fee rate (in %s/kB) that will be used when fee estimation has insufficient data (default: %s)</source>
@@ -3914,8 +4049,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Изтриване на всички транзакции на портфейла и  възстановява само тези части на блок веригата чрез -rescan при стартиране</translation>
     </message>
     <message>
-        <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
-        <translation>Разпространява се под MIT софтуерен лиценз,вижте придружаващият файл COPYING или&lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
+        <source>Error loading %s: You can't enable HD on a already existing non-HD wallet</source>
+        <translation>Грешка при зареждане %s: Не може да включите HD на вече съществуващ не-HD портфейл</translation>
     </message>
     <message>
         <source>Found unconfirmed denominated outputs, will wait till they confirm to continue.</source>
@@ -3930,12 +4065,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Ако paytxfee не е зададен,включва достатъчно такса, така транзакциите започват потвърждение средно в рамките n блокове(по подразбиране: %u)</translation>
     </message>
     <message>
+        <source>If this block is in the chain assume that it and its ancestors are valid and potentially skip their script verification (0 to verify all, default: %s, testnet: %s)</source>
+        <translation>Ако този блок е във веригата приемете, че той и предишните са валидни и евентуално пропуснете този скрипт за проверка (0 за проверка на всичко, по подразбиране: %s, testnet: %s)</translation>
+    </message>
+    <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>Невалидна сума за -maxtxfee=&lt;amount&gt;: '%s' (трябва да бъде най-малко от %s за да се избегне забиване на транзакциите)</translation>
     </message>
     <message>
         <source>Maintain a full transaction index, used by the getrawtransaction rpc call (default: %u)</source>
         <translation>Поддържай пълен списък с транзакциите, използван от getrawtransaction rpc повикването (по подразбиране: %u)</translation>
+    </message>
+    <message>
+        <source>Make sure to encrypt your wallet and delete all non-encrypted backups after you verified that wallet works!</source>
+        <translation>Уверете се, че шифровате портфейла си и изтривате всички некриптирани архиви, след като сте проверили, че този портфейл работи!</translation>
     </message>
     <message>
         <source>Maximum size of data in data carrier transactions we relay and mine (default: %u)</source>
@@ -3950,32 +4093,24 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Изходяща информация за грешки (по подразбиране: %u, задаването на &lt;category&gt; е опция)</translation>
     </message>
     <message>
-        <source>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</source>
-        <translation>Задай брой заявки, когато се използва генериране (-1 =всички ядра, по подразбиране: %d)</translation>
-    </message>
-    <message>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
-        <translation>Покажи N потвърждения при успешно заключена транзакция (0-9999, по подразбиране: %u)</translation>
-    </message>
-    <message>
-        <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>Този продукт включва софтуер, разработен от проекта OpenSSL за използване в OpenSSL Toolkit &lt;https://www.openssl.org/&gt; и криптографски софтуер, написан от Eric Young и UPnP софтуер, написан от Thomas Bernard.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 STG.</source>
-        <translation>Не са намерени достатъчно  средства за тази транзакция, които не са равни на 1000 STG.</translation>
-    </message>
-    <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
         <translation>Използва отделен SOCKS5 прокси, за достигне на пиъри чрез Tor скрити услуги (по подразбиране: %s)</translation>
     </message>
     <message>
-        <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
-        <translation>Whitelist пиъри свързани от дадената мрежома маска или  IP адрес. Може да бъде определян многократно.</translation>
+        <source>User defined mnemonic for HD wallet (bip39). Only has effect during wallet creation/first start (default: randomly generated)</source>
+        <translation>Потребителски дефиниран мнемоничен за HD портфейла (bip39). Има ефект само по време на създаване на портфейла / първия старт (по подразбиране: произволно генериран)</translation>
+    </message>
+    <message>
+        <source>User defined seed for HD wallet (should be in hex). Only has effect during wallet creation/first start (default: randomly generated)</source>
+        <translation>Дефинирани от потребителя части за HD портфейл (трябва да са в шестнадесети). Има ефект само  по време на създаването на портфейла / първия старт (по подразбиране: произволно генериран)</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
         <translation>Whitelisted не могат да бъдат DoS забранени и техните транзакции ще бъдат винаги предадени, дори ако вече са в  mempool, полезно напр. за gateway</translation>
+    </message>
+    <message>
+        <source>You need to rebuild the database using -reindex-chainstate to change -txindex</source>
+        <translation>Нужно е възстановяване на базата данни, използвайте -reindex-chainstate за промяна  на -txindex</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3990,8 +4125,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Винаги пускай заявка за адреси на пиъри през DNS справката (по подразбиране:  %u)</translation>
     </message>
     <message>
-        <source>Cannot resolve -whitebind address: '%s'</source>
-        <translation>Не може да установи -whitebind адрес: '%s'</translation>
+        <source>Can't mix: no compatible inputs found!</source>
+        <translation>Не може да бъде миксирано: няма останали съвместими входящи средства.</translation>
+    </message>
+    <message>
+        <source>Chain selection options:</source>
+        <translation>Опции за избор на верига:</translation>
     </message>
     <message>
         <source>Connect through SOCKS5 proxy</source>
@@ -4002,24 +4141,32 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Свързване към KeePassHttp през порт &lt;port&gt; (по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Запазени права (C) 2009-%i Bitcoin Core разработчици</translation>
-    </message>
-    <message>
-        <source>Copyright (C) 2014-%i The SecureTag Developers</source>
-        <translation>Запазени права (C) 2014-%i SecureTag разработчиците</translation>
-    </message>
-    <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
         <translation>Активиране на клиента да работи като masternode (0-1, по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Error connecting to Masternode.</source>
-        <translation>Грешка при свързване с Masternode.</translation>
+        <source>Entry exceeds maximum size.</source>
+        <translation>Входа надвишава максималният размер.</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of SecureTag</source>
-        <translation>Грешка при зареждане на wallet.dat: портфейлът изисква по-нова версия на SecureTag</translation>
+        <source>Error loading %s: You can't disable HD on a already existing HD wallet</source>
+        <translation>Грешка при зареждане %s: Не може да изключите HD на вече съществуващ HD портфейл</translation>
+    </message>
+    <message>
+        <source>Failed to load fulfilled requests cache from</source>
+        <translation>Неуспешно зареждане на  кеш с изпълнени заявки от</translation>
+    </message>
+    <message>
+        <source>Failed to load governance cache from</source>
+        <translation>Неуспешно зареждане кеша за управлението от</translation>
+    </message>
+    <message>
+        <source>Failed to load masternode cache from</source>
+        <translation>Неуспешно зареждане на masternode кеша от</translation>
+    </message>
+    <message>
+        <source>Failed to load masternode payments cache from</source>
+        <translation>Неуспешно зареждане на кеша за masternode плащанията от</translation>
     </message>
     <message>
         <source>Found enough users, signing ( waiting %s )</source>
@@ -4028,10 +4175,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Found enough users, signing ...</source>
         <translation>Открити са достатъчно потребители, подписва...</translation>
-    </message>
-    <message>
-        <source>Generate coins (default: %u)</source>
-        <translation>Генериране на монети (по подразбиране: %u)</translation>
     </message>
     <message>
         <source>How many blocks to check at startup (default: %u, 0 = all)</source>
@@ -4062,10 +4205,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. SecureTag is shutting down.</source>
-        <translation>Инициализационната проверка не успешна. SecureTag ядрото се изключва.</translation>
-    </message>
-    <message>
         <source>Input is not valid.</source>
         <translation>Въвеждането е невалидно.</translation>
     </message>
@@ -4082,24 +4221,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Невалиден -proxy address: '%s'</translation>
     </message>
     <message>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Невалидна сума за -maxtxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Невалидна сума за -minrelaytxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Невалидна сума за -mintxfee=&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
         <translation>Невалидна сума за -paytxfee=&lt;amount&gt;: '%s' (трябва да бъде най-малко %s)</translation>
     </message>
     <message>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Невалидна сума за -paytxfee=&lt;amount&gt;: '%s'</translation>
+        <source>Keypool ran out, please call keypoolrefill first</source>
+        <translation>Keypool изтече, моля поискайте първо keypoolrefill</translation>
     </message>
     <message>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
@@ -4108,6 +4235,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Listen for connections on &lt;port&gt; (default: %u or testnet: %u)</source>
         <translation>Слушане за входящи връзки на &lt;port&gt; (по подразбиране:%u или за тестовата мрежа: %u)</translation>
+    </message>
+    <message>
+        <source>Loading banlist...</source>
+        <translation>Зареждане на бан лист...</translation>
+    </message>
+    <message>
+        <source>Loading fulfilled requests cache...</source>
+        <translation>Зараждане на кеша с изпълнените заявки...</translation>
     </message>
     <message>
         <source>Loading masternode cache...</source>
@@ -4138,6 +4273,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>В процес на смесване...</translation>
     </message>
     <message>
+        <source>Mnemonic passphrase is too long, must be at most 256 characters</source>
+        <translation>Мнемоничната парола е твърде дълга, трябва да бъде не по-дълга от 256 символа</translation>
+    </message>
+    <message>
         <source>Need to specify a port with -whitebind: '%s'</source>
         <translation>Нужно е определяне на порта с -whitebind: '%s'</translation>
     </message>
@@ -4166,6 +4305,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Прикрепва справката за грешки към времевия запис(по подразбиране:  %u)</translation>
     </message>
     <message>
+        <source>Rebuild chain state and block index from the blk*.dat files on disk</source>
+        <translation>Възстановяване състоянието на веригата и блок индекса от blk*.dat файловете на диска</translation>
+    </message>
+    <message>
+        <source>Rebuild chain state from the currently indexed blocks</source>
+        <translation>Възстановяване състоянието на веригата от сега индексирани блокове</translation>
+    </message>
+    <message>
         <source>Send trace/debug info to debug.log file (default: %u)</source>
         <translation>Изпрати информацията за грешки към  файла debug.log (по подразбиране: %u)</translation>
     </message>
@@ -4176,10 +4323,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Set key pool size to &lt;n&gt; (default: %u)</source>
         <translation>Задайте максимален брой на генерираните ключове до &lt;n&gt; (по подразбиране: %u)</translation>
-    </message>
-    <message>
-        <source>Set minimum block size in bytes (default: %u)</source>
-        <translation>Задайте минимален размер на блок-а в байтове (подразбиране: %u)</translation>
     </message>
     <message>
         <source>Set the number of threads to service RPC calls (default: %d)</source>
@@ -4218,6 +4361,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Изпратено към Мастернода, чака в опашката %s</translation>
     </message>
     <message>
+        <source>Synchroning blockchain...</source>
+        <translation>Синхронизиране на блок-веригата...</translation>
+    </message>
+    <message>
         <source>Synchronization failed</source>
         <translation>Синхронизацията е неуспешна</translation>
     </message>
@@ -4228,10 +4375,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Synchronizing masternodes...</source>
         <translation>Синхронизиране на masternodes ...</translation>
-    </message>
-    <message>
-        <source>Synchronizing sporks...</source>
-        <translation>Синхронизиране на sporks...</translation>
     </message>
     <message>
         <source>This is not a Masternode.</source>
@@ -4286,16 +4429,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Използвай UPnP за определяне на порта за слушане (по подразбиране: %u)</translation>
     </message>
     <message>
+        <source>Use the test chain</source>
+        <translation>Използвайте тестовата мрежа</translation>
+    </message>
+    <message>
         <source>User Agent comment (%s) contains unsafe characters.</source>
         <translation>User Agent comment (%s) съдържа опасни символи.</translation>
-    </message>
-    <message>
-        <source>Value more than PrivateSend pool maximum allows.</source>
-        <translation>Стойност повече от максимално позволената в PrivateSend басейна.</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart SecureTag to complete</source>
-        <translation>Портфейлът трябва да бъде презаписан: рестартирайте SecureTag за да завършите</translation>
     </message>
     <message>
         <source>Will retry...</source>
@@ -4338,10 +4477,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>KeePassHttp ключ за  AES криптирана връзка с KeePass</translation>
     </message>
     <message>
-        <source>Keep N STG anonymized (default: %u)</source>
-        <translation>Поддържай N SecureTag анонимизирани (по подразбиране: %u)</translation>
-    </message>
-    <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>Пази поне &lt;n&gt; неосъществени транзакции в паметта (по подразбиране: %u)</translation>
     </message>
@@ -4370,10 +4505,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Активиране на автоматизирано използване на PrivateSend за средствата съхранявани в този портфейл(0-1, по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Грешка при четене на wallet.dat! Всички ключове са прочетени коректно, но данните за транзакциите или записите в адресната книга може да липсват или са некоректни.</translation>
-    </message>
-    <message>
         <source>Execute command when a wallet InstantSend transaction is successfully locked (%s in cmd is replaced by TxID)</source>
         <translation>Изпълнена команда когато транзакцията в  InstantSend портфейла е успешно заключена (%s в cmd е заместен от TxID)</translation>
     </message>
@@ -4390,16 +4521,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Такси (в %s/kB) по-малки от това се считат за нулева такса при създаване на транзакция (по подразбиране: %s)</translation>
     </message>
     <message>
-        <source>Force relay of transactions from whitelisted peers even they violate local relay policy (default: %d)</source>
-        <translation>Приема препредадените транзакции получени от белия списък на пиърите,  дори когато не са препредадени транзакциите (по подразбиране: %d)</translation>
-    </message>
-    <message>
         <source>If &lt;category&gt; is not supplied or if &lt;category&gt; = 1, output all debugging information.</source>
         <translation>Ако &lt;category&gt; не е предоставена или ако &lt;category&gt; = 1, изведи цялата информация за отстраняване на грешки.</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 STG.</source>
-        <translation>InstantSend не поддържа толкова високи стойности за изпращане все още. Транзакциите в момента са ограничени до %1 STG.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</source>
+        <translation>InstantSend не поддържа толкова високи стойности за изпращане все още. Транзакциите в момента са ограничени до %1 SECURETAG.</translation>
     </message>
     <message>
         <source>InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again.</source>
@@ -4422,20 +4549,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Поддържайте най-много &lt;n&gt; връзки към пиъри(без временните сервизни връзки)(по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Maximum total fees (in %s) to use in a single wallet transaction; setting this too low may abort large transactions (default: %s)</source>
-        <translation>Максимална крайна такса (в %s) използвана в единична транзакция, ако е зададена твърде малка, няма да бъдат възможни големи транзакции (по подразбиране: %s)</translation>
-    </message>
-    <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong SecureTag will not work properly.</source>
-        <translation>Моля проверете дали датата и часът на вашият компютър са верни! Ако часовникът ви не е сверен, SecureTag няма да работи правилно.</translation>
-    </message>
-    <message>
         <source>PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
         <translation>PrivateSend използва всички деноминирани наличности за да изпрати сумата, може би ще е необходимо да бъдат анонимизирани  още монети.</translation>
-    </message>
-    <message>
-        <source>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Осигуряване на ликвидност PrivateSend от рядко смесване монети непрекъснато в съответствие (0-100, по подразбиране: %u, 1=много чести, високи такси, 100=твърде редки, ниски такси)</translation>
     </message>
     <message>
         <source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
@@ -4448,10 +4563,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
         <translation>произволни удостоверения за всяка прокси връзка. Това дава възможност за изолация Tor потока (по подразбиране: %u)</translation>
-    </message>
-    <message>
-        <source>Reduce storage requirements by pruning (deleting) old blocks. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, &gt;%u = target size in MiB to use for block files)</source>
-        <translation>Редуциране на изискванията за пространство чрез изчистване (изтриване) стари блокове. Този режим е несъвместим с -txindex и -rescan. внимание: Изключването на тази настройка изисква повторно изтегляне на цялата блок-верига. (по подразбиране: 0 = изключено изчистване на блокове, &gt;%u = желан размер в MiB за използване на блок файлове)</translation>
     </message>
     <message>
         <source>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
@@ -4486,10 +4597,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Не са намерени достатъчно PrivateSend деноминирани средства за тази транзакция.</translation>
     </message>
     <message>
-        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 STG.</source>
-        <translation>Не са намерени достатъчно PrivateSend неденоминирани средства за тази транзакция, които не са равни на 1000 STG.</translation>
-    </message>
-    <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
         <translation>Открит е неподдържан аргумент -socks .Настройката SOCKS версия вече не е възможна, само SOCKS5 прокси се поддържа.</translation>
     </message>
@@ -4498,28 +4605,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Неподдържан аргумент -whitelistalwaysrelay игнориран, използвайте -whitelistrelay и/или -whitelistforcerelay.</translation>
     </message>
     <message>
-        <source>Use N separate masternodes for each denominated input to mix funds (2-16, default: %u)</source>
-        <translation>Използвайте N отделни Masternode за всеки деноминиран вход за миксиране на средства (2-16, по подразбиране: %u)</translation>
-    </message>
-    <message>
         <source>Use UPnP to map the listening port (default: 1 when listening and no -proxy)</source>
         <translation>Използвайте UPnP за определяне на порта за слушане (по подразбиране: 1 когато слуша без прокси)</translation>
     </message>
     <message>
-        <source>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. This option can be specified multiple times</source>
-        <translation>Потребител и хаш парола за JSON-RPC връзки.Полето&lt;userpw&gt;е във формат: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. Канонически питон скрипт е включена в share/rpcuser. Тази опция може да бъде променяна многократно</translation>
-    </message>
-    <message>
         <source>WARNING! Failed to replenish keypool, please unlock your wallet to do so.</source>
         <translation>ВНИМАНИЕ! Неуспешно попълване на keypool, моля отключете портфейла си за да се извърши.</translation>
-    </message>
-    <message>
-        <source>WARNING: abnormally high number of blocks generated, %d blocks received in the last %d hours (%d expected)</source>
-        <translation>ВНИМАНИЕ: Ненормално висок брой генерирани блокове, %d блока получени през последните %d часа (%d очаквани)</translation>
-    </message>
-    <message>
-        <source>WARNING: check your network connection, %d blocks received in the last %d hours (%d expected)</source>
-        <translation>ВНИМАНИЕ: проверете вашата връзка, %d блока получени през последните %d часа (%d очаквани)</translation>
     </message>
     <message>
         <source>Wallet is locked, can't replenish keypool! Automatic backups and mixing are disabled, please unlock your wallet to replenish keypool.</source>
@@ -4532,14 +4623,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>You need to rebuild the database using -reindex to go back to unpruned mode.  This will redownload the entire blockchain</source>
         <translation>Необходимо е повторно изграждане на базата данни използвайки -reindex за да се върнете в неизчистен режим.Това ще изтегли отново съществуващата блок-верига</translation>
-    </message>
-    <message>
-        <source>masternodeaddr option is deprecated. Please use masternode.conf to manage your remote masternodes.</source>
-        <translation>masternodeaddr опцията е отхвърлена. Моля използвайте masternode.conf за управление на вашите отдалечени masternodes.</translation>
-    </message>
-    <message>
-        <source>%s - %d confirmations</source>
-        <translation>%s - %d потвърждения</translation>
     </message>
     <message>
         <source>(%d could be used only on mainnet)</source>
@@ -4562,16 +4645,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>&lt;category&gt; може да бъде:</translation>
     </message>
     <message>
-        <source>Activating best chain...</source>
-        <translation>Активиране на най-добрата верига ...</translation>
-    </message>
-    <message>
         <source>Append comment to the user agent string</source>
         <translation>Добавяне на коментар към стринг на потребителският агент</translation>
-    </message>
-    <message>
-        <source>Attempt to recover private keys from a corrupt wallet.dat on startup</source>
-        <translation>Опит да се възстановят частни ключове от повреден wallet.dat при стартиране</translation>
     </message>
     <message>
         <source>Automatic backups disabled</source>
@@ -4674,10 +4749,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Зареждане на блок индекса...</translation>
     </message>
     <message>
-        <source>Loading fullfiled requests cache...</source>
-        <translation>Зарежда се кеш с изпълнени заявки...</translation>
-    </message>
-    <message>
         <source>Loading governance cache...</source>
         <translation>Зарежда се  masternode кеш...</translation>
     </message>
@@ -4724,10 +4795,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>No errors detected.</source>
         <translation>Не са открити грешки.</translation>
-    </message>
-    <message>
-        <source>No funds detected in need of denominating.</source>
-        <translation>Не са открити суми нуждаещи се от деноминиране.</translation>
     </message>
     <message>
         <source>No matching denominations found for mixing.</source>
@@ -4798,12 +4865,56 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Изчистване на блоковото пространство...</translation>
     </message>
     <message>
-        <source>Rebuild block chain index from current blk000??.dat files on startup</source>
-        <translation>Възстановяване индекса на блок регистъра от настоящия blk000??.dat файла при стартиране</translation>
-    </message>
-    <message>
         <source>Rescan the block chain for missing wallet transactions on startup</source>
         <translation>Повторно сканиране на регистъра на блокове за липсващи в портфейла транзакции  при стартиране</translation>
+    </message>
+    <message>
+        <source>The wallet will avoid paying less than the minimum relay fee.</source>
+        <translation>Портфейлът няма да плаща по-малко от миналата такса за препредаване.</translation>
+    </message>
+    <message>
+        <source>This is the minimum transaction fee you pay on every transaction.</source>
+        <translation>Това е минималната такса за транзакция, която плащате за всяка транзакция.</translation>
+    </message>
+    <message>
+        <source>This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Това е таксата за транзакцията, която ще платите ако изпратите транзакция.</translation>
+    </message>
+    <message>
+        <source>Transaction amounts must not be negative</source>
+        <translation>Сумите на транзакциите не трябва да бъдат отрицателни</translation>
+    </message>
+    <message>
+        <source>Transaction has too long of a mempool chain</source>
+        <translation>Транзакцията е била твърде дълго в mempool </translation>
+    </message>
+    <message>
+        <source>Transaction must have at least one recipient</source>
+        <translation>Транзакцията трябва да има поне един получател.</translation>
+    </message>
+    <message>
+        <source>Trying to connect...</source>
+        <translation>Опит за свързване...</translation>
+    </message>
+    <message>
+        <source>Unable to bind to %s on this computer. %s is probably already running.</source>
+        <translation>Невъзможно да се свърже към %s на този компютър. %s вероятно  вече работи.</translation>
+    </message>
+    <message>
+        <source>Upgrading UTXO database</source>
+        <translation>Обновяване на UTXO база данни</translation>
+    </message>
+    <message>
+        <source>Use devnet chain with provided name</source>
+        <translation>Използвайте devnet веригата с предоставеното име</translation>
+    </message>
+    <message>
+        <source>Wallet debugging/testing options:</source>
+        <translation>Опции за Откриване на грешки/Тестване на портфейла:</translation>
+    </message>
+    <message>
+        <source>Wallet needed to be rewritten: restart %s to complete</source>
+        <translation>Портфейлът трябва да бъде презаписан: рестартирайте %s за да завършите</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -4832,6 +4943,222 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>RPC server options:</source>
         <translation>Опции на RPC сървъра:</translation>
+    </message>
+    <message>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
+    </message>
+    <message>
+        <source>The %s developers</source>
+        <translation>%s разработчици</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</source>
+        <translation>Приемай връзки отвън (по подразбиране: 1, ако няма  -proxy или -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>
+        <translation>Не може да се заключи дата директорията %s.%s вероятно вече работи.</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Свързване само към специфичен нод(ове); -noconnect или -connect=0 за да изключите автоматичните връзки</translation>
+    </message>
+    <message>
+        <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
+        <translation>Разпространява се под MIT софтуерен лиценз,вижте придружаващият файл  %s или %s</translation>
+    </message>
+    <message>
+        <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Грешка при четене на  %s! Всички ключове са прочетени коректно, но данните за транзакциите или записите в адресната книга може да липсват или са некоректни.</translation>
+    </message>
+    <message>
+        <source>Force relay of transactions from whitelisted peers even if they violate local relay policy (default: %d)</source>
+        <translation>Приема препредадените транзакции получени от белия списък на пиърите,  дори когато не са препредадени транзакциите (по подразбиране: %d)</translation>
+    </message>
+    <message>
+        <source>Incorrect or no devnet genesis block found. Wrong datadir for devnet specified?</source>
+        <translation>Намерен е неправилен или не devnet блок. Грешно зададена data директория за devnet мрежата?</translation>
+    </message>
+    <message>
+        <source>Maximum allowed median peer time offset adjustment. Local perspective of time may be influenced by peers forward or backward by this amount. (default: %u seconds)</source>
+        <translation>Максимално допустима корекция на средното време за връщане на пиъри. Локалната перспектива на времето може да бъде повлияна от пиери напред или назад от това количество. (по подразбиране:%u секунди)</translation>
+    </message>
+    <message>
+        <source>Maximum total fees (in %s) to use in a single wallet transaction or raw transaction; setting this too low may abort large transactions (default: %s)</source>
+        <translation>Максимална крайна такса (в %s) използвана в единична или сурова транзакция, ако е зададена твърде малка, няма да бъдат възможни големи транзакции (по подразбиране: %s)</translation>
+    </message>
+    <message>
+        <source>Override spork address. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.</source>
+        <translation>Заменете spork адреса. Полезен само за regtest и devnet. Използването на това на mainnet или testnet ще прекъсне връзката ви с мрежата.</translation>
+    </message>
+    <message>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
+        <translation>Моля проверете дали датата и часът на вашият компютър са верни! Ако часовникът ви не е сверен, %s няма да работи правилно.</translation>
+    </message>
+    <message>
+        <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
+        <translation>Моля помогнете ако намерите %s полезен. Посетете %s за допълнителна информация за софтуера.</translation>
+    </message>
+    <message>
+        <source>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (%u-%u, default: %u, 1=very frequent, high fees, %u=very infrequent, low fees)</source>
+        <translation>Осигуряване на ликвидност на PrivateSend от рядко смесване на монети в съответствие (%u-%u, по подразбиране: %u, 1=много чести, високи такси, %u=много рядко, ниски такси)</translation>
+    </message>
+    <message>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Заявка за адреси на пиъри чрез DNS справка, ако адресите са недостатъчно (по-подразбиране: 1 освен ако -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Reduce storage requirements by enabling pruning (deleting) of old blocks. This allows the pruneblockchain RPC to be called to delete specific blocks, and enables automatic pruning of old blocks if a target size in MiB is provided. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, &gt;%u = automatically prune block files to stay under the specified target size in MiB)</source>
+        <translation>Редуциране на изискванията за пространство чрез изчистване (изтриване) стари блокове. Това позволява на RPC  да изтрие конкретни блокове и позволява автоматичното изчистване на стари блокове, ако е предвиден целеви размер в MiB. Този режим е несъвместим с -txindex и -rescan. внимание: Изключването на тази настройка изисква повторно изтегляне на цялата блок-верига. (по подразбиране: 0 = изключено изчистване на блокове, &gt;%u = желан размер в MiB за използване на блок файлове)</translation>
+    </message>
+    <message>
+        <source>Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)</source>
+        <translation>Задайте най-ниска такса (в %s / kB) за транзакции, които да бъдат включени в създаването на блок. (по подразбиране:%s)</translation>
+    </message>
+    <message>
+        <source>Show N confirmations for a successfully locked transaction (%u-%u, default: %u)</source>
+        <translation>Покажи N потвърждения при успешно заключена транзакция (%u-%u, по подразбиране: %u)</translation>
+    </message>
+    <message>
+        <source>This is the transaction fee you may pay when fee estimates are not available.</source>
+        <translation>Това е таксата за транзакция, която можете да платите, когато не са налице оценки на таксите.</translation>
+    </message>
+    <message>
+        <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
+        <translation>Този продукт включва софтуер, разработен от проекта OpenSSL за използване в OpenSSL Toolkit %s и криптографски софтуер, написан от Eric Young и UPnP софтуер, написан от Thomas Bernard.</translation>
+    </message>
+    <message>
+        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction.</source>
+        <translation>Невъзможно е да се намерят достатъчно средства, които не са деноминирани от PrivateSend, за тази транзакция.</translation>
+    </message>
+    <message>
+        <source>Use N separate masternodes for each denominated input to mix funds (%u-%u, default: %u)</source>
+        <translation>Използвайте N отделни Masternode за всеки деноминиран вход за миксиране на средства (%u-%u, по подразбиране: %u)</translation>
+    </message>
+    <message>
+        <source>Use hierarchical deterministic key generation (HD) after BIP39/BIP44. Only has effect during wallet creation/first start</source>
+        <translation>Използвайте йерархично детерминиращо генериране на ключ (HD) след bip39 / bip44. Има ефект само по време на създаване на портфейла / първия старт</translation>
+    </message>
+    <message>
+        <source>User defined mnemonic passphrase for HD wallet (BIP39). Only has effect during wallet creation/first start (default: empty string)</source>
+        <translation>Потребителски дефиниран мнемонична парола за HD портфейла (bip39). Има ефект само по време на създаване на портфейла / първия старт (по подразбиране:празен низ )</translation>
+    </message>
+    <message>
+        <source>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. The client then connects normally using the rpcuser=&lt;USERNAME&gt;/rpcpassword=&lt;PASSWORD&gt; pair of arguments. This option can be specified multiple times</source>
+        <translation>Потребителско име и парола за JSON-RPC връзки. Полето &lt;userpw&gt; е във формата: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;.  Включен е каноничен скрипт на phyton в share/ rpcuser . След това клиентът се свързва нормално с помощта на rpcuser=&lt;USERNAME&gt;/rpcpassword=&lt;PASSWORD&gt;двойка аргументи. Тази опция може да се зададе няколко пъти</translation>
+    </message>
+    <message>
+        <source>Wallet will not create transactions that violate mempool chain limits (default: %u)</source>
+        <translation>Портфейла няма да създава транзакции, които нарушават ограниченията на веригата на mempool (по подразбиране:%u)</translation>
+    </message>
+    <message>
+        <source>Warning: At least %d of %d masternodes are running on a newer software version. Please check latest releases, you might need to update too.</source>
+        <translation>Внимание: Най-малко%d от %d masternodes работят на по-нова версия на софтуера. Моля, проверете последните версии, може да се наложи Вие също да актуализирате .</translation>
+    </message>
+    <message>
+        <source>Warning: Every masternode (out of %d known ones) is running on a newer software version. Please check latest releases, it's very likely that you missed a major/critical update.</source>
+        <translation>Внимание: Всеки masternode (извън %d познатите ни) работи на по-нова версия на софтуера. Моля проверете последните версии, напълно е възможно да сте пропуснали важен/критичен ъпдейт. </translation>
+    </message>
+    <message>
+        <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Внимание: Файла на портфейла  е повреден, данните са спасени! Оригиналния  %s е запазен като %s в %s; ако вашият баланс или транзакции са неверни трябва да възстановите от резервното копие/архив.</translation>
+    </message>
+    <message>
+        <source>Whitelist peers connecting from the given IP address (e.g. 1.2.3.4) or CIDR notated network (e.g. 1.2.3.0/24). Can be specified multiple times.</source>
+        <translation>Whitelist пиъри свързани от даден  IP адрес(напр. 1.2.3.4) или дадената мрежова маска (напр. 1.2.3.0/24). Може да бъде определян многократно.</translation>
+    </message>
+    <message>
+        <source>%s corrupt, salvage failed</source>
+        <translation>%s е повреден, спасяването е неуспешно</translation>
+    </message>
+    <message>
+        <source>%s is not a valid backup folder!</source>
+        <translation>%s не е валидна папка за архиви!</translation>
+    </message>
+    <message>
+        <source>%s is set very high!</source>
+        <translation>%s е зададен твърде високо!</translation>
+    </message>
+    <message>
+        <source>(press q to shutdown and continue later)</source>
+        <translation>(натиснете q за изключване и продължете по-късно)</translation>
+    </message>
+    <message>
+        <source>-devnet can only be specified once</source>
+        <translation>-devnet може да се зададе само веднъж</translation>
+    </message>
+    <message>
+        <source>-port must be specified when -devnet and -listen are specified</source>
+        <translation>-port трябва да се зададе когато -devnet и -listen са зададени</translation>
+    </message>
+    <message>
+        <source>-rpcport must be specified when -devnet and -server are specified</source>
+        <translation>-rpcport трябва да се зададе когато -devnet и  -server са зададени</translation>
+    </message>
+    <message>
+        <source>Allow RFC1918 addresses to be relayed and connected to (default: %u)</source>
+        <translation>Разрешава препредаването и свързването на RFC1918 адреси към  (по подразбиране: %u)</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet on startup</source>
+        <translation>Опит да се възстановят частни ключове от повреден портфейл при стартиране</translation>
+    </message>
+    <message>
+        <source>Cannot resolve -%s address: '%s'</source>
+        <translation>Не може да установи -%s адрес: '%s'</translation>
+    </message>
+    <message>
+        <source>Change index out of range</source>
+        <translation>Изместете индекса извън обхвата</translation>
+    </message>
+    <message>
+        <source>Copyright (C)</source>
+        <translation>Авторски права (C)</translation>
+    </message>
+    <message>
+        <source>Error loading %s</source>
+        <translation>Грешка при зареждане на %s</translation>
+    </message>
+    <message>
+        <source>Error loading %s: Wallet corrupted</source>
+        <translation>Грешка при зареждане на %s: Портфейлът е повреден</translation>
+    </message>
+    <message>
+        <source>Error loading %s: Wallet requires newer version of %s</source>
+        <translation>Грешка при зареждане на %s: Портфейлът изисква по-нова версия на %s</translation>
+    </message>
+    <message>
+        <source>Error upgrading chainstate database</source>
+        <translation>Грешка при надграждане на верижната база данни </translation>
+    </message>
+    <message>
+        <source>Failed to find mixing queue to join</source>
+        <translation>Неуспех при намиране на опашка за миксиране</translation>
+    </message>
+    <message>
+        <source>Failed to start a new mixing queue</source>
+        <translation>Неуспешно стартиране на нова опашка за миксиране</translation>
+    </message>
+    <message>
+        <source>Initialization sanity check failed. %s is shutting down.</source>
+        <translation>Инициализирането на проверката за състоянието е неуспешно. %s се изключва.</translation>
+    </message>
+    <message>
+        <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
+        <translation>Невалидно количество за -%s=&lt;amount&gt;: '%s'</translation>
+    </message>
+    <message>
+        <source>Invalid spork address specified with -sporkaddr</source>
+        <translation>Невалиден спорк адрес посочен с -sporkaddr</translation>
+    </message>
+    <message>
+        <source>Keep N SECURETAG anonymized (%u-%u, default: %u)</source>
+        <translation>Поддържай N SECURETAG анонимизирани (%u-%u, по подразбиране: %u)</translation>
+    </message>
+    <message>
+        <source>Print this help message and exit</source>
+        <translation>Отпечатай това помощно съобщение и излез</translation>
     </message>
     <message>
         <source>Receive and display P2P network alerts (default: %u)</source>
@@ -4906,6 +5233,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Въведете Ваш публичен адрес</translation>
     </message>
     <message>
+        <source>Starting network threads...</source>
+        <translation>Стартиране на мрежовите нишки...</translation>
+    </message>
+    <message>
         <source>Synchronization pending...</source>
         <translation>Изчаква синхронизация ...</translation>
     </message>
@@ -4918,12 +5249,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Синхронизиране на masternodes плащанията...</translation>
     </message>
     <message>
-        <source>The transaction amount is too small to pay the fee</source>
-        <translation>Сумата на транзакцията е твърде малка за плащане на таксата</translation>
+        <source>The source code is available from %s.</source>
+        <translation>Изходният код е достъпен от %s.</translation>
     </message>
     <message>
-        <source>This help message</source>
-        <translation>Това помощно съобщение</translation>
+        <source>The transaction amount is too small to pay the fee</source>
+        <translation>Сумата на транзакцията е твърде малка за плащане на таксата</translation>
     </message>
     <message>
         <source>This is experimental software.</source>
@@ -4932,10 +5263,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Transaction amount too small</source>
         <translation>Сумата на транзакцията е твърде малка</translation>
-    </message>
-    <message>
-        <source>Transaction amounts must be positive</source>
-        <translation>Сумите на транзакциите трябва да са положителни</translation>
     </message>
     <message>
         <source>Transaction created successfully.</source>
@@ -4952,10 +5279,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Transaction too large for fee policy</source>
         <translation>Транзакцията е твърде голяма за таксовите политики.</translation>
-    </message>
-    <message>
-        <source>Transaction too large</source>
-        <translation>Транзакцията е твърде голяма</translation>
     </message>
     <message>
         <source>Unable to bind to %s on this computer (bind returned error %s)</source>
@@ -5010,10 +5333,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <source>You need to rebuild the database using -reindex to change -txindex</source>
-        <translation>Необходимо е повторно изграждане на базата данни използвайки -reindex, за да промените -txindex</translation>
-    </message>
-    <message>
         <source>Your entries added successfully.</source>
         <translation>Вашите записи са добавени успешно.</translation>
     </message>
@@ -5024,10 +5343,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Zapping all transactions from wallet...</source>
         <translation>Премахване на всички транзакции от портфейла ...</translation>
-    </message>
-    <message>
-        <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat е повреден, възстановяването неуспешно</translation>
     </message>
 </context>
 </TS>

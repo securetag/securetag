@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2018 The SecureTag developers
+// Copyright (c) 2014-2017 The SecureTag Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,7 +22,7 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
     unitlist.append(STG);
     unitlist.append(mSTG);
     unitlist.append(uSTG);
-    unitlist.append(duffs);
+    unitlist.append(tags);
     return unitlist;
 }
 
@@ -33,7 +33,7 @@ bool BitcoinUnits::valid(int unit)
     case STG:
     case mSTG:
     case uSTG:
-    case duffs:
+    case tags:
         return true;
     default:
         return false;
@@ -49,7 +49,7 @@ QString BitcoinUnits::name(int unit)
             case STG: return QString("STG");
             case mSTG: return QString("mSTG");
             case uSTG: return QString::fromUtf8("μSTG");
-            case duffs: return QString("duffs");
+            case tags: return QString("tags");
             default: return QString("???");
         }
     }
@@ -60,7 +60,7 @@ QString BitcoinUnits::name(int unit)
             case STG: return QString("tSTG");
             case mSTG: return QString("mtSTG");
             case uSTG: return QString::fromUtf8("μtSTG");
-            case duffs: return QString("tduffs");
+            case tags: return QString("ttags");
             default: return QString("???");
         }
     }
@@ -75,7 +75,7 @@ QString BitcoinUnits::description(int unit)
             case STG: return QString("SecureTag");
             case mSTG: return QString("Milli-SecureTag (1 / 1" THIN_SP_UTF8 "000)");
             case uSTG: return QString("Micro-SecureTag (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-SecureTag (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case tags: return QString("Ten Nano-SecureTag (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -86,7 +86,7 @@ QString BitcoinUnits::description(int unit)
             case STG: return QString("TestSecureTags");
             case mSTG: return QString("Milli-TestSecureTag (1 / 1" THIN_SP_UTF8 "000)");
             case uSTG: return QString("Micro-TestSecureTag (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestSecureTag (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case tags: return QString("Ten Nano-TestSecureTag (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -99,7 +99,7 @@ qint64 BitcoinUnits::factor(int unit)
     case STG:  return 100000000;
     case mSTG: return 100000;
     case uSTG: return 100;
-    case duffs: return 1;
+    case tags: return 1;
     default:   return 100000000;
     }
 }
@@ -111,7 +111,7 @@ int BitcoinUnits::decimals(int unit)
     case STG: return 8;
     case mSTG: return 5;
     case uSTG: return 2;
-    case duffs: return 0;
+    case tags: return 0;
     default: return 0;
     }
 }

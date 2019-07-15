@@ -68,9 +68,9 @@ can then be controlled by group membership.
 3b) Mac OS X
 
 Binary:              `/usr/local/bin/securetagd`  
-Configuration file:  `~/Library/Application Support/SecureTagCore/securetag.conf`  
-Data directory:      `~/Library/Application Support/SecureTagCore`
-Lock file:           `~/Library/Application Support/SecureTagCore/.lock`
+Configuration file:  `~/Library/Application Support/SecureTag/securetag.conf`  
+Data directory:      `~/Library/Application Support/SecureTag`
+Lock file:           `~/Library/Application Support/SecureTag/.lock`
 
 4. Installing Service Configuration
 -----------------------------------
@@ -104,7 +104,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy securetagd.init to /etc/init.d/securetagd. Test by running `service securetagd start`.
 
 Using this script, you can adjust the path and flags to the securetagd program by
-setting the STGD and FLAGS environment variables in the file
+setting the SECURETAGD and FLAGS environment variables in the file
 /etc/sysconfig/securetagd. You can also use the DAEMONOPTS environment variable here.
 
 4e) Mac OS X

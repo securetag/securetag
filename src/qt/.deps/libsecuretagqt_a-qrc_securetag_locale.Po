@@ -1,0 +1,4 @@
+qt/libsecuretagqt_a-qrc_securetag_locale.o: qt/qrc_securetag_locale.cpp \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

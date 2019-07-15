@@ -1,4 +1,4 @@
-SecureTag 0.12.1
+SecureTag Core 1.4.5
 =====================
 
 Intro
@@ -13,11 +13,11 @@ Setup
 -----
 Unpack the files into a directory and run securetag-qt.exe.
 
-SecureTag is the original SecureTag client and it builds the backbone of the network.
+SecureTag Core is the original SecureTag client and it builds the backbone of the network.
 However, it downloads and stores the entire history of SecureTag transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.
 
 See the securetag wiki at:
-  https://securetagcoin.atlassian.net/wiki/
+  https://securetagpay.atlassian.net/wiki/
 for more help and information.
