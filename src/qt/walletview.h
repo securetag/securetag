@@ -7,6 +7,8 @@
 
 #include "amount.h"
 #include "masternodelist.h"
+#include "fundamentalnodelist.h"
+#include "governancelist.h"
 
 #include <QStackedWidget>
 
@@ -66,7 +68,9 @@ private:
     SendCoinsDialog *sendCoinsPage;
     AddressBookPage *usedSendingAddressesPage;
     AddressBookPage *usedReceivingAddressesPage;
+    FundamentalnodeList *fundamentalnodeListPage;
     MasternodeList *masternodeListPage;
+    GovernanceList *governanceListPage;
 
     TransactionView *transactionView;
 
@@ -81,6 +85,10 @@ public Q_SLOTS:
     void gotoHistoryPage();
     /** Switch to masternode page */
     void gotoMasternodePage();
+    /** Switch to fundamentalnode page */
+    void gotoFundamentalnodePage();
+    /** Switch to governance page */
+    void gotoGovernancePage();
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
@@ -118,9 +126,12 @@ public Q_SLOTS:
     /** Show progress dialog e.g. for rescan */
     void showProgress(const QString &title, int nProgress);
 
-    /** Update selected STG amount from transactionview */
-    void trxAmount(QString amount);
+    /** User has requested more information about the out of sync state */
+    void requestedSyncWarningInfo();
 
+
+    /** Update selected SECURETAG amount from transactionview */
+    void trxAmount(QString amount);
 Q_SIGNALS:
     /** Signal that we want to show the main window */
     void showNormalIfMinimized();
@@ -128,8 +139,12 @@ Q_SIGNALS:
     void message(const QString &title, const QString &message, unsigned int style);
     /** Encryption status of wallet changed */
     void encryptionStatusChanged(int status);
+    /** HD-Enabled status of wallet changed (only possible during startup) */
+    void hdEnabledStatusChanged(int hdEnabled);
     /** Notify that a new transaction appeared */
     void incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label);
+    /** Notify that the out of sync warning icon has been pressed */
+    void outOfSyncWarningClicked();
 };
 
 #endif // BITCOIN_QT_WALLETVIEW_H

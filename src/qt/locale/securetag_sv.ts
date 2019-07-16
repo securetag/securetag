@@ -164,8 +164,8 @@
         <translation>Bekräfta plånbokskryptering</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR STG&lt;/b&gt;!</source>
-        <translation>Varning: Om du krypterar din plånbok och förlorar din lösenfras kommer du att &lt;b&gt;FÖRLORA ALLA DINA STG&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SECURETAG&lt;/b&gt;!</source>
+        <translation>Varning: Om du krypterar din plånbok och förlorar din lösenfras kommer du att &lt;b&gt;FÖRLORA ALLA DINA SECURETAG&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -219,8 +219,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core
 </translation>
     </message>
     <message>
@@ -272,8 +272,8 @@
         <translation>Avsluta applikationen</translation>
     </message>
     <message>
-        <source>&amp;About SecureTag</source>
-        <translation>&amp;Om SecureTag</translation>
+        <source>&amp;About SecureTag Core</source>
+        <translation>&amp;Om SecureTag Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -412,8 +412,8 @@
         <translation>&amp;Kommandoradalternativ</translation>
     </message>
     <message>
-        <source>Show the SecureTag help message to get a list with possible SecureTag command-line options</source>
-        <translation>Visa SecureTag-hjälpmeddelandet för att få en lista med möjliga SecureTag-kommandoradalternativ</translation>
+        <source>Show the SecureTag Core help message to get a list with possible SecureTag command-line options</source>
+        <translation>Visa SecureTag Core-hjälpmeddelandet för att få en lista med möjliga SecureTag-kommandoradalternativ</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -758,28 +758,28 @@ Adress: %4
         <translation>Vänligen välj en integritetsnivå.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Använd 2 enskilda masternoder för att mixa medel upp till 1000 STG</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Använd 2 enskilda masternoder för att mixa medel upp till 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Använd 8 enskilda masternoder för att mixa medel upp till 1000 STG.</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Använd 8 enskilda masternoder för att mixa medel upp till 1000 SECURETAG.</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Använd 16 enskilda masternoder</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 STG to anonymize 1000 STG</source>
-        <translation>Detta alternativ är det snabbaste och kommer att kosta omkring ~0,025 STG för att anonymisera 1000 STG</translation>
+        <source>This option is the quickest and will cost about ~0.025 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>Detta alternativ är det snabbaste och kommer att kosta omkring ~0,025 SECURETAG för att anonymisera 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 STG to anonymize 1000 STG</source>
-        <translation>Detta alternativ är relativt snabbt och kommer att kosta omkring 0,05 STG för att anonymisera 1000 STG</translation>
+        <source>This option is moderately fast and will cost about 0.05 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>Detta alternativ är relativt snabbt och kommer att kosta omkring 0,05 SECURETAG för att anonymisera 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>0.1 STG per 1000 STG you anonymize.</source>
-        <translation>0,1 STG per 1000 STG du anonymiserar.</translation>
+        <source>0.1 SECURETAG per 1000 SECURETAG you anonymize.</source>
+        <translation>0,1 SECURETAG per 1000 SECURETAG du anonymiserar.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -883,8 +883,8 @@ Adress: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core
 </translation>
     </message>
     <message>
@@ -931,16 +931,16 @@ Adress: %4
         <translation>Välkommen</translation>
     </message>
     <message>
-        <source>Welcome to SecureTag.</source>
-        <translation>Välkommen till SecureTag.</translation>
+        <source>Welcome to SecureTag Core.</source>
+        <translation>Välkommen till SecureTag Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where SecureTag will store its data.</source>
-        <translation>Då detta är första gången programmet startas kan du välja var SecureTag ska lagra sin data.</translation>
+        <source>As this is the first time the program is launched, you can choose where SecureTag Core will store its data.</source>
+        <translation>Då detta är första gången programmet startas kan du välja var SecureTag Core ska lagra sin data.</translation>
     </message>
     <message>
-        <source>SecureTag will download and store a copy of the SecureTag block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>SecureTag kommer att laddas ned och lagra en kopia av SecureTag:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
+        <source>SecureTag Core will download and store a copy of the SecureTag block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>SecureTag Core kommer att laddas ned och lagra en kopia av SecureTag:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1238,8 +1238,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Mängd och omgångar:</translation>
     </message>
     <message>
-        <source>0 STG / 0 Rounds</source>
-        <translation>0 STG/0 omgångar</translation>
+        <source>0 SECURETAG / 0 Rounds</source>
+        <translation>0 SECURETAG/0 omgångar</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -1985,8 +1985,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>SecureTag is shutting down...</source>
-        <translation>SecureTag stängs ned...</translation>
+        <source>SecureTag Core is shutting down...</source>
+        <translation>SecureTag Core stängs ned...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2127,8 +2127,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core
 </translation>
     </message>
     <message>
@@ -2140,8 +2140,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Bitcoin Core-utvecklarna</translation>
     </message>
     <message>
-        <source>The SecureTag developers</source>
-        <translation>SecureTag-utvecklarna</translation>
+        <source>The SecureTag Core developers</source>
+        <translation>SecureTag Core-utvecklarna</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2662,8 +2662,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Sammanbind till fastställd adress och avlyssna alltid den. Använd [host]:port-notation för IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. SecureTag is probably already running.</source>
-        <translation>Kan inte erhålla ett lås på datakatalog %s. SecureTag körs förmodligen redan.</translation>
+        <source>Cannot obtain a lock on data directory %s. SecureTag Core is probably already running.</source>
+        <translation>Kan inte erhålla ett lås på datakatalog %s. SecureTag Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -2718,16 +2718,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Detta är en förhandsutgiven testkompilering - använd på egen risk - använd inte för utvinning eller handlarapplikationer.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. SecureTag is probably already running.</source>
-        <translation>Det går inte att binda till %s till denna dator. SecureTag körs förmodligen redan.</translation>
+        <source>Unable to bind to %s on this computer. SecureTag Core is probably already running.</source>
+        <translation>Det går inte att binda till %s till denna dator. SecureTag Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
         <translation>Kunde inte hitta tillräckliga Darksend-denominationsmedel för denna transaktion.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 STG.</source>
-        <translation>Kunde inte hitta tillräckliga Darksend-icke-denominationsmedel för denna transaktion som inte är likvärdiga 1000 STG.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SECURETAG.</source>
+        <translation>Kunde inte hitta tillräckliga Darksend-icke-denominationsmedel för denna transaktion som inte är likvärdiga 1000 SECURETAG.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2942,8 +2942,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. SecureTag is shutting down.</source>
-        <translation>Initialiseringstillståndkontroll misslyckades. SecureTag stängs ned.</translation>
+        <source>Initialization sanity check failed. SecureTag Core is shutting down.</source>
+        <translation>Initialiseringstillståndkontroll misslyckades. SecureTag Core stängs ned.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>

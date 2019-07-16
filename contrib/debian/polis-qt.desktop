@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SecureTag Core
+Comment=SecureTag P2P Cryptocurrency
+Comment[de]=Verbinde mit dem SecureTag peer-to-peer Netzwerk
+Comment[fr]=SecureTag, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=SecureTag, eşten eşe kriptografik sanal para birimi
+Exec=securetag-qt %u
+Terminal=false
+Type=Application
+Icon=securetag128
+MimeType=x-scheme-handler/securetag;
+Categories=Office;Finance;

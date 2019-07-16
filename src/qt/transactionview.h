@@ -75,14 +75,15 @@ private:
     QFrame *dateRangeWidget;
     QDateTimeEdit *dateFrom;
     QDateTimeEdit *dateTo;
+    QAction *abandonAction;
 
     QWidget *createDateRangeWidget();
 
     GUIUtil::TableViewLastColumnResizingFixer *columnResizingFixer;
 
-    virtual void resizeEvent(QResizeEvent* event);
+    virtual void resizeEvent(QResizeEvent* event) override;
 
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private Q_SLOTS:
     void contextualMenu(const QPoint &);
@@ -94,8 +95,10 @@ private Q_SLOTS:
     void copyAmount();
     void copyTxID();
     void copyTxHex();
+    void copyTxPlainText();
     void openThirdPartyTxUrl(QString url);
     void updateWatchOnlyColumn(bool fHaveWatchOnly);
+    void abandonTx();
 
 Q_SIGNALS:
     void doubleClicked(const QModelIndex&);

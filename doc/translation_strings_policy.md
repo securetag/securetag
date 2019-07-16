@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the SecureTag software.
+This document provides guidelines for internationalization of the SecureTag Core software.
 
 How to translate?
 ------------------
@@ -68,7 +68,7 @@ This may sometimes be at conflict with the recommendation in the previous sectio
 
 Plurals can be complex in some languages. A quote from the gettext documentation:
 
-    In Polish we use e.g. plik (file) this way:
+    In SecureTagh we use e.g. plik (file) this way:
     1 plik,
     2,3,4 pliki,
     5-21 pliko'w,
@@ -106,4 +106,4 @@ The second example reduces the number of pluralized words that translators have 
 
 During a string freeze (often before a major release), no translation strings are to be added, modified or removed.
 
-This can be checked by executing `make translate` in the `src` directory, then verifying that `bitcoin_en.ts` remains unchanged.
+This can be checked by executing `make translate` in the `src` directory, then verifying that `securetag_en.ts` remains unchanged.

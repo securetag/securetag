@@ -7,7 +7,14 @@
 #include "tinyformat.h"
 #include "utilstrencodings.h"
 
-using namespace std;
+inline std::string ValueString(const std::vector<unsigned char>& vch)
+{
+    if (vch.size() <= 4)
+        return strprintf("%d", CScriptNum(vch, false).getint());
+    else
+        return HexStr(vch);
+}
+
 
 const char* GetOpName(opcodetype opcode)
 {
@@ -128,7 +135,7 @@ const char* GetOpName(opcodetype opcode)
     case OP_CHECKMULTISIG          : return "OP_CHECKMULTISIG";
     case OP_CHECKMULTISIGVERIFY    : return "OP_CHECKMULTISIGVERIFY";
 
-    // expanson
+    // expansion
     case OP_NOP1                   : return "OP_NOP1";
     case OP_CHECKLOCKTIMEVERIFY    : return "OP_CHECKLOCKTIMEVERIFY";
     case OP_CHECKSEQUENCEVERIFY    : return "OP_CHECKSEQUENCEVERIFY";
@@ -185,7 +192,7 @@ unsigned int CScript::GetSigOpCount(const CScript& scriptSig) const
     // get the last item that the scriptSig
     // pushes onto the stack:
     const_iterator pc = scriptSig.begin();
-    vector<unsigned char> data;
+    std::vector<unsigned char> data;
     while (pc < scriptSig.end())
     {
         opcodetype opcode;
@@ -200,39 +207,15 @@ unsigned int CScript::GetSigOpCount(const CScript& scriptSig) const
     return subscript.GetSigOpCount(true);
 }
 
-bool CScript::IsNormalPaymentScript() const
-{
-    if(this->size() != 25) return false;
-
-    std::string str;
-    opcodetype opcode;
-    const_iterator pc = begin();
-    int i = 0;
-    while (pc < end())
-    {
-        GetOp(pc, opcode);
-
-        if(     i == 0 && opcode != OP_DUP) return false;
-        else if(i == 1 && opcode != OP_HASH160) return false;
-        else if(i == 3 && opcode != OP_EQUALVERIFY) return false;
-        else if(i == 4 && opcode != OP_CHECKSIG) return false;
-        else if(i == 5) return false;
-
-        i++;
-    }
-
-    return true;
-}
-
 bool CScript::IsPayToPublicKeyHash() const
 {
     // Extra-fast test for pay-to-pubkey-hash CScripts:
     return (this->size() == 25 &&
-	    (*this)[0] == OP_DUP &&
-	    (*this)[1] == OP_HASH160 &&
-	    (*this)[2] == 0x14 &&
-	    (*this)[23] == OP_EQUALVERIFY &&
-	    (*this)[24] == OP_CHECKSIG);
+            (*this)[0] == OP_DUP &&
+            (*this)[1] == OP_HASH160 &&
+            (*this)[2] == 0x14 &&
+            (*this)[23] == OP_EQUALVERIFY &&
+            (*this)[24] == OP_CHECKSIG);
 }
 
 bool CScript::IsPayToScriptHash() const
@@ -242,6 +225,44 @@ bool CScript::IsPayToScriptHash() const
             (*this)[0] == OP_HASH160 &&
             (*this)[1] == 0x14 &&
             (*this)[22] == OP_EQUAL);
+}
+
+bool CScript::IsPayToPublicKey() const
+{
+    // Test for pay-to-pubkey CScript with both
+    // compressed or uncompressed pubkey
+    if (this->size() == 35) {
+        return ((*this)[1] == 0x02 || (*this)[1] == 0x03) &&
+                (*this)[34] == OP_CHECKSIG;
+    }
+    if (this->size() == 67) {
+        return (*this)[1] == 0x04 &&
+                (*this)[66] == OP_CHECKSIG;
+    }
+    return false;
+}
+
+std::string CScript::ToString() const
+{
+    std::string str;
+    opcodetype opcode;
+    std::vector<unsigned char> vch;
+    const_iterator pc = begin();
+    while (pc < end())
+    {
+        if (!str.empty())
+            str += " ";
+        if (!GetOp(pc, opcode, vch))
+        {
+            str += "[error]";
+            return str;
+        }
+        if (0 <= opcode && opcode <= OP_PUSHDATA4)
+            str += ValueString(vch);
+        else
+            str += GetOpName(opcode);
+    }
+    return str;
 }
 
 bool CScript::IsPushOnly(const_iterator pc) const

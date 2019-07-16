@@ -1,97 +1,73 @@
-SecureTag version 0.12.1 is now available from:
+SecureTag Core version 0.12.3.3
+==========================
 
-  <https://www.securetag.org/downloads/>
+Release is now available from:
+
+  <https://www.securetagpay.org/downloads/#wallets>
+
+This is a critical bugfix release.
+
+Please report bugs using the issue tracker at github:
+
+  <https://github.com/securetagpay/securetag/issues>
 
 
+Upgrading and downgrading
+=========================
+
+How to Upgrade
+--------------
+
+If you are running an older version, shut it down. Wait until it has completely
+shut down (which might take a few minutes for older versions), then run the
+installer (on Windows) or just copy over /Applications/SecureTag-Qt (on Mac) or
+securetagd/securetag-qt (on Linux).
+
+Downgrade warning
+-----------------
+
+### Downgrade to a version < 0.12.2.2
+
+Because release 0.12.2.2 included the [per-UTXO fix](release-notes/securetag/release-notes-0.12.2.2.md#per-utxo-fix)
+which changed the structure of the internal database, you will have to reindex
+the database if you decide to use any pre-0.12.2.2 version.
+
+Wallet forward or backward compatibility was not affected.
+
+### Downgrade to 0.12.2.2/3, 0.12.3.1/2
+
+Downgrading to these versions does not require any additional actions, should be
+fully compatible.
+
+
+Notable changes
+===============
+
+Fix crash bug with duplicate inputs within a transaction
+--------------------------------------------------------
+
+There was a critical bug discovered in Bitcoin Core's codebase recently which
+can cause node receiving a block to crash https://github.com/bitcoin/bitcoin/pull/14247
+
+0.12.3.3 Change log
+===================
+
+See detailed [set of changes](https://github.com/securetagpay/securetag/compare/v0.12.3.2...securetagpay:v0.12.3.3).
+
+Credits
+=======
+
+Thanks to everyone who directly contributed to this release,
+as well as everyone who submitted issues and reviewed pull requests.
 
 
 Older releases
---------------
+==============
 
 SecureTag was previously known as Darkcoin.
 
 Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
-
-### Downgrade to a version < 0.12.0
-
-Because release 0.12.0 and later will obfuscate the chainstate on every
-fresh sync or reindex, the chainstate is not backwards-compatible with
-pre-0.12 versions of Bitcoin Core or other software.
-
-If you want to downgrade after you have done a reindex with 0.12.0 or later,
-you will need to reindex when you first start Bitcoin Core version 0.11 or
-earlier.
-
-Notable changes
-===============
-
-Example item
----------------------------------------
-
-Example text.
-
-0.12.1 Change log
-=================
-
-Detailed release notes follow. This overview includes changes that affect
-behavior, not code moves, refactors and string updates. For convenience in locating
-the code changes and accompanying discussion, both the pull request and
-git merge commit are mentioned.
-
-### RPC and REST
-
-Asm script outputs replacements for OP_NOP2 and OP_NOP3
--------------------------------------------------------
-
-OP_NOP2 has been renamed to OP_CHECKLOCKTIMEVERIFY by [BIP 
-65](https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki)
-
-OP_NOP3 has been renamed to OP_CHECKSEQUENCEVERIFY by [BIP 
-112](https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki)
-
-The following outputs are affected by this change:
-- RPC `getrawtransaction` (in verbose mode)
-- RPC `decoderawtransaction`
-- RPC `decodescript`
-- REST `/rest/tx/` (JSON format)
-- REST `/rest/block/` (JSON format when including extended tx details)
-- `bitcoin-tx -json`
-
-### ZMQ
-
-Each ZMQ notification now contains an up-counting sequence number that allows
-listeners to detect lost notifications.
-The sequence number is always the last element in a multi-part ZMQ notification and
-therefore backward compatible.
-Each message type has its own counter.
-(https://github.com/bitcoin/bitcoin/pull/7762)
-
-### Configuration and command-line options
-
-### Block and transaction handling
-
-### P2P protocol and network code
-
-### Validation
-
-### Build system
-
-### Wallet
-
-### GUI
-
-### Tests and QA
-
-### Miscellaneous
-
-Credits
-=======
-
-Thanks to everyone who directly contributed to this release:
-
-
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
 
 Darkcoin tree 0.9.x was the open source implementation of masternodes based on
 the 0.8.x tree and was first released on Mar/13/2014.
@@ -99,17 +75,25 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-SecureTag tree 0.11.x was a fork of Bitcoin Core tree 0.9, Darkcoin was rebranded
-to SecureTag.
+SecureTag Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Darkcoin was rebranded to SecureTag.
 
-SecureTag tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+SecureTag Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
 
-These release are considered obsolete. Old changelogs can be found here:
+SecureTag Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
 
-- [v0.12.0](release-notes/securetag/release-notes-0.12.0.md) released ???/??/2015
-- [v0.11.2](release-notes/securetag/release-notes-0.11.2.md) released Mar/25/2015
-- [v0.11.1](release-notes/securetag/release-notes-0.11.1.md) released Feb/10/2015
-- [v0.11.0](release-notes/securetag/release-notes-0.11.0.md) released Jan/15/2015
-- [v0.10.x](release-notes/securetag/release-notes-0.10.0.md) released Sep/25/2014
-- [v0.9.x](release-notes/securetag/release-notes-0.9.0.md) released Mar/13/2014
+These release are considered obsolete. Old release notes can be found here:
+
+- [v0.12.3.2](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.12.3.2.md) released Jul/09/2018
+- [v0.12.3.1](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.12.3.1.md) released Jul/03/2018
+- [v0.12.2.3](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.12.2.3.md) released Jan/12/2018
+- [v0.12.2.2](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.12.2.2.md) released Dec/17/2017
+- [v0.12.2](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.12.2.md) released Nov/08/2017
+- [v0.12.1](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.12.1.md) released Feb/06/2017
+- [v0.12.0](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.12.0.md) released Jun/15/2015
+- [v0.11.2](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.11.2.md) released Mar/04/2015
+- [v0.11.1](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.11.1.md) released Feb/10/2015
+- [v0.11.0](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.11.0.md) released Jan/15/2015
+- [v0.10.x](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.10.0.md) released Sep/25/2014
+- [v0.9.x](https://github.com/securetagpay/securetag/blob/master/doc/release-notes/securetag/release-notes-0.9.0.md) released Mar/13/2014
 

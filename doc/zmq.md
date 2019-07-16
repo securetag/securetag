@@ -1,11 +1,11 @@
-# Block and Transaction Broadcasting With ZeroMQ
+# Block and Transaction Broadcasting with ZeroMQ
 
 [ZeroMQ](http://zeromq.org/) is a lightweight wrapper around TCP
 connections, inter-process communication, and shared-memory,
 providing various message-oriented semantics such as publish/subscribe,
 request/reply, and push/pull.
 
-The SecureTag daemon can be configured to act as a trusted "border
+The SecureTag Core daemon can be configured to act as a trusted "border
 router", implementing the securetag wire protocol and relay, making
 consensus decisions, maintaining the local blockchain database,
 broadcasting locally generated transactions into the network, and
@@ -33,12 +33,12 @@ buffering or reassembly.
 
 ## Prerequisites
 
-The ZeroMQ feature in SecureTag requires ZeroMQ API version 4.x or
+The ZeroMQ feature in SecureTag Core requires ZeroMQ API version 4.x or
 newer. Typically, it is packaged by distributions as something like
 *libzmq3-dev*. The C++ wrapper for ZeroMQ is *not* needed.
 
 In order to run the example Python client scripts in contrib/ one must
-also install *python-zmq*, though this is not necessary for daemon
+also install *python3-zmq*, though this is not necessary for daemon
 operation.
 
 ## Enabling
@@ -50,7 +50,7 @@ during the *configure* step of building bitcoind:
     $ ./configure --disable-zmq (other options)
 
 To actually enable operation, one must set the appropriate options on
-the commandline or in the configuration file.
+the command line or in the configuration file.
 
 ## Usage
 

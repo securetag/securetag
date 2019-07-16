@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="en" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -163,17 +165,7 @@
         <translation>Repeat new passphrase</translation>
     </message>
     <message>
-        <location line="+33"/>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Only for mixing via PrivateSend</source>
-        <translation>Only for mixing via PrivateSend</translation>
-    </message>
-    <message>
-        <location filename="../askpassphrasedialog.cpp" line="+43"/>
+        <location filename="../askpassphrasedialog.cpp" line="+47"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</translation>
     </message>
@@ -183,12 +175,18 @@
         <translation>Encrypt wallet</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+3"/>
+        <location line="+8"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>This operation needs your wallet passphrase to unlock the wallet.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-3"/>
+        <source>Unlock wallet for mixing only</source>
+        <translation>Unlock wallet for mixing only</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Unlock wallet</source>
         <translation>Unlock wallet</translation>
     </message>
@@ -208,14 +206,19 @@
         <translation>Change passphrase</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+1"/>
+        <source>Enter the old passphrase and new passphrase to the wallet.</source>
+        <translation>Enter the old passphrase and new passphrase to the wallet.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
         <source>Confirm wallet encryption</source>
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR STG&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR STG&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SECURETAG&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SECURETAG&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -223,28 +226,30 @@
         <translation>Are you sure you wish to encrypt your wallet?</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <location line="+59"/>
+        <location line="+10"/>
+        <location line="+12"/>
+        <location line="+60"/>
         <source>Wallet encrypted</source>
         <translation>Wallet encrypted</translation>
     </message>
     <message>
-        <location line="-114"/>
-        <source>Enter the old passphrase and new passphrase to the wallet.</source>
-        <translation>Enter the old passphrase and new passphrase to the wallet.</translation>
+        <location line="-70"/>
+        <location line="+12"/>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your funds from being stolen by malware infecting your computer.</source>
+        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your funds from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
-        <location line="+57"/>
-        <source>SecureTag will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your securetags from being stolen by malware infecting your computer.</source>
-        <translation>SecureTag will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your securetags from being stolen by malware infecting your computer.</translation>
+        <location line="-8"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. Previous backups of the unencrypted wallet file contain the same HD seed and still have full access to all your funds just like the new, encrypted wallet.</source>
+        <translation>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. Previous backups of the unencrypted wallet file contain the same HD seed and still have full access to all your funds just like the new, encrypted wallet.</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+12"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <location line="+7"/>
         <location line="+43"/>
         <location line="+6"/>
@@ -294,7 +299,7 @@
 <context>
     <name>BanTableModel</name>
     <message>
-        <location filename="../bantablemodel.cpp" line="+88"/>
+        <location filename="../bantablemodel.cpp" line="+89"/>
         <source>IP/Netmask</source>
         <translation>IP/Netmask</translation>
     </message>
@@ -307,13 +312,17 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+127"/>
-        <location line="+919"/>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
+        <location filename="../securetag.cpp" line="+558"/>
+        <source>A fatal error occurred. SecureTag Core can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. SecureTag Core can no longer continue safely and will quit.</translation>
     </message>
     <message>
-        <location line="-910"/>
+        <location filename="../bitcoingui.cpp" line="+1127"/>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
+    </message>
+    <message>
+        <location line="-984"/>
         <source>Wallet</source>
         <translation>Wallet</translation>
     </message>
@@ -323,7 +332,7 @@
         <translation>Node</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+147"/>
         <source>&amp;Overview</source>
         <translation>&amp;Overview</translation>
     </message>
@@ -383,14 +392,9 @@
         <translation>Quit application</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>&amp;About SecureTag</source>
-        <translation>&amp;About SecureTag</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Show information about SecureTag</source>
-        <translation>Show information about SecureTag</translation>
+        <location line="+4"/>
+        <source>Show information about SecureTag Core</source>
+        <translation>Show information about SecureTag Core</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -408,7 +412,17 @@
         <translation>&amp;Options...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-7"/>
+        <source>&amp;About %1</source>
+        <translation>&amp;About %1</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Modify configuration options for %1</source>
+        <translation>Modify configuration options for %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>&amp;Show / Hide</source>
         <translation>&amp;Show / Hide</translation>
     </message>
@@ -533,12 +547,27 @@
         <translation>Show wallet repair options</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Open Wallet &amp;Configuration File</source>
+        <translation>Open Wallet &amp;Configuration File</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Open configuration file</source>
         <translation>Open configuration file</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
+        <source>Open &amp;Masternode Configuration File</source>
+        <translation>Open &amp;Masternode Configuration File</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open Masternode configuration file</source>
+        <translation>Open Masternode configuration file</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show Automatic &amp;Backups</source>
         <translation>Show Automatic &amp;Backups</translation>
     </message>
@@ -583,17 +612,27 @@
         <translation>&amp;Command-line options</translation>
     </message>
     <message>
-        <location line="+267"/>
-        <source>SecureTag client</source>
-        <translation>SecureTag client</translation>
+        <location line="+2"/>
+        <source>Show the %1 help message to get a list with possible SecureTag command-line options</source>
+        <translation>Show the %1 help message to get a list with possible SecureTag command-line options</translation>
     </message>
     <message>
-        <location line="+334"/>
-        <source>Synchronizing additional data: %p%</source>
-        <translation>Synchronizing additional data: %p%</translation>
+        <location line="+290"/>
+        <source>%1 client</source>
+        <translation>%1 client</translation>
     </message>
     <message>
-        <location line="-533"/>
+        <location line="-288"/>
+        <source>&amp;PrivateSend information</source>
+        <translation>&amp;PrivateSend information</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show the PrivateSend basic information</source>
+        <translation>Show the PrivateSend basic information</translation>
+    </message>
+    <message>
+        <location line="+62"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
@@ -613,108 +652,63 @@
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+13"/>
         <source>Tabs toolbar</source>
         <translation>Tabs toolbar</translation>
     </message>
     <message numerus="yes">
-        <location line="+347"/>
+        <location line="+372"/>
         <source>%n active connection(s) to SecureTag network</source>
-        <translation><numerusform>%n active connection to SecureTag network</numerusform><numerusform>%n active connections to SecureTag network</numerusform></translation>
+        <translation>
+            <numerusform>%n active connection to SecureTag network</numerusform>
+            <numerusform>%n active connections to SecureTag network</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+2"/>
+        <source>Network activity disabled</source>
+        <translation>Network activity disabled</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Syncing Headers (%1%)...</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Synchronizing with network...</source>
         <translation>Synchronizing with network...</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Importing blocks from disk...</source>
-        <translation>Importing blocks from disk...</translation>
+        <location line="+5"/>
+        <source>Indexing blocks on disk...</source>
+        <translation>Indexing blocks on disk...</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>Processing blocks on disk...</source>
+        <translation>Processing blocks on disk...</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Reindexing blocks on disk...</source>
         <translation>Reindexing blocks on disk...</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>No block source available...</source>
-        <translation>No block source available...</translation>
-    </message>
-    <message>
-        <location line="+92"/>
-        <source>Up to date</source>
-        <translation>Up to date</translation>
-    </message>
-    <message numerus="yes">
-        <location line="-68"/>
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n hour</numerusform><numerusform>%n hours</numerusform></translation>
-    </message>
-    <message>
-        <location line="-567"/>
-        <source>Modify configuration options for SecureTag</source>
-        <translation>Modify configuration options for SecureTag</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Open Wallet &amp;Configuration File</source>
-        <translation>Open Wallet &amp;Configuration File</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Open &amp;Masternode Configuration File</source>
-        <translation>Open &amp;Masternode Configuration File</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Open Masternode configuration file</source>
-        <translation>Open Masternode configuration file</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Show the SecureTag help message to get a list with possible SecureTag command-line options</source>
-        <translation>Show the SecureTag help message to get a list with possible SecureTag command-line options</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;PrivateSend information</source>
-        <translation>&amp;PrivateSend information</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Show the PrivateSend basic information</source>
-        <translation>Show the PrivateSend basic information</translation>
-    </message>
-    <message numerus="yes">
-        <location line="+494"/>
-        <source>Processed %n block(s) of transaction history.</source>
-        <translation><numerusform>Processed %n block(s) of transaction history.</numerusform><numerusform>Processed %n block(s) of transaction history.</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="+19"/>
-        <source>%n day(s)</source>
-        <translation><numerusform>%n day</numerusform><numerusform>%n days</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
         <location line="+6"/>
-        <source>%n week(s)</source>
-        <translation><numerusform>%n week</numerusform><numerusform>%n weeks</numerusform></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>%1 and %2</source>
-        <translation>%1 and %2</translation>
+        <source>Connecting to peers...</source>
+        <translation>Connecting to peers...</translation>
     </message>
     <message numerus="yes">
-        <location line="+0"/>
-        <source>%n year(s)</source>
-        <translation><numerusform>%n year</numerusform><numerusform>%n years</numerusform></translation>
+        <location line="+9"/>
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation>
+            <numerusform>Processed %n block of transaction history.</numerusform>
+            <numerusform>Processed %n blocks of transaction history.</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+26"/>
         <source>%1 behind</source>
         <translation>%1 behind</translation>
     </message>
@@ -724,7 +718,7 @@
         <translation>Catching up...</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+18"/>
         <source>Last received block was generated %1 ago.</source>
         <translation>Last received block was generated %1 ago.</translation>
     </message>
@@ -734,7 +728,17 @@
         <translation>Transactions after this will not yet be visible.</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+29"/>
+        <source>Up to date</source>
+        <translation>Up to date</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Synchronizing additional data: %p%</source>
+        <translation>Synchronizing additional data: %p%</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -749,7 +753,7 @@
         <translation>Information</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+95"/>
         <source>Date: %1
 </source>
         <translation>Date: %1
@@ -794,17 +798,27 @@
         <translation>Incoming transaction</translation>
     </message>
     <message>
-        <location line="+75"/>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</source>
-        <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</translation>
+        <location line="+54"/>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+0"/>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+10"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</source>
+        <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
@@ -812,12 +826,12 @@
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+79"/>
+        <location filename="../clientmodel.cpp" line="+86"/>
         <source>Total: %1 (PS compatible: %2 / Enabled: %3)</source>
         <translation>Total: %1 (PS compatible: %2 / Enabled: %3)</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+126"/>
         <source>Network Alert</source>
         <translation>Network Alert</translation>
     </message>
@@ -840,27 +854,22 @@
         <translation>Amount:</translation>
     </message>
     <message>
-        <location line="+29"/>
-        <source>Priority:</source>
-        <translation>Priority:</translation>
-    </message>
-    <message>
-        <location line="+45"/>
+        <location line="+80"/>
         <source>Fee:</source>
         <translation>Fee:</translation>
     </message>
     <message>
-        <location line="-182"/>
+        <location line="-188"/>
         <source>Coin Selection</source>
         <translation>Coin Selection</translation>
     </message>
     <message>
-        <location line="+214"/>
+        <location line="+140"/>
         <source>Dust:</source>
         <translation>Dust:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+93"/>
         <source>After Fee:</source>
         <translation>After Fee:</translation>
     </message>
@@ -930,12 +939,7 @@
         <translation>Confirmed</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Priority</source>
-        <translation>Priority</translation>
-    </message>
-    <message>
-        <location filename="../coincontroldialog.cpp" line="+54"/>
+        <location filename="../coincontroldialog.cpp" line="+62"/>
         <source>Copy address</source>
         <translation>Copy address</translation>
     </message>
@@ -987,11 +991,6 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Copy priority</source>
-        <translation>Copy priority</translation>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Copy dust</source>
         <translation>Copy dust</translation>
     </message>
@@ -1001,126 +1000,43 @@
         <translation>Copy change</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+148"/>
         <source>Please switch to &quot;List mode&quot; to use this function.</source>
         <translation>Please switch to &quot;List mode&quot; to use this function.</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+196"/>
         <source>Non-anonymized input selected. &lt;b&gt;PrivateSend will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use PrivateSend, please deselect all non-nonymized inputs first and then check PrivateSend checkbox again.</source>
         <translation>Non-anonymized input selected. &lt;b&gt;PrivateSend will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use PrivateSend, please deselect all non-nonymized inputs first and then check PrivateSend checkbox again.</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>highest</source>
-        <translation>highest</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>higher</source>
-        <translation>higher</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>high</source>
-        <translation>high</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>medium-high</source>
-        <translation>medium-high</translation>
-    </message>
-    <message>
-        <location line="+216"/>
-        <source>This label turns red if the transaction size is greater than 1000 bytes.</source>
-        <translation>This label turns red if the transaction size is greater than 1000 bytes.</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>This label turns red if the priority is smaller than &quot;medium&quot;.</source>
-        <translation>This label turns red if the priority is smaller than &quot;medium&quot;.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>This label turns red if any recipient receives an amount smaller than %1.</source>
-        <translation>This label turns red if any recipient receives an amount smaller than %1.</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Can vary +/- %1 duff(s) per input.</source>
-        <translation>Can vary +/- %1 duff(s) per input.</translation>
-    </message>
-    <message>
-        <location line="+131"/>
-        <source>n/a</source>
-        <translation>n/a</translation>
-    </message>
-    <message>
-        <location filename="../forms/coincontroldialog.ui" line="-334"/>
-        <location filename="../coincontroldialog.cpp" line="-363"/>
-        <source>medium</source>
-        <translation>medium</translation>
-    </message>
-    <message>
-        <location filename="../coincontroldialog.cpp" line="+1"/>
-        <source>low-medium</source>
-        <translation>low-medium</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>low</source>
-        <translation>low</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>lower</source>
-        <translation>lower</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>lowest</source>
-        <translation>lowest</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+29"/>
         <source>(%1 locked)</source>
         <translation>(%1 locked)</translation>
     </message>
     <message>
-        <location line="+28"/>
-        <source>none</source>
-        <translation>none</translation>
-    </message>
-    <message>
-        <location line="+157"/>
+        <location line="+177"/>
         <source>yes</source>
         <translation>yes</translation>
     </message>
     <message>
-        <location filename="../forms/coincontroldialog.ui" line="+80"/>
-        <location filename="../coincontroldialog.cpp" line="+0"/>
+        <location line="+0"/>
         <source>no</source>
         <translation>no</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+17"/>
-        <location line="+5"/>
-        <source>This means a fee of at least %1 per kB is required.</source>
-        <translation>This means a fee of at least %1 per kB is required.</translation>
+        <location line="+14"/>
+        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
+        <translation>This label turns red if any recipient receives an amount smaller than the current dust threshold.</translation>
     </message>
     <message>
-        <location line="-4"/>
-        <source>Can vary +/- 1 byte per input.</source>
-        <translation>Can vary +/- 1 byte per input.</translation>
+        <location line="+9"/>
+        <source>Can vary +/- %1 politoshi(s) per input.</source>
+        <translation>Can vary +/- %1 politoshi(s) per input.</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Transactions with higher priority are more likely to get included into a block.</source>
-        <translation>Transactions with higher priority are more likely to get included into a block.</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <location line="+64"/>
+        <location line="+43"/>
+        <location line="+56"/>
         <source>(no label)</source>
         <translation>(no label)</translation>
     </message>
@@ -1133,6 +1049,11 @@
         <location line="+1"/>
         <source>(change)</source>
         <translation>(change)</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>n/a</source>
+        <translation>n/a</translation>
     </message>
 </context>
 <context>
@@ -1164,13 +1085,13 @@
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Use 2 separate masternodes to mix funds up to 1000 STG</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Use 2 separate masternodes to mix funds up to 1000 SECURETAG</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Use 8 separate masternodes to mix funds up to 1000 STG</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Use 8 separate masternodes to mix funds up to 1000 SECURETAG</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1179,30 +1100,23 @@
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 STG to anonymize 1000 STG</source>
-        <translation>This option is the quickest and will cost about ~0.025 STG to anonymize 1000 STG</translation>
+        <source>This option is the quickest and will cost about ~0.025 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>This option is the quickest and will cost about ~0.025 SECURETAG to anonymize 1000 SECURETAG</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 STG to anonymize 1000 STG</source>
-        <translation>This option is moderately fast and will cost about 0.05 STG to anonymize 1000 STG</translation>
+        <source>This option is moderately fast and will cost about 0.05 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>This option is moderately fast and will cost about 0.05 SECURETAG to anonymize 1000 SECURETAG</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>0.1 STG per 1000 STG you anonymize.</source>
-        <translation>0.1 STG per 1000 STG you anonymize.</translation>
+        <source>0.1 SECURETAG per 1000 SECURETAG you anonymize.</source>
+        <translation>0.1 SECURETAG per 1000 SECURETAG you anonymize.</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>This is the slowest and most secure option. Using maximum anonymity will cost</translation>
-    </message>
-    <message>
-        <location filename="../darksendconfig.cpp" line="+43"/>
-        <location line="+15"/>
-        <location line="+15"/>
-        <source>PrivateSend Configuration</source>
-        <translation>PrivateSend Configuration</translation>
     </message>
     <message>
         <location line="-29"/>
@@ -1291,7 +1205,7 @@
 <context>
     <name>FreespaceChecker</name>
     <message>
-        <location filename="../intro.cpp" line="+75"/>
+        <location filename="../intro.cpp" line="+79"/>
         <source>A new data directory will be created.</source>
         <translation>A new data directory will be created.</translation>
     </message>
@@ -1319,12 +1233,7 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <location filename="../utilitydialog.cpp" line="+37"/>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
-    </message>
-    <message>
-        <location line="+0"/>
+        <location filename="../utilitydialog.cpp" line="+41"/>
         <source>version</source>
         <translation>version</translation>
     </message>
@@ -1336,8 +1245,8 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>About SecureTag</source>
-        <translation>About SecureTag</translation>
+        <source>About %1</source>
+        <translation>About %1</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1365,27 +1274,7 @@
         <translation>Choose data directory on startup (default: %u)</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Show splash screen on startup (default: %u)</source>
-        <translation>Show splash screen on startup (default: %u)</translation>
-    </message>
-    <message>
         <location line="+1"/>
-        <source>Reset all settings changes made over the GUI</source>
-        <translation>Reset all settings changes made over the GUI</translation>
-    </message>
-    <message>
-        <location line="+42"/>
-        <source>PrivateSend information</source>
-        <translation>PrivateSend information</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 STG, 0.1 STG, 1 STG and 10 STG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
-        <translation>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 STG, 0.1 STG, 1 STG and 10 STG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
-    </message>
-    <message>
-        <location line="-50"/>
         <source>Set language, for example &quot;de_DE&quot; (default: system locale)</source>
         <translation>Set language, for example &quot;de_DE&quot; (default: system locale)</translation>
     </message>
@@ -1399,6 +1288,26 @@
         <source>Set SSL root certificates for payment request (default: -system-)</source>
         <translation>Set SSL root certificates for payment request (default: -system-)</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>Show splash screen on startup (default: %u)</source>
+        <translation>Show splash screen on startup (default: %u)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset all settings changed in the GUI</source>
+        <translation>Reset all settings changed in the GUI</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>PrivateSend information</source>
+        <translation>PrivateSend information</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 SECURETAG, 0.1 SECURETAG, 1 SECURETAG and 10 SECURETAG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
+        <translation>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 SECURETAG, 0.1 SECURETAG, 1 SECURETAG and 10 SECURETAG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;masternodes.&quot; These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href=&quot;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&quot;&gt;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
+    </message>
 </context>
 <context>
     <name>Intro</name>
@@ -1409,18 +1318,18 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to SecureTag.</source>
-        <translation>Welcome to SecureTag.</translation>
+        <source>Welcome to %1.</source>
+        <translation>Welcome to %1.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where SecureTag will store its data.</source>
-        <translation>As this is the first time the program is launched, you can choose where SecureTag will store its data.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>As this is the first time the program is launched, you can choose where %1 will store its data.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>SecureTag will download and store a copy of the SecureTag block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>SecureTag will download and store a copy of the SecureTag block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
+        <source>%1 will download and store a copy of the SecureTag block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 will download and store a copy of the SecureTag block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1433,17 +1342,12 @@
         <translation>Use a custom data directory:</translation>
     </message>
     <message>
-        <location filename="../intro.cpp" line="+88"/>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location filename="../intro.cpp" line="+96"/>
         <source>Error: Specified data directory &quot;%1&quot; cannot be created.</source>
         <translation>Error: Specified data directory &quot;%1&quot; cannot be created.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -1476,48 +1380,54 @@
         <translation>Note: Status of your masternodes in local wallet can potentially be slightly incorrect.&lt;br /&gt;Always wait for wallet to sync additional data and then double check from another node&lt;br /&gt;if your masternode should be running but you still do not see &quot;ENABLED&quot; in &quot;Status&quot; field.</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+34"/>
+        <location filename="../masternodelist.cpp" line="+493"/>
         <source>Alias</source>
         <translation>Alias</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+123"/>
+        <location line="+130"/>
         <source>Address</source>
         <translation>Address</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+123"/>
+        <location line="-125"/>
+        <location line="+130"/>
+        <location filename="../masternodelist.cpp" line="+5"/>
         <source>Protocol</source>
         <translation>Protocol</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+123"/>
+        <location line="-125"/>
+        <location line="+130"/>
+        <location filename="../masternodelist.cpp" line="+3"/>
         <source>Status</source>
         <translation>Status</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+123"/>
+        <location line="-125"/>
+        <location line="+130"/>
+        <location filename="../masternodelist.cpp" line="+2"/>
         <source>Active</source>
         <translation>Active</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+123"/>
+        <location line="-125"/>
+        <location line="+130"/>
+        <location filename="../masternodelist.cpp" line="+1"/>
         <source>Last Seen</source>
         <translation>Last Seen</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+123"/>
+        <location line="-125"/>
+        <location line="+130"/>
+        <location filename="../masternodelist.cpp" line="-2"/>
         <source>Payee</source>
         <translation>Payee</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-117"/>
         <source>S&amp;tart alias</source>
         <translation>S&amp;tart alias</translation>
     </message>
@@ -1538,22 +1448,32 @@
     </message>
     <message>
         <location line="+7"/>
+        <source>Show additional Masternode information</source>
+        <translation>Show additional Masternode information</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Show &amp;Info...</source>
+        <translation>Show &amp;Info...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Status will be updated automatically in (sec):</source>
         <translation>Status will be updated automatically in (sec):</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+122"/>
+        <location line="+119"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-94"/>
         <source>All Masternodes</source>
         <translation>All Masternodes</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+60"/>
         <source>Filter List:</source>
         <translation>Filter List:</translation>
     </message>
@@ -1568,12 +1488,12 @@
         <translation>Node Count:</translation>
     </message>
     <message>
-        <location filename="../masternodelist.cpp" line="+50"/>
+        <location filename="../masternodelist.cpp" line="-439"/>
         <source>Start alias</source>
         <translation>Start alias</translation>
     </message>
     <message>
-        <location line="+278"/>
+        <location line="+289"/>
         <source>Confirm masternode start</source>
         <translation>Confirm masternode start</translation>
     </message>
@@ -1611,6 +1531,113 @@
         <location line="+1"/>
         <source>Are you sure you want to start MISSING masternodes?</source>
         <translation>Are you sure you want to start MISSING masternodes?</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Additional information for Masternode %1</source>
+        <translation>Additional information for Masternode %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Masternode Private Key</source>
+        <translation>Masternode Private Key</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Private Key</source>
+        <translation>Private Key</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Collateral</source>
+        <translation>Collateral</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Version</source>
+        <translation>Version</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+1"/>
+        <source>Unknown</source>
+        <translation>Unknown</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sentinel</source>
+        <translation>Sentinel</translation>
+    </message>
+</context>
+<context>
+    <name>ModalOverlay</name>
+    <message>
+        <location filename="../forms/modaloverlay.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+117"/>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the SecureTag network, as detailed below.</source>
+        <translation>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the SecureTag network, as detailed below.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Attempting to spend SecureTag that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Attempting to spend SecureTag that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+    </message>
+    <message>
+        <location line="+63"/>
+        <source>Number of blocks left</source>
+        <translation>Number of blocks left</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+26"/>
+        <location filename="../modaloverlay.cpp" line="+141"/>
+        <source>Unknown...</source>
+        <translation>Unknown...</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Last block time</source>
+        <translation>Last block time</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Progress</source>
+        <translation>Progress</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Progress increase per hour</source>
+        <translation>Progress increase per hour</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+20"/>
+        <source>calculating...</source>
+        <translation>calculating...</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Estimated time left until synced</source>
+        <translation>Estimated time left until synced</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Hide</source>
+        <translation>Hide</translation>
+    </message>
+    <message>
+        <location filename="../modaloverlay.cpp" line="-1"/>
+        <source>Unknown. Syncing Headers (%1)...</source>
+        <translation>Unknown. Syncing Headers (%1)...</translation>
     </message>
 </context>
 <context>
@@ -1684,17 +1711,7 @@
         <translation>W&amp;allet</translation>
     </message>
     <message>
-        <location line="-104"/>
-        <source>Automatically start SecureTag after logging in to the system.</source>
-        <translation>Automatically start SecureTag after logging in to the system.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Start SecureTag on system login</source>
-        <translation>&amp;Start SecureTag on system login</translation>
-    </message>
-    <message>
-        <location line="+123"/>
+        <location line="+22"/>
         <source>Show additional tab listing all your masternodes in first sub-tab&lt;br/&gt;and all masternodes on the network in second sub-tab.</source>
         <translation>Show additional tab listing all your masternodes in first sub-tab&lt;br/&gt;and all masternodes on the network in second sub-tab.</translation>
     </message>
@@ -1750,8 +1767,8 @@
     </message>
     <message>
         <location line="+60"/>
-        <source>Automatically open the SecureTag client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the SecureTag client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the SecureTag Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the SecureTag Core client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1774,23 +1791,18 @@
         <translation>&amp;Connect through SOCKS5 proxy (default proxy):</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+315"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
         <translation>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</translation>
     </message>
     <message>
-        <location line="+45"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting SecureTag.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting SecureTag.</translation>
-    </message>
-    <message>
-        <location line="+99"/>
+        <location line="+144"/>
         <location line="+13"/>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items.&lt;br/&gt;%s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items.&lt;br/&gt;%s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-653"/>
         <source>Expert</source>
         <translation>Expert</translation>
     </message>
@@ -1805,7 +1817,17 @@
         <translation>Whether to show coin control features or not.</translation>
     </message>
     <message>
+        <location line="-116"/>
+        <source>Automatically start %1 after logging in to the system.</source>
+        <translation>Automatically start %1 after logging in to the system.</translation>
+    </message>
+    <message>
         <location line="+3"/>
+        <source>&amp;Start %1 on system login</source>
+        <translation>&amp;Start %1 on system login</translation>
+    </message>
+    <message>
+        <location line="+116"/>
         <source>Enable coin &amp;control features</source>
         <translation>Enable coin &amp;control features</translation>
     </message>
@@ -1892,6 +1914,16 @@
     </message>
     <message>
         <location line="+6"/>
+        <source>&amp;Hide the icon from the system tray.</source>
+        <translation>&amp;Hide the icon from the system tray.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hide tray icon</source>
+        <translation>Hide tray icon</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Show only a tray icon after minimizing the window.</source>
         <translation>Show only a tray icon after minimizing the window.</translation>
     </message>
@@ -1916,7 +1948,12 @@
         <translation>User Interface &amp;language:</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+13"/>
+        <source>The user interface language can be set here. This setting will take effect after restarting %1.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting %1.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
 https://www.transifex.com/projects/p/securetag/</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
@@ -1973,7 +2010,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>&amp;Cancel</translation>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+100"/>
+        <location filename="../optionsdialog.cpp" line="+108"/>
         <source>default</source>
         <translation>default</translation>
     </message>
@@ -1983,28 +2020,28 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>none</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+84"/>
         <source>Confirm options reset</source>
         <translation>Confirm options reset</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+32"/>
+        <location line="+48"/>
         <source>Client restart required to activate changes.</source>
         <translation>Client restart required to activate changes.</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-48"/>
         <source>Client will be shut down. Do you want to proceed?</source>
         <translation>Client will be shut down. Do you want to proceed?</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+52"/>
         <source>This change would require a client restart.</source>
         <translation>This change would require a client restart.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
         <source>The supplied proxy address is invalid.</source>
         <translation>The supplied proxy address is invalid.</translation>
     </message>
@@ -2017,7 +2054,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Form</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <location line="+355"/>
         <location line="+258"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SecureTag network after a connection is established, but this process has not completed yet.</source>
@@ -2100,7 +2137,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+35"/>
-        <location filename="../overviewpage.cpp" line="+497"/>
+        <location filename="../overviewpage.cpp" line="+502"/>
         <location line="+12"/>
         <location line="+8"/>
         <location line="+61"/>
@@ -2152,8 +2189,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 STG / 0 Rounds</source>
-        <translation>0 STG / 0 Rounds</translation>
+        <source>0 SECURETAG / 0 Rounds</source>
+        <translation>0 SECURETAG / 0 Rounds</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2201,42 +2238,58 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="-466"/>
+        <location filename="../overviewpage.cpp" line="-471"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>out of sync</source>
         <translation>out of sync</translation>
     </message>
     <message>
-        <location line="+325"/>
-        <location line="+48"/>
-        <location line="+140"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+3"/>
-        <source>Disabled</source>
-        <translation>Disabled</translation>
+        <location line="+16"/>
+        <source>Automatic backups are disabled, no mixing available!</source>
+        <translation>Automatic backups are disabled, no mixing available!</translation>
     </message>
     <message>
-        <location line="-332"/>
+        <location line="+4"/>
+        <location line="+308"/>
+        <location line="+155"/>
+        <source>Start Mixing</source>
+        <translation>Start Mixing</translation>
+    </message>
+    <message>
+        <location line="-461"/>
+        <location line="+464"/>
+        <source>Stop Mixing</source>
+        <translation>Stop Mixing</translation>
+    </message>
+    <message>
+        <location line="-295"/>
         <location line="+6"/>
         <source>No inputs detected</source>
         <translation>No inputs detected</translation>
     </message>
     <message numerus="yes">
         <location line="-2"/>
-        <location line="+32"/>
+        <location line="+20"/>
         <location line="+10"/>
         <source>%n Rounds</source>
-        <translation><numerusform>%n Round</numerusform><numerusform>%n Rounds</numerusform></translation>
+        <translation>
+            <numerusform>%n Round</numerusform>
+            <numerusform>%n Rounds</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-13"/>
+        <source>Found enough compatible inputs to anonymize %1</source>
+        <translation>Found enough compatible inputs to anonymize %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Not enough compatible inputs to anonymize &lt;span style=&apos;color:red;&apos;&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style=&apos;color:red;&apos;&gt;%2&lt;/span&gt; instead</source>
         <translation>Not enough compatible inputs to anonymize &lt;span style=&apos;color:red;&apos;&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style=&apos;color:red;&apos;&gt;%2&lt;/span&gt; instead</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+58"/>
         <source>Overall progress</source>
         <translation>Overall progress</translation>
     </message>
@@ -2246,50 +2299,40 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Denominated</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Mixed</source>
+        <translation>Mixed</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Anonymized</source>
         <translation>Anonymized</translation>
     </message>
     <message numerus="yes">
         <location line="+1"/>
         <source>Denominated inputs have %5 of %n rounds on average</source>
-        <translation><numerusform>Denominated inputs have %5 of %n rounds on average</numerusform><numerusform>Denominated inputs have %5 of %n rounds on average</numerusform></translation>
+        <translation>
+            <numerusform>Denominated inputs have %5 of %n round on average</numerusform>
+            <numerusform>Denominated inputs have %5 of %n rounds on average</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="-56"/>
-        <source>Found enough compatible inputs to anonymize %1</source>
-        <translation>Found enough compatible inputs to anonymize %1</translation>
-    </message>
-    <message>
-        <location line="-203"/>
-        <source>Automatic backups are disabled, no mixing available!</source>
-        <translation>Automatic backups are disabled, no mixing available!</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <location line="+303"/>
-        <location line="+155"/>
-        <source>Start Mixing</source>
-        <translation>Start Mixing</translation>
-    </message>
-    <message>
-        <location line="-456"/>
-        <location line="+459"/>
-        <source>Stop Mixing</source>
-        <translation>Stop Mixing</translation>
-    </message>
-    <message>
-        <location line="-208"/>
-        <source>Mixed</source>
-        <translation>Mixed</translation>
-    </message>
-    <message>
-        <location line="+37"/>
+        <location line="+35"/>
         <source>keys left: %1</source>
         <translation>keys left: %1</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+15"/>
+        <location line="+48"/>
+        <location line="+140"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+3"/>
+        <source>Disabled</source>
+        <translation>Disabled</translation>
+    </message>
+    <message>
+        <location line="-180"/>
         <source>Very low number of keys left since last automatic backup!</source>
         <translation>Very low number of keys left since last automatic backup!</translation>
     </message>
@@ -2300,8 +2343,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Note: You turn this message off in options.</source>
-        <translation>Note: You turn this message off in options.</translation>
+        <source>Note: You can turn this message off in options.</source>
+        <translation>Note: You can turn this message off in options.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2343,7 +2386,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
 </translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+8"/>
+        <source>N/A</source>
+        <translation>N/A</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>PrivateSend was successfully reset.</source>
         <translation>PrivateSend was successfully reset.</translation>
     </message>
@@ -2362,16 +2410,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <source>Wallet is locked and user declined to unlock. Disabling PrivateSend.</source>
         <translation>Wallet is locked and user declined to unlock. Disabling PrivateSend.</translation>
     </message>
-    <message>
-        <location line="-54"/>
-        <source>N/A</source>
-        <translation>N/A</translation>
-    </message>
 </context>
 <context>
     <name>PaymentServer</name>
     <message>
-        <location filename="../paymentserver.cpp" line="+329"/>
+        <location filename="../paymentserver.cpp" line="+327"/>
         <location line="+216"/>
         <location line="+42"/>
         <location line="+113"/>
@@ -2398,17 +2441,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Payment request fetch URL is invalid: %1</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <source>Payment request file handling</source>
-        <translation>Payment request file handling</translation>
-    </message>
-    <message>
-        <location line="+71"/>
-        <source>Payment request expired.</source>
-        <translation>Payment request expired.</translation>
-    </message>
-    <message>
-        <location line="-92"/>
+        <location line="+13"/>
         <source>Invalid payment address %1</source>
         <translation>Invalid payment address %1</translation>
     </message>
@@ -2418,7 +2451,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>URI cannot be parsed! This can be caused by an invalid SecureTag address or malformed URI parameters.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
+        <source>Payment request file handling</source>
+        <translation>Payment request file handling</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
         <translation>Payment request file cannot be read! This can be caused by an invalid payment request file.</translation>
     </message>
@@ -2438,7 +2476,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Payment request network doesn&apos;t match client network.</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+9"/>
+        <source>Payment request expired.</source>
+        <translation>Payment request expired.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Payment request is not initialized.</source>
         <translation>Payment request is not initialized.</translation>
     </message>
@@ -2498,34 +2541,54 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <name>PeerTableModel</name>
     <message>
         <location filename="../peertablemodel.cpp" line="+117"/>
-        <source>User Agent</source>
-        <translation>User Agent</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ping Time</source>
-        <translation>Ping Time</translation>
+        <source>NodeId</source>
+        <translation>NodeId</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Node/Service</source>
         <translation>Node/Service</translation>
     </message>
+    <message>
+        <location line="+0"/>
+        <source>User Agent</source>
+        <translation>User Agent</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ping</source>
+        <translation>Ping</translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
+    <message>
+        <location filename="../securetag.cpp" line="+132"/>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>%1 didn&apos;t yet exit safely...</source>
+        <translation>%1 didn&apos;t yet exit safely...</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>Error reading masternode configuration file: %1</source>
+        <translation>Error reading masternode configuration file: %1</translation>
+    </message>
     <message>
         <location filename="../bitcoinunits.cpp" line="+233"/>
         <source>Amount</source>
         <translation>Amount</translation>
     </message>
     <message>
-        <location filename="../guiutil.cpp" line="+119"/>
+        <location filename="../guiutil.cpp" line="+137"/>
         <source>Enter a SecureTag address (e.g. %1)</source>
         <translation>Enter a SecureTag address (e.g. %1)</translation>
     </message>
     <message>
-        <location line="+857"/>
+        <location line="+859"/>
         <source>%1 d</source>
         <translation>%1 d</translation>
     </message>
@@ -2541,7 +2604,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+2"/>
-        <location line="+44"/>
+        <location line="+47"/>
         <source>%1 s</source>
         <translation>%1 s</translation>
     </message>
@@ -2559,6 +2622,129 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+0"/>
         <source>%1 ms</source>
         <translation>%1 ms</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+18"/>
+        <source>%n second(s)</source>
+        <translation>
+            <numerusform>%n second</numerusform>
+            <numerusform>%n seconds</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n minute</numerusform>
+            <numerusform>%n minutes</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n hour</numerusform>
+            <numerusform>%n hours</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s)</source>
+        <translation>
+            <numerusform>%n day</numerusform>
+            <numerusform>%n days</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <location line="+6"/>
+        <source>%n week(s)</source>
+        <translation>
+            <numerusform>%n week</numerusform>
+            <numerusform>%n weeks</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n year(s)</source>
+        <translation>
+            <numerusform>%n year</numerusform>
+            <numerusform>%n years</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1 and %2</source>
+        <translation>%1 and %2</translation>
+    </message>
+    <message>
+        <location filename="../modaloverlay.cpp" line="-29"/>
+        <source>unknown</source>
+        <translation>unknown</translation>
+    </message>
+</context>
+<context>
+    <name>QObject::QObject</name>
+    <message>
+        <location filename="../securetag.cpp" line="-41"/>
+        <source>Error: Specified data directory &quot;%1&quot; does not exist.</source>
+        <translation>Error: Specified data directory &quot;%1&quot; does not exist.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Error: Cannot parse configuration file: %1. Only use key=value syntax.</source>
+        <translation>Error: Cannot parse configuration file: %1. Only use key=value syntax.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Error: %1</source>
+        <translation>Error: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QRDialog</name>
+    <message>
+        <location filename="../forms/qrdialog.ui" line="+23"/>
+        <source>QR-Code Title</source>
+        <translation>QR-Code Title</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>QR Code</source>
+        <translation>QR Code</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Save Image...</translation>
+    </message>
+    <message>
+        <location filename="../qrdialog.cpp" line="+149"/>
+        <source>Error creating QR Code.</source>
+        <translation>Error creating QR Code.</translation>
+    </message>
+</context>
+<context>
+    <name>QRGeneralImageWidget</name>
+    <message>
+        <location line="-113"/>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Save Image...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Copy Image</source>
+        <translation>&amp;Copy Image</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Save QR Code</source>
+        <translation>Save QR Code</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>PNG Image (*.png)</source>
+        <translation>PNG Image (*.png)</translation>
     </message>
 </context>
 <context>
@@ -2602,22 +2788,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>General</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+144"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location line="-157"/>
-        <source>Client name</source>
-        <translation>Client name</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+23"/>
+        <location line="-127"/>
         <location line="+26"/>
         <location line="+26"/>
         <location line="+23"/>
-        <location line="+23"/>
+        <location line="+26"/>
         <location line="+36"/>
         <location line="+23"/>
         <location line="+20"/>
@@ -2625,7 +2805,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+23"/>
         <location line="+36"/>
         <location line="+23"/>
-        <location line="+536"/>
+        <location line="+665"/>
         <location line="+23"/>
         <location line="+23"/>
         <location line="+23"/>
@@ -2642,11 +2822,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+23"/>
         <location line="+26"/>
         <location line="+23"/>
+        <location line="+23"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location line="-1049"/>
+        <location line="-1201"/>
         <source>Number of connections</source>
         <translation>Number of connections</translation>
     </message>
@@ -2676,17 +2857,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Debug log file</translation>
     </message>
     <message>
-        <location line="-255"/>
-        <source>Build date</source>
-        <translation>Build date</translation>
-    </message>
-    <message>
-        <location line="+132"/>
+        <location line="-123"/>
         <source>Current number of blocks</source>
         <translation>Current number of blocks</translation>
     </message>
     <message>
-        <location line="-207"/>
+        <location line="-210"/>
         <source>Client version</source>
         <translation>Client version</translation>
     </message>
@@ -2696,7 +2872,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Using BerkeleyDB version</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+154"/>
         <source>Block chain</source>
         <translation>Block chain</translation>
     </message>
@@ -2721,22 +2897,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Memory usage</translation>
     </message>
     <message>
-        <location line="+48"/>
-        <source>Open the SecureTag debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the SecureTag debug log file from the current data directory. This can take a few seconds for large log files.</translation>
-    </message>
-    <message>
-        <location line="+29"/>
+        <location line="+77"/>
         <source>&amp;Console</source>
         <translation>&amp;Console</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+100"/>
         <source>Clear console</source>
         <translation>Clear console</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+95"/>
         <source>&amp;Network Traffic</source>
         <translation>&amp;Network Traffic</translation>
     </message>
@@ -2752,30 +2923,30 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+64"/>
-        <location line="+554"/>
+        <location line="+560"/>
         <source>Received</source>
         <translation>Received</translation>
     </message>
     <message>
-        <location line="-474"/>
-        <location line="+451"/>
+        <location line="-480"/>
+        <location line="+457"/>
         <source>Sent</source>
         <translation>Sent</translation>
     </message>
     <message>
-        <location line="-410"/>
+        <location line="-416"/>
         <source>&amp;Peers</source>
         <translation>&amp;Peers</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Banned peers</source>
         <translation>Banned peers</translation>
     </message>
     <message>
-        <location line="+59"/>
-        <location filename="../rpcconsole.cpp" line="+302"/>
-        <location line="+672"/>
+        <location line="+62"/>
+        <location filename="../rpcconsole.cpp" line="+484"/>
+        <location line="+788"/>
         <source>Select a peer to view detailed information.</source>
         <translation>Select a peer to view detailed information.</translation>
     </message>
@@ -2810,18 +2981,38 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Synced Blocks</translation>
     </message>
     <message>
-        <location line="+511"/>
+        <location line="+534"/>
         <source>Wallet Path</source>
         <translation>Wallet Path</translation>
     </message>
     <message>
-        <location line="-1474"/>
-        <location line="+871"/>
+        <location line="-1629"/>
+        <location line="+1003"/>
         <source>User Agent</source>
         <translation>User Agent</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-951"/>
+        <source>Datadir</source>
+        <translation>Datadir</translation>
+    </message>
+    <message>
+        <location line="+265"/>
+        <source>Open the %1 debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open the %1 debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Decrease font size</source>
+        <translation>Decrease font size</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Increase font size</source>
+        <translation>Increase font size</translation>
+    </message>
+    <message>
+        <location line="+612"/>
         <source>Services</source>
         <translation>Services</translation>
     </message>
@@ -2859,6 +3050,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+3"/>
         <source>Ping Wait</source>
         <translation>Ping Wait</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Min Ping</source>
+        <translation>Min Ping</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -2941,27 +3137,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>-reindex: Rebuild block chain index from current blk000??.dat files.</translation>
     </message>
     <message>
-        <location filename="../rpcconsole.cpp" line="-348"/>
-        <source>In:</source>
-        <translation>In:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Out:</source>
-        <translation>Out:</translation>
-    </message>
-    <message>
-        <location line="-234"/>
-        <source>&amp;Disconnect Node</source>
-        <translation>&amp;Disconnect Node</translation>
+        <location filename="../rpcconsole.cpp" line="-692"/>
+        <source>&amp;Disconnect</source>
+        <translation>&amp;Disconnect</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <source>Ban Node for</source>
-        <translation>Ban Node for</translation>
+        <source>Ban for</source>
+        <translation>Ban for</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -2984,14 +3170,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>1 &amp;year</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <source>&amp;Unban Node</source>
-        <translation>&amp;Unban Node</translation>
+        <location line="+48"/>
+        <source>&amp;Unban</source>
+        <translation>&amp;Unban</translation>
     </message>
     <message>
-        <location line="+148"/>
-        <source>Welcome to the SecureTag RPC console.</source>
-        <translation>Welcome to the SecureTag RPC console.</translation>
+        <location line="+188"/>
+        <source>Welcome to the %1 RPC console.</source>
+        <translation>Welcome to the %1 RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3004,7 +3190,27 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+2"/>
+        <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramification of a command.</source>
+        <translation>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramification of a command.</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>In:</source>
+        <translation>In:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Out:</source>
+        <translation>Out:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Network activity disabled</source>
+        <translation>Network activity disabled</translation>
+    </message>
+    <message>
+        <location line="+153"/>
         <source>%1 B</source>
         <translation>%1 B</translation>
     </message>
@@ -3024,7 +3230,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>%1 GB</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+99"/>
         <source>(node id: %1)</source>
         <translation>(node id: %1)</translation>
     </message>
@@ -3040,7 +3246,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>never</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Inbound</source>
         <translation>Inbound</translation>
     </message>
@@ -3166,7 +3372,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Remove</translation>
     </message>
     <message>
-        <location filename="../receivecoinsdialog.cpp" line="+47"/>
+        <location filename="../receivecoinsdialog.cpp" line="+48"/>
+        <source>Copy URI</source>
+        <translation>Copy URI</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Copy label</source>
         <translation>Copy label</translation>
     </message>
@@ -3239,10 +3450,19 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Message</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>InstantSend</source>
         <translation>InstantSend</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Yes</source>
+        <translation>Yes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No</source>
+        <translation>No</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3273,12 +3493,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Message</translation>
     </message>
     <message>
-        <location line="+99"/>
-        <source>Amount</source>
-        <translation>Amount</translation>
-    </message>
-    <message>
-        <location line="-59"/>
+        <location line="+40"/>
         <source>(no label)</source>
         <translation>(no label)</translation>
     </message>
@@ -3289,15 +3504,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>(no amount)</source>
-        <translation>(no amount)</translation>
+        <source>(no amount requested)</source>
+        <translation>(no amount requested)</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Requested</source>
+        <translation>Requested</translation>
     </message>
 </context>
 <context>
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+659"/>
+        <location filename="../sendcoinsdialog.cpp" line="+667"/>
         <source>Send Coins</source>
         <translation>Send Coins</translation>
     </message>
@@ -3337,32 +3557,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Amount:</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>Priority:</source>
-        <translation>Priority:</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>medium</source>
-        <translation>medium</translation>
-    </message>
-    <message>
-        <location line="+35"/>
+        <location line="+80"/>
         <source>Fee:</source>
         <translation>Fee:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-48"/>
         <source>Dust:</source>
         <translation>Dust:</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>no</source>
-        <translation>no</translation>
-    </message>
-    <message>
-        <location line="+35"/>
+        <location line="+99"/>
         <source>After Fee:</source>
         <translation>After Fee:</translation>
     </message>
@@ -3392,12 +3597,27 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Choose...</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+24"/>
+        <source>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until your have validated the complete chain.</source>
+        <translation>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until your have validated the complete chain.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Warning: Fee estimation is currently not possible.</source>
+        <translation>Warning: Fee estimation is currently not possible.</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>collapse fee-settings</source>
         <translation>collapse fee-settings</translation>
     </message>
     <message>
-        <location line="+520"/>
+        <location line="+256"/>
+        <source>Confirmation time target:</source>
+        <translation>Confirmation time target:</translation>
+    </message>
+    <message>
+        <location line="+231"/>
         <source>PrivateSend</source>
         <translation>PrivateSend</translation>
     </message>
@@ -3407,14 +3627,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>InstantSend</translation>
     </message>
     <message>
-        <location line="-488"/>
-        <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 duffs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 duffs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <location line="-455"/>
+        <source>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 tags in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 tags in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 duffs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 duffs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 tags in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 tags in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -3458,32 +3678,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(Smart fee not initialized yet. This usually takes a few blocks...)</translation>
     </message>
     <message>
-        <location line="+29"/>
-        <source>Confirmation time:</source>
-        <translation>Confirmation time:</translation>
-    </message>
-    <message>
-        <location line="+60"/>
+        <location line="+89"/>
         <source>normal</source>
         <translation>normal</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+40"/>
         <source>fast</source>
         <translation>fast</translation>
     </message>
     <message>
-        <location line="+38"/>
-        <source>Send as zero-fee transaction if possible</source>
-        <translation>Send as zero-fee transaction if possible</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>(confirmation may take longer)</source>
-        <translation>(confirmation may take longer)</translation>
-    </message>
-    <message>
-        <location line="+67"/>
+        <location line="+59"/>
         <source>Confirm the send action</source>
         <translation>Confirm the send action</translation>
     </message>
@@ -3518,7 +3723,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Balance:</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-565"/>
+        <location filename="../sendcoinsdialog.cpp" line="-569"/>
         <source>Copy quantity</source>
         <translation>Copy quantity</translation>
     </message>
@@ -3544,11 +3749,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Copy priority</source>
-        <translation>Copy priority</translation>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Copy dust</source>
         <translation>Copy dust</translation>
     </message>
@@ -3558,7 +3758,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Copy change</translation>
     </message>
     <message>
-        <location line="+155"/>
+        <location line="+153"/>
         <location line="+6"/>
         <location line="+9"/>
         <source>using</source>
@@ -3586,27 +3786,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>and InstantSend</translation>
     </message>
     <message>
-        <location line="+359"/>
-        <source>Duplicate address found: addresses should only be used once each.</source>
-        <translation>Duplicate address found: addresses should only be used once each.</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>A fee higher than %1 is considered an absurdly high fee.</source>
-        <translation>A fee higher than %1 is considered an absurdly high fee.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Payment request expired.</source>
-        <translation>Payment request expired.</translation>
-    </message>
-    <message>
-        <location line="+91"/>
-        <source>Pay only the required fee of %1</source>
-        <translation>Pay only the required fee of %1</translation>
-    </message>
-    <message>
-        <location line="-397"/>
+        <location line="+74"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+4"/>
@@ -3629,22 +3809,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Total Amount = &lt;b&gt;%1&lt;/b&gt;&lt;br /&gt;= %2</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Confirm send coins</source>
-        <translation>Confirm send coins</translation>
-    </message>
-    <message numerus="yes">
-        <location line="+354"/>
-        <source>Estimated to begin confirmation within %n block(s).</source>
-        <translation><numerusform>Estimated to begin confirmation within %n block.</numerusform><numerusform>Estimated to begin confirmation within %n blocks.</numerusform></translation>
-    </message>
-    <message>
-        <location line="-357"/>
+        <location line="+17"/>
         <source>&lt;b&gt;(%1 of %2 entries displayed)&lt;/b&gt;</source>
         <translation>&lt;b&gt;(%1 of %2 entries displayed)&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+215"/>
+        <location line="+3"/>
+        <source>Confirm send coins</source>
+        <translation>Confirm send coins</translation>
+    </message>
+    <message>
+        <location line="+212"/>
         <source>The recipient address is not valid. Please recheck.</source>
         <translation>The recipient address is not valid. Please recheck.</translation>
     </message>
@@ -3664,17 +3839,53 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>The total exceeds your balance when the %1 transaction fee is included.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+3"/>
+        <source>Duplicate address found: addresses should only be used once each.</source>
+        <translation>Duplicate address found: addresses should only be used once each.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Transaction creation failed!</source>
         <translation>Transaction creation failed!</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</translation>
+        <source>The transaction was rejected with the following reason: %1</source>
+        <translation>The transaction was rejected with the following reason: %1</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+4"/>
+        <source>A fee higher than %1 is considered an absurdly high fee.</source>
+        <translation>A fee higher than %1 is considered an absurdly high fee.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Payment request expired.</source>
+        <translation>Payment request expired.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+67"/>
+        <source>%n block(s)</source>
+        <translation>
+            <numerusform>%n block</numerusform>
+            <numerusform>%n blocks</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Pay only the required fee of %1</source>
+        <translation>Pay only the required fee of %1</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+30"/>
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation>
+            <numerusform>Estimated to begin confirmation within %n block.</numerusform>
+            <numerusform>Estimated to begin confirmation within %n blocks.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+103"/>
         <source>Warning: Invalid SecureTag address</source>
         <translation>Warning: Invalid SecureTag address</translation>
     </message>
@@ -3684,7 +3895,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Warning: Unknown change address</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+3"/>
+        <source>Confirm custom change address</source>
+        <translation>Confirm custom change address</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
+        <translation>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>(no label)</source>
         <translation>(no label)</translation>
     </message>
@@ -3799,11 +4020,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
 </context>
 <context>
+    <name>SendConfirmationDialog</name>
+    <message>
+        <location filename="../sendcoinsdialog.cpp" line="+97"/>
+        <location line="+5"/>
+        <source>Yes</source>
+        <translation>Yes</translation>
+    </message>
+</context>
+<context>
     <name>ShutdownWindow</name>
     <message>
-        <location filename="../utilitydialog.cpp" line="+119"/>
-        <source>SecureTag is shutting down...</source>
-        <translation>SecureTag is shutting down...</translation>
+        <location filename="../utilitydialog.cpp" line="+71"/>
+        <source>%1 is shutting down...</source>
+        <translation>%1 is shutting down...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3996,35 +4226,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <location filename="../splashscreen.cpp" line="+45"/>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>The Bitcoin Core developers</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>The SecureTag developers</source>
-        <translation>The SecureTag developers</translation>
-    </message>
-    <message>
-        <location filename="../networkstyle.cpp" line="+21"/>
+        <location filename="../networkstyle.cpp" line="+24"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
+    </message>
+    <message>
+        <location filename="../splashscreen.cpp" line="+50"/>
+        <source>Version %1</source>
+        <translation>Version %1</translation>
     </message>
 </context>
 <context>
     <name>TrafficGraphWidget</name>
     <message>
-        <location filename="../trafficgraphwidget.cpp" line="+79"/>
+        <location filename="../trafficgraphwidget.cpp" line="+94"/>
         <source>KB/s</source>
         <translation>KB/s</translation>
     </message>
@@ -4034,7 +4249,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message numerus="yes">
         <location filename="../transactiondesc.cpp" line="+33"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Open for %n more block</numerusform><numerusform>Open for %n more blocks</numerusform></translation>
+        <translation>
+            <numerusform>Open for %n more block</numerusform>
+            <numerusform>Open for %n more blocks</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4050,6 +4268,26 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+6"/>
         <source>%1/offline</source>
         <translation>%1/offline</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>0/unconfirmed, %1</source>
+        <translation>0/unconfirmed, %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>in memory pool</source>
+        <translation>in memory pool</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>not in memory pool</source>
+        <translation>not in memory pool</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>abandoned</source>
+        <translation>abandoned</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4089,7 +4327,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message numerus="yes">
         <location line="+2"/>
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, broadcast through %n node</numerusform><numerusform>, broadcast through %n nodes</numerusform></translation>
+        <translation>
+            <numerusform>, broadcast through %n node</numerusform>
+            <numerusform>, broadcast through %n nodes</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4146,14 +4387,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+12"/>
         <location line="+53"/>
         <location line="+26"/>
-        <location line="+53"/>
+        <location line="+55"/>
         <source>Credit</source>
         <translation>Credit</translation>
     </message>
     <message numerus="yes">
-        <location line="-142"/>
+        <location line="-144"/>
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>matures in %n more block</numerusform><numerusform>matures in %n more blocks</numerusform></translation>
+        <translation>
+            <numerusform>matures in %n more block</numerusform>
+            <numerusform>matures in %n more blocks</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4163,12 +4407,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <location line="+59"/>
         <location line="+25"/>
-        <location line="+53"/>
+        <location line="+55"/>
         <source>Debit</source>
         <translation>Debit</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location line="-70"/>
         <source>Total debit</source>
         <translation>Total debit</translation>
     </message>
@@ -4189,12 +4433,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+6"/>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Message</source>
         <translation>Message</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-9"/>
         <source>Comment</source>
         <translation>Comment</translation>
     </message>
@@ -4202,6 +4446,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+2"/>
         <source>Transaction ID</source>
         <translation>Transaction ID</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Output index</source>
+        <translation>Output index</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transaction total size</source>
+        <translation>Transaction total size</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4229,7 +4483,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Inputs</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+20"/>
         <source>Amount</source>
         <translation>Amount</translation>
     </message>
@@ -4249,14 +4503,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>TransactionDescDialog</name>
     <message>
-        <location filename="../forms/transactiondescdialog.ui" line="+14"/>
-        <source>Transaction details</source>
-        <translation>Transaction details</translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location filename="../forms/transactiondescdialog.ui" line="+20"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>This pane shows a detailed description of the transaction</translation>
+    </message>
+    <message>
+        <location filename="../transactiondescdialog.cpp" line="+20"/>
+        <source>Details for %1</source>
+        <translation>Details for %1</translation>
     </message>
 </context>
 <context>
@@ -4279,7 +4533,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message numerus="yes">
         <location line="+58"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Open for %n more block</numerusform><numerusform>Open for %n more blocks</numerusform></translation>
+        <translation>
+            <numerusform>Open for %n more block</numerusform>
+            <numerusform>Open for %n more blocks</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4295,6 +4552,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+3"/>
         <source>Unconfirmed</source>
         <translation>Unconfirmed</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Abandoned</source>
+        <translation>Abandoned</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4342,7 +4604,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Received via PrivateSend</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+3"/>
+        <source>Sent to</source>
+        <translation>Sent to</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Payment to yourself</source>
+        <translation>Payment to yourself</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mined</source>
+        <translation>Mined</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>PrivateSend Denominate</source>
         <translation>PrivateSend Denominate</translation>
     </message>
@@ -4367,27 +4644,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>PrivateSend</translation>
     </message>
     <message>
-        <location line="+280"/>
-        <source>User-defined intent/purpose of the transaction.</source>
-        <translation>User-defined intent/purpose of the transaction.</translation>
-    </message>
-    <message>
-        <location line="-295"/>
-        <source>Sent to</source>
-        <translation>Sent to</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Payment to yourself</source>
-        <translation>Payment to yourself</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Mined</source>
-        <translation>Mined</translation>
-    </message>
-    <message>
-        <location line="+42"/>
+        <location line="+31"/>
         <source>watch-only</source>
         <translation>watch-only</translation>
     </message>
@@ -4397,7 +4654,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(n/a)</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+219"/>
+        <source>(no label)</source>
+        <translation>(no label)</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Transaction status. Hover over this field to show number of confirmations.</translation>
     </message>
@@ -4417,7 +4679,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Whether or not a watch-only address is involved in this transaction.</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+2"/>
+        <source>User-defined intent/purpose of the transaction.</source>
+        <translation>User-defined intent/purpose of the transaction.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
         <translation>Amount removed from or added to balance.</translation>
     </message>
@@ -4527,6 +4794,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+37"/>
+        <source>Abandon transaction</source>
+        <translation>Abandon transaction</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Copy address</source>
         <translation>Copy address</translation>
     </message>
@@ -4552,6 +4824,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Copy full transaction details</source>
+        <translation>Copy full transaction details</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Edit label</source>
         <translation>Edit label</translation>
     </message>
@@ -4561,7 +4838,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Show transaction details</translation>
     </message>
     <message>
-        <location line="+206"/>
+        <location line="+211"/>
         <source>Export Transaction History</source>
         <translation>Export Transaction History</translation>
     </message>
@@ -4626,7 +4903,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>The transaction history was successfully saved to %1.</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+169"/>
         <source>Range:</source>
         <translation>Range:</translation>
     </message>
@@ -4639,7 +4916,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>UnitDisplayStatusBarControl</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+115"/>
+        <location filename="../bitcoingui.cpp" line="+138"/>
         <source>Unit to show amounts in. Click to select another unit.</source>
         <translation>Unit to show amounts in. Click to select another unit.</translation>
     </message>
@@ -4655,7 +4932,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+308"/>
+        <location filename="../walletmodel.cpp" line="+311"/>
         <location line="+12"/>
         <location line="+5"/>
         <location line="+11"/>
@@ -4665,8 +4942,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <location line="-28"/>
         <location line="+12"/>
-        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 STG.</source>
-        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 STG.</translation>
+        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</source>
+        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4692,7 +4969,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Selected amount:</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+231"/>
         <source>Backup Wallet</source>
         <translation>Backup Wallet</translation>
     </message>
@@ -4725,17 +5002,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>securetag-core</name>
     <message>
-        <location filename="../securetagstrings.cpp" line="+34"/>
+        <location filename="../securetagstrings.cpp" line="+33"/>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>Cannot obtain a lock on data directory %s. SecureTag is probably already running.</source>
-        <translation>Cannot obtain a lock on data directory %s. SecureTag is probably already running.</translation>
-    </message>
-    <message>
-        <location line="+32"/>
+        <location line="+46"/>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>
         <translation>Error: Listening for incoming connections failed (listen returned error %s)</translation>
     </message>
@@ -4755,17 +5027,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+71"/>
         <source>Name to construct url for KeePass entry that stores the wallet passphrase</source>
         <translation>Name to construct url for KeePass entry that stores the wallet passphrase</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+48"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
         <translation>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</translation>
     </message>
@@ -4775,47 +5042,32 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>Unable to bind to %s on this computer. SecureTag is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. SecureTag is probably already running.</translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="+67"/>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+10"/>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</source>
         <translation>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+21"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accept command line and JSON-RPC commands</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Accept connections from outside (default: 1 if no -proxy or -connect)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Add a node to connect to and attempt to keep the connection open</translation>
     </message>
@@ -4825,7 +5077,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Allow DNS lookups for -addnode, -seednode and -connect</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Already have that input.</source>
         <translation>Already have that input.</translation>
     </message>
@@ -4835,24 +5087,9 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Block creation options:</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Can&apos;t denominate: no compatible inputs left.</source>
-        <translation>Can&apos;t denominate: no compatible inputs left.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Cannot downgrade wallet</source>
         <translation>Cannot downgrade wallet</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
-        <translation>Cannot resolve -bind address: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
-        <translation>Cannot resolve -externalip address: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4860,14 +5097,9 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Cannot write default address</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Collateral not valid.</source>
         <translation>Collateral not valid.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Connect only to the specified node(s)</source>
-        <translation>Connect only to the specified node(s)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4880,7 +5112,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Connection options:</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Corrupted block database detected</source>
         <translation>Corrupted block database detected</translation>
     </message>
@@ -4920,22 +5152,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Error initializing wallet database environment %s!</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Error loading block database</source>
         <translation>Error loading block database</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat</source>
-        <translation>Error loading wallet.dat</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Error loading wallet.dat: Wallet corrupted</translation>
-    </message>
-    <message>
-        <location line="+2"/>
         <source>Error opening block database</source>
         <translation>Error opening block database</translation>
     </message>
@@ -4945,7 +5167,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Error reading from database, shutting down.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -4955,19 +5177,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Error: Disk space is low!</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Failed to listen on any port. Use -listen=0 if you want this.</translation>
     </message>
     <message>
-        <location line="-336"/>
+        <location line="-381"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>-fallbackfee is set very high! This is the transaction fee you may pay when fee estimates are not available.</source>
-        <translation>-fallbackfee is set very high! This is the transaction fee you may pay when fee estimates are not available.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4976,16 +5193,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>-paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>-paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
         <source>A fee rate (in %s/kB) that will be used when fee estimation has insufficient data (default: %s)</source>
         <translation>A fee rate (in %s/kB) that will be used when fee estimation has insufficient data (default: %s)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Accept relayed transactions received from whitelisted peers even when not relaying transactions (default: %d)</source>
         <translation>Accept relayed transactions received from whitelisted peers even when not relaying transactions (default: %d)</translation>
     </message>
@@ -5005,7 +5217,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
         <translation>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</translation>
     </message>
@@ -5015,12 +5227,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
-        <translation>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
+        <location line="+23"/>
+        <source>Error loading %s: You can&apos;t enable HD on a already existing non-HD wallet</source>
+        <translation>Error loading %s: You can&apos;t enable HD on a already existing non-HD wallet</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+32"/>
         <source>Found unconfirmed denominated outputs, will wait till they confirm to continue.</source>
         <translation>Found unconfirmed denominated outputs, will wait till they confirm to continue.</translation>
     </message>
@@ -5035,7 +5247,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+3"/>
+        <source>If this block is in the chain assume that it and its ancestors are valid and potentially skip their script verification (0 to verify all, default: %s, testnet: %s)</source>
+        <translation>If this block is in the chain assume that it and its ancestors are valid and potentially skip their script verification (0 to verify all, default: %s, testnet: %s)</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: &apos;%s&apos; (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>Invalid amount for -maxtxfee=&lt;amount&gt;: &apos;%s&apos; (must be at least the minrelay fee of %s to prevent stuck transactions)</translation>
     </message>
@@ -5046,6 +5263,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+9"/>
+        <source>Make sure to encrypt your wallet and delete all non-encrypted backups after you verified that wallet works!</source>
+        <translation>Make sure to encrypt your wallet and delete all non-encrypted backups after you verified that wallet works!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Maximum size of data in data carrier transactions we relay and mine (default: %u)</source>
         <translation>Maximum size of data in data carrier transactions we relay and mine (default: %u)</translation>
     </message>
@@ -5060,47 +5282,37 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</translation>
     </message>
     <message>
-        <location line="+36"/>
-        <source>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</source>
-        <translation>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
-        <translation>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 STG.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 1000 STG.</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+97"/>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
         <translation>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</translation>
     </message>
     <message>
-        <location line="+31"/>
-        <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
-        <translation>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</translation>
+        <location line="+3"/>
+        <source>User defined mnemonic for HD wallet (bip39). Only has effect during wallet creation/first start (default: randomly generated)</source>
+        <translation>User defined mnemonic for HD wallet (bip39). Only has effect during wallet creation/first start (default: randomly generated)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
+        <source>User defined seed for HD wallet (should be in hex). Only has effect during wallet creation/first start (default: randomly generated)</source>
+        <translation>User defined seed for HD wallet (should be in hex). Only has effect during wallet creation/first start (default: randomly generated)</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
         <translation>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+9"/>
+        <source>You need to rebuild the database using -reindex-chainstate to change -txindex</source>
+        <translation>You need to rebuild the database using -reindex-chainstate to change -txindex</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>(default: %s)</source>
         <translation>(default: %s)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Accept public REST requests (default: %u)</source>
         <translation>Accept public REST requests (default: %u)</translation>
     </message>
@@ -5110,12 +5322,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Always query for peer addresses via DNS lookup (default: %u)</translation>
     </message>
     <message>
-        <location line="+12"/>
-        <source>Cannot resolve -whitebind address: &apos;%s&apos;</source>
-        <translation>Cannot resolve -whitebind address: &apos;%s&apos;</translation>
+        <location line="+8"/>
+        <source>Can&apos;t mix: no compatible inputs found!</source>
+        <translation>Can&apos;t mix: no compatible inputs found!</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Chain selection options:</source>
+        <translation>Chain selection options:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Connect through SOCKS5 proxy</source>
         <translation>Connect through SOCKS5 proxy</translation>
     </message>
@@ -5125,32 +5342,42 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Connect to KeePassHttp on port &lt;port&gt; (default: %u)</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Copyright (C) 2014-%i The SecureTag Developers</source>
-        <translation>Copyright (C) 2014-%i The SecureTag Developers</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
         <translation>Enable the client to act as a masternode (0-1, default: %u)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Error connecting to Masternode.</source>
-        <translation>Error connecting to Masternode.</translation>
+        <source>Entry exceeds maximum size.</source>
+        <translation>Entry exceeds maximum size.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of SecureTag</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of SecureTag</translation>
+        <source>Error loading %s: You can&apos;t disable HD on a already existing HD wallet</source>
+        <translation>Error loading %s: You can&apos;t disable HD on a already existing HD wallet</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+13"/>
+        <source>Failed to load fulfilled requests cache from</source>
+        <translation>Failed to load fulfilled requests cache from</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to load governance cache from</source>
+        <translation>Failed to load governance cache from</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to load masternode cache from</source>
+        <translation>Failed to load masternode cache from</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Failed to load masternode payments cache from</source>
+        <translation>Failed to load masternode payments cache from</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Found enough users, signing ( waiting %s )</source>
         <translation>Found enough users, signing ( waiting %s )</translation>
     </message>
@@ -5158,11 +5385,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+1"/>
         <source>Found enough users, signing ...</source>
         <translation>Found enough users, signing ...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Generate coins (default: %u)</source>
-        <translation>Generate coins (default: %u)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5200,12 +5422,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Information</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Initialization sanity check failed. SecureTag is shutting down.</source>
-        <translation>Initialization sanity check failed. SecureTag is shutting down.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Input is not valid.</source>
         <translation>Input is not valid.</translation>
     </message>
@@ -5225,32 +5442,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Invalid -proxy address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Invalid amount for -maxtxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Invalid amount for -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Invalid amount for -mintxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos; (must be at least %s)</source>
         <translation>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos; (must be at least %s)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+        <location line="+11"/>
+        <source>Keypool ran out, please call keypoolrefill first</source>
+        <translation>Keypool ran out, please call keypoolrefill first</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+4"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
         <translation>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</translation>
     </message>
@@ -5260,7 +5462,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Listen for connections on &lt;port&gt; (default: %u or testnet: %u)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+2"/>
+        <source>Loading banlist...</source>
+        <translation>Loading banlist...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Loading fulfilled requests cache...</source>
+        <translation>Loading fulfilled requests cache...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Loading masternode cache...</source>
         <translation>Loading masternode cache...</translation>
     </message>
@@ -5296,6 +5508,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Mnemonic passphrase is too long, must be at most 256 characters</source>
+        <translation>Mnemonic passphrase is too long, must be at most 256 characters</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Need to specify a port with -whitebind: &apos;%s&apos;</source>
         <translation>Need to specify a port with -whitebind: &apos;%s&apos;</translation>
     </message>
@@ -5310,7 +5527,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>No compatible Masternode found.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Not in the Masternode list.</source>
         <translation>Not in the Masternode list.</translation>
     </message>
@@ -5330,7 +5547,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Prepend debug output with timestamp (default: %u)</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+11"/>
+        <source>Rebuild chain state and block index from the blk*.dat files on disk</source>
+        <translation>Rebuild chain state and block index from the blk*.dat files on disk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rebuild chain state from the currently indexed blocks</source>
+        <translation>Rebuild chain state from the currently indexed blocks</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Send trace/debug info to debug.log file (default: %u)</source>
         <translation>Send trace/debug info to debug.log file (default: %u)</translation>
     </message>
@@ -5345,12 +5572,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Set key pool size to &lt;n&gt; (default: %u)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Set minimum block size in bytes (default: %u)</source>
-        <translation>Set minimum block size in bytes (default: %u)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Set the number of threads to service RPC calls (default: %d)</source>
         <translation>Set the number of threads to service RPC calls (default: %d)</translation>
     </message>
@@ -5380,7 +5602,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Spend unconfirmed change when sending transactions (default: %u)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Submitted following entries to masternode: %u / %d</source>
         <translation>Submitted following entries to masternode: %u / %d</translation>
     </message>
@@ -5393,6 +5615,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+1"/>
         <source>Submitted to masternode, waiting in queue %s</source>
         <translation>Submitted to masternode, waiting in queue %s</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Synchroning blockchain...</source>
+        <translation>Synchroning blockchain...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5410,17 +5637,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Synchronizing masternodes...</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Synchronizing sporks...</source>
-        <translation>Synchronizing sporks...</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>This is not a Masternode.</source>
         <translation>This is not a Masternode.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Threshold for disconnecting misbehaving peers (default: %u)</source>
         <translation>Threshold for disconnecting misbehaving peers (default: %u)</translation>
     </message>
@@ -5440,7 +5662,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Tor control port to use if onion listening enabled (default: %s)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>Unable to start HTTP server. See debug log for details.</translation>
     </message>
@@ -5470,7 +5692,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Upgrade wallet to latest format on startup</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Use KeePass 2 integration using KeePassHttp plugin (default: %u)</source>
         <translation>Use KeePass 2 integration using KeePassHttp plugin (default: %u)</translation>
     </message>
@@ -5480,32 +5702,27 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Use UPnP to map the listening port (default: %u)</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Use the test chain</source>
+        <translation>Use the test chain</translation>
+    </message>
+    <message>
         <location line="+1"/>
         <source>User Agent comment (%s) contains unsafe characters.</source>
         <translation>User Agent comment (%s) contains unsafe characters.</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Value more than PrivateSend pool maximum allows.</source>
-        <translation>Value more than PrivateSend pool maximum allows.</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Wallet needed to be rewritten: restart SecureTag to complete</source>
-        <translation>Wallet needed to be rewritten: restart SecureTag to complete</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+15"/>
         <source>Will retry...</source>
         <translation>Will retry...</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-158"/>
         <source>Invalid masternodeprivkey. Please see documenation.</source>
         <translation>Invalid masternodeprivkey. Please see documenation.</translation>
     </message>
     <message>
-        <location line="-72"/>
+        <location line="-75"/>
         <source>Can&apos;t find random Masternode.</source>
         <translation>Can&apos;t find random Masternode.</translation>
     </message>
@@ -5515,12 +5732,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Can&apos;t mix while sync in progress.</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+14"/>
         <source>Could not parse masternode.conf</source>
         <translation>Could not parse masternode.conf</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Invalid netmask specified in -whitelist: &apos;%s&apos;</source>
         <translation>Invalid netmask specified in -whitelist: &apos;%s&apos;</translation>
     </message>
@@ -5535,7 +5752,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Invalid script detected.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>KeePassHttp id for the established association</source>
         <translation>KeePassHttp id for the established association</translation>
     </message>
@@ -5545,17 +5762,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>KeePassHttp key for AES encrypted communication with KeePass</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Keep N STG anonymized (default: %u)</source>
-        <translation>Keep N STG anonymized (default: %u)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</translation>
     </message>
     <message>
-        <location line="-328"/>
+        <location line="-376"/>
         <source>Disable all SecureTag specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
         <translation>Disable all SecureTag specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</translation>
     </message>
@@ -5585,12 +5797,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Enable use of automated PrivateSend for funds stored in this wallet (0-1, default: %u)</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>Execute command when a wallet InstantSend transaction is successfully locked (%s in cmd is replaced by TxID)</source>
         <translation>Execute command when a wallet InstantSend transaction is successfully locked (%s in cmd is replaced by TxID)</translation>
     </message>
@@ -5610,19 +5817,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Fees (in %s/kB) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Force relay of transactions from whitelisted peers even they violate local relay policy (default: %d)</source>
-        <translation>Force relay of transactions from whitelisted peers even they violate local relay policy (default: %d)</translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>If &lt;category&gt; is not supplied or if &lt;category&gt; = 1, output all debugging information.</source>
         <translation>If &lt;category&gt; is not supplied or if &lt;category&gt; = 1, output all debugging information.</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 STG.</source>
-        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 STG.</translation>
+        <location line="+13"/>
+        <source>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</source>
+        <translation>InstantSend doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5650,27 +5852,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Maintain at most &lt;n&gt; connections to peers (temporary service connections excluded) (default: %u)</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Maximum total fees (in %s) to use in a single wallet transaction; setting this too low may abort large transactions (default: %s)</source>
-        <translation>Maximum total fees (in %s) to use in a single wallet transaction; setting this too low may abort large transactions (default: %s)</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong SecureTag will not work properly.</source>
-        <translation>Please check that your computer&apos;s date and time are correct! If your clock is wrong SecureTag will not work properly.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+31"/>
         <source>PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
         <translation>PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location line="+7"/>
         <source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
         <translation>Prune configured below the minimum of %d MiB.  Please use a higher number.</translation>
     </message>
@@ -5685,12 +5872,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Reduce storage requirements by pruning (deleting) old blocks. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, &gt;%u = target size in MiB to use for block files)</source>
-        <translation>Reduce storage requirements by pruning (deleting) old blocks. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, &gt;%u = target size in MiB to use for block files)</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+12"/>
         <source>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
         <translation>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</translation>
     </message>
@@ -5715,7 +5897,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>The transaction amount is too small to send after the fee has been deducted</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
         <translation>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</translation>
     </message>
@@ -5725,17 +5907,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = no limit (default: %d)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Unable to locate enough PrivateSend denominated funds for this transaction.</source>
         <translation>Unable to locate enough PrivateSend denominated funds for this transaction.</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 STG.</source>
-        <translation>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 STG.</translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
         <translation>Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</translation>
     </message>
@@ -5745,42 +5922,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Use N separate masternodes for each denominated input to mix funds (2-16, default: %u)</source>
-        <translation>Use N separate masternodes for each denominated input to mix funds (2-16, default: %u)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Use UPnP to map the listening port (default: 1 when listening and no -proxy)</source>
         <translation>Use UPnP to map the listening port (default: 1 when listening and no -proxy)</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. This option can be specified multiple times</source>
-        <translation>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. This option can be specified multiple times</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location line="+23"/>
         <source>WARNING! Failed to replenish keypool, please unlock your wallet to do so.</source>
         <translation>WARNING! Failed to replenish keypool, please unlock your wallet to do so.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>WARNING: abnormally high number of blocks generated, %d blocks received in the last %d hours (%d expected)</source>
-        <translation>WARNING: abnormally high number of blocks generated, %d blocks received in the last %d hours (%d expected)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>WARNING: check your network connection, %d blocks received in the last %d hours (%d expected)</source>
-        <translation>WARNING: check your network connection, %d blocks received in the last %d hours (%d expected)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
         <source>Wallet is locked, can&apos;t replenish keypool! Automatic backups and mixing are disabled, please unlock your wallet to replenish keypool.</source>
         <translation>Wallet is locked, can&apos;t replenish keypool! Automatic backups and mixing are disabled, please unlock your wallet to replenish keypool.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Warning: Unknown block versions being mined! It&apos;s possible unknown rules are in effect</source>
         <translation>Warning: Unknown block versions being mined! It&apos;s possible unknown rules are in effect</translation>
     </message>
@@ -5790,17 +5947,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>You need to rebuild the database using -reindex to go back to unpruned mode.  This will redownload the entire blockchain</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>masternodeaddr option is deprecated. Please use masternode.conf to manage your remote masternodes.</source>
-        <translation>masternodeaddr option is deprecated. Please use masternode.conf to manage your remote masternodes.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>%s - %d confirmations</source>
-        <translation>%s - %d confirmations</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+8"/>
         <source>(%d could be used only on mainnet)</source>
         <translation>(%d could be used only on mainnet)</translation>
     </message>
@@ -5815,32 +5962,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(must be %d for mainnet)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>-maxmempool must be at least %d MB</source>
         <translation>-maxmempool must be at least %d MB</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>&lt;category&gt; can be:</source>
         <translation>&lt;category&gt; can be:</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Activating best chain...</source>
-        <translation>Activating best chain...</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <source>Append comment to the user agent string</source>
         <translation>Append comment to the user agent string</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Attempt to recover private keys from a corrupt wallet.dat on startup</source>
-        <translation>Attempt to recover private keys from a corrupt wallet.dat on startup</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Automatic backups disabled</source>
         <translation>Automatic backups disabled</translation>
     </message>
@@ -5850,7 +5987,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Automatically create Tor hidden service (default: %d)</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>ERROR! Failed to create automatic backup</source>
         <translation>ERROR! Failed to create automatic backup</translation>
     </message>
@@ -5890,7 +6027,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Enable transaction replacement in the memory pool (default: %u)</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+14"/>
         <source>Error: A fatal internal error occurred, see debug.log for details</source>
         <translation>Error: A fatal internal error occurred, see debug.log for details</translation>
     </message>
@@ -5910,17 +6047,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Failed to delete backup, error: %s</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>Failed to parse host:port string</source>
         <translation>Failed to parse host:port string</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Fee (in %s/kB) to add to transactions you send (default: %s)</source>
         <translation>Fee (in %s/kB) to add to transactions you send (default: %s)</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Imports blocks from external blk000??.dat file on startup</source>
         <translation>Imports blocks from external blk000??.dat file on startup</translation>
     </message>
@@ -5930,17 +6067,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>InstantSend options:</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Invalid amount for -fallbackfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Invalid amount for -fallbackfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+11"/>
         <source>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</source>
         <translation>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Last PrivateSend was too recent.</source>
         <translation>Last PrivateSend was too recent.</translation>
     </message>
@@ -5960,17 +6097,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Loading addresses...</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Loading block index...</source>
         <translation>Loading block index...</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Loading fullfiled requests cache...</source>
-        <translation>Loading fullfiled requests cache...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Loading governance cache...</source>
         <translation>Loading governance cache...</translation>
     </message>
@@ -6025,14 +6157,9 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Missing input transaction information.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>No errors detected.</source>
         <translation>No errors detected.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>No funds detected in need of denominating.</source>
-        <translation>No funds detected in need of denominating.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6080,7 +6207,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Password for JSON-RPC connections</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Print version and exit</source>
         <translation>Print version and exit</translation>
     </message>
@@ -6120,17 +6247,72 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Pruning blockstore...</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Rebuild block chain index from current blk000??.dat files on startup</source>
-        <translation>Rebuild block chain index from current blk000??.dat files on startup</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <source>Rescan the block chain for missing wallet transactions on startup</source>
         <translation>Rescan the block chain for missing wallet transactions on startup</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+37"/>
+        <source>The wallet will avoid paying less than the minimum relay fee.</source>
+        <translation>The wallet will avoid paying less than the minimum relay fee.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This is the minimum transaction fee you pay on every transaction.</source>
+        <translation>This is the minimum transaction fee you pay on every transaction.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>This is the transaction fee you will pay if you send a transaction.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Transaction amounts must not be negative</source>
+        <translation>Transaction amounts must not be negative</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Transaction has too long of a mempool chain</source>
+        <translation>Transaction has too long of a mempool chain</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transaction must have at least one recipient</source>
+        <translation>Transaction must have at least one recipient</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Trying to connect...</source>
+        <translation>Trying to connect...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unable to bind to %s on this computer. %s is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. %s is probably already running.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Upgrading UTXO database</source>
+        <translation>Upgrading UTXO database</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use devnet chain with provided name</source>
+        <translation>Use devnet chain with provided name</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Wallet debugging/testing options:</source>
+        <translation>Wallet debugging/testing options:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Wallet needed to be rewritten: restart %s to complete</source>
+        <translation>Wallet needed to be rewritten: restart %s to complete</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
         <translation>Warning: unknown new rules activated (versionbit %i)</translation>
     </message>
@@ -6145,7 +6327,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Whether to operate in a blocks only mode (default: %u)</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>ZeroMQ notification options:</source>
         <translation>ZeroMQ notification options:</translation>
     </message>
@@ -6160,12 +6342,282 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>see debug.log for details.</translation>
     </message>
     <message>
-        <location line="-90"/>
+        <location line="-99"/>
         <source>RPC server options:</source>
         <translation>RPC server options:</translation>
     </message>
     <message>
+        <location line="-475"/>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The %s developers</source>
+        <translation>The %s developers</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</source>
+        <translation>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>
+        <translation>Cannot obtain a lock on data directory %s. %s is probably already running.</translation>
+    </message>
+    <message>
         <location line="+2"/>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
+        <translation>Distributed under the MIT software license, see the accompanying file %s or %s</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Force relay of transactions from whitelisted peers even if they violate local relay policy (default: %d)</source>
+        <translation>Force relay of transactions from whitelisted peers even if they violate local relay policy (default: %d)</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Incorrect or no devnet genesis block found. Wrong datadir for devnet specified?</source>
+        <translation>Incorrect or no devnet genesis block found. Wrong datadir for devnet specified?</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Maximum allowed median peer time offset adjustment. Local perspective of time may be influenced by peers forward or backward by this amount. (default: %u seconds)</source>
+        <translation>Maximum allowed median peer time offset adjustment. Local perspective of time may be influenced by peers forward or backward by this amount. (default: %u seconds)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Maximum total fees (in %s) to use in a single wallet transaction or raw transaction; setting this too low may abort large transactions (default: %s)</source>
+        <translation>Maximum total fees (in %s) to use in a single wallet transaction or raw transaction; setting this too low may abort large transactions (default: %s)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Override spork address. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.</source>
+        <translation>Override spork address. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong, %s will not work properly.</source>
+        <translation>Please check that your computer&apos;s date and time are correct! If your clock is wrong, %s will not work properly.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
+        <translation>Please contribute if you find %s useful. Visit %s for further information about the software.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (%u-%u, default: %u, 1=very frequent, high fees, %u=very infrequent, low fees)</source>
+        <translation>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (%u-%u, default: %u, 1=very frequent, high fees, %u=very infrequent, low fees)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Reduce storage requirements by enabling pruning (deleting) of old blocks. This allows the pruneblockchain RPC to be called to delete specific blocks, and enables automatic pruning of old blocks if a target size in MiB is provided. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, &gt;%u = automatically prune block files to stay under the specified target size in MiB)</source>
+        <translation>Reduce storage requirements by enabling pruning (deleting) of old blocks. This allows the pruneblockchain RPC to be called to delete specific blocks, and enables automatic pruning of old blocks if a target size in MiB is provided. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, &gt;%u = automatically prune block files to stay under the specified target size in MiB)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)</source>
+        <translation>Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Show N confirmations for a successfully locked transaction (%u-%u, default: %u)</source>
+        <translation>Show N confirmations for a successfully locked transaction (%u-%u, default: %u)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>This is the transaction fee you may pay when fee estimates are not available.</source>
+        <translation>This is the transaction fee you may pay when fee estimates are not available.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
+        <translation>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction.</source>
+        <translation>Unable to locate enough PrivateSend non-denominated funds for this transaction.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Use N separate masternodes for each denominated input to mix funds (%u-%u, default: %u)</source>
+        <translation>Use N separate masternodes for each denominated input to mix funds (%u-%u, default: %u)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Use hierarchical deterministic key generation (HD) after BIP39/BIP44. Only has effect during wallet creation/first start</source>
+        <translation>Use hierarchical deterministic key generation (HD) after BIP39/BIP44. Only has effect during wallet creation/first start</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>User defined mnemonic passphrase for HD wallet (BIP39). Only has effect during wallet creation/first start (default: empty string)</source>
+        <translation>User defined mnemonic passphrase for HD wallet (BIP39). Only has effect during wallet creation/first start (default: empty string)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. The client then connects normally using the rpcuser=&lt;USERNAME&gt;/rpcpassword=&lt;PASSWORD&gt; pair of arguments. This option can be specified multiple times</source>
+        <translation>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. The client then connects normally using the rpcuser=&lt;USERNAME&gt;/rpcpassword=&lt;PASSWORD&gt; pair of arguments. This option can be specified multiple times</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Wallet will not create transactions that violate mempool chain limits (default: %u)</source>
+        <translation>Wallet will not create transactions that violate mempool chain limits (default: %u)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Warning: At least %d of %d masternodes are running on a newer software version. Please check latest releases, you might need to update too.</source>
+        <translation>Warning: At least %d of %d masternodes are running on a newer software version. Please check latest releases, you might need to update too.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Warning: Every masternode (out of %d known ones) is running on a newer software version. Please check latest releases, it&apos;s very likely that you missed a major/critical update.</source>
+        <translation>Warning: Every masternode (out of %d known ones) is running on a newer software version. Please check latest releases, it&apos;s very likely that you missed a major/critical update.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Whitelist peers connecting from the given IP address (e.g. 1.2.3.4) or CIDR notated network (e.g. 1.2.3.0/24). Can be specified multiple times.</source>
+        <translation>Whitelist peers connecting from the given IP address (e.g. 1.2.3.4) or CIDR notated network (e.g. 1.2.3.0/24). Can be specified multiple times.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>%s corrupt, salvage failed</source>
+        <translation>%s corrupt, salvage failed</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%s is not a valid backup folder!</source>
+        <translation>%s is not a valid backup folder!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%s is set very high!</source>
+        <translation>%s is set very high!</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>(press q to shutdown and continue later)</source>
+        <translation>(press q to shutdown and continue later)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>-devnet can only be specified once</source>
+        <translation>-devnet can only be specified once</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>-port must be specified when -devnet and -listen are specified</source>
+        <translation>-port must be specified when -devnet and -listen are specified</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>-rpcport must be specified when -devnet and -server are specified</source>
+        <translation>-rpcport must be specified when -devnet and -server are specified</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow RFC1918 addresses to be relayed and connected to (default: %u)</source>
+        <translation>Allow RFC1918 addresses to be relayed and connected to (default: %u)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Attempt to recover private keys from a corrupt wallet on startup</source>
+        <translation>Attempt to recover private keys from a corrupt wallet on startup</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cannot resolve -%s address: &apos;%s&apos;</source>
+        <translation>Cannot resolve -%s address: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Change index out of range</source>
+        <translation>Change index out of range</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Copyright (C)</source>
+        <translation>Copyright (C)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Error loading %s</source>
+        <translation>Error loading %s</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading %s: Wallet corrupted</source>
+        <translation>Error loading %s: Wallet corrupted</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading %s: Wallet requires newer version of %s</source>
+        <translation>Error loading %s: Wallet requires newer version of %s</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error upgrading chainstate database</source>
+        <translation>Error upgrading chainstate database</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Failed to find mixing queue to join</source>
+        <translation>Failed to find mixing queue to join</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Failed to start a new mixing queue</source>
+        <translation>Failed to start a new mixing queue</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Initialization sanity check failed. %s is shutting down.</source>
+        <translation>Initialization sanity check failed. %s is shutting down.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Invalid amount for -%s=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Invalid amount for -%s=&lt;amount&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Invalid spork address specified with -sporkaddr</source>
+        <translation>Invalid spork address specified with -sporkaddr</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Keep N SECURETAG anonymized (%u-%u, default: %u)</source>
+        <translation>Keep N SECURETAG anonymized (%u-%u, default: %u)</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Print this help message and exit</source>
+        <translation>Print this help message and exit</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Receive and display P2P network alerts (default: %u)</source>
         <translation>Receive and display P2P network alerts (default: %u)</translation>
     </message>
@@ -6220,7 +6672,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Set maximum block size in bytes (default: %d)</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Set the masternode private key</source>
         <translation>Set the masternode private key</translation>
     </message>
@@ -6255,6 +6707,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Specify your own public address</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Starting network threads...</source>
+        <translation>Starting network threads...</translation>
+    </message>
+    <message>
         <location line="+7"/>
         <source>Synchronization pending...</source>
         <translation>Synchronization pending...</translation>
@@ -6270,32 +6727,27 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Synchronizing masternode payments...</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>The source code is available from %s.</source>
+        <translation>The source code is available from %s.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The transaction amount is too small to pay the fee</source>
         <translation>The transaction amount is too small to pay the fee</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>This help message</source>
-        <translation>This help message</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>This is experimental software.</source>
         <translation>This is experimental software.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Transaction amount too small</source>
         <translation>Transaction amount too small</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Transaction amounts must be positive</source>
-        <translation>Transaction amounts must be positive</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Transaction created successfully.</source>
         <translation>Transaction created successfully.</translation>
     </message>
@@ -6305,7 +6757,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Transaction fees are too high.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Transaction not valid.</source>
         <translation>Transaction not valid.</translation>
     </message>
@@ -6315,17 +6767,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Transaction too large for fee policy</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Transaction too large</source>
-        <translation>Transaction too large</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Unable to bind to %s on this computer (bind returned error %s)</source>
         <translation>Unable to bind to %s on this computer (bind returned error %s)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Unable to sign spork message, wrong key?</source>
         <translation>Unable to sign spork message, wrong key?</translation>
     </message>
@@ -6340,12 +6787,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Unknown state: id = %u</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Username for JSON-RPC connections</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Verifying blocks...</source>
         <translation>Verifying blocks...</translation>
     </message>
@@ -6365,7 +6812,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Wallet %s resides outside data directory %s</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Wallet is locked.</source>
         <translation>Wallet is locked.</translation>
     </message>
@@ -6386,11 +6833,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>You need to rebuild the database using -reindex to change -txindex</source>
-        <translation>You need to rebuild the database using -reindex to change -txindex</translation>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Your entries added successfully.</source>
         <translation>Your entries added successfully.</translation>
     </message>
@@ -6403,11 +6845,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <location line="+1"/>
         <source>Zapping all transactions from wallet...</source>
         <translation>Zapping all transactions from wallet...</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat corrupt, salvage failed</translation>
     </message>
 </context>
 </TS>

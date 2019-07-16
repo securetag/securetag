@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>These are your SecureTag addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ce sont vos adresses SecureTag pour la réception de paiements. Il est recommandé d'utiliser une nouvelle adresse de réception pour chaque transaction.</translation>
+        <translation>Voici vos adresses SecureTag pour la réception de paiements. Il est recommandé d'utiliser une nouvelle adresse de réception pour chaque transaction.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -110,7 +110,7 @@
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(aucune étiquette)</translation>
+        <translation>(pas d'étiquette)</translation>
     </message>
 </context>
 <context>
@@ -132,14 +132,6 @@
         <translation>Répéter la phrase de passe</translation>
     </message>
     <message>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>Utiliser pour désactiver le mode d'envoi trivial de paiement lorsque le compte système est compromis. N'assure pas une sécurité efficace.</translation>
-    </message>
-    <message>
-        <source>Only for mixing via PrivateSend</source>
-        <translation>Seulement pour le mélange avec PrivateSend</translation>
-    </message>
-    <message>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Saisir la nouvelle phrase de passe pour le portefeuille.&lt;br/&gt;Veuillez utiliser une phrase de passe de &lt;b&gt;dix caractères aléatoires ou plus&lt;/b&gt;, ou de &lt;b&gt;huit mots ou plus&lt;/b&gt;.</translation>
     </message>
@@ -150,6 +142,10 @@
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>Cette opération nécessite votre phrase de passe pour déverrouiller le portefeuille.</translation>
+    </message>
+    <message>
+        <source>Unlock wallet for mixing only</source>
+        <translation>Déverrouiller le portefeuille uniquement pour le mélange</translation>
     </message>
     <message>
         <source>Unlock wallet</source>
@@ -168,12 +164,16 @@
         <translation>Changer le mot de passe</translation>
     </message>
     <message>
+        <source>Enter the old passphrase and new passphrase to the wallet.</source>
+        <translation>Saisissez l'ancienne phrase de passe et la nouvelle phrase de passe du portefeuille.</translation>
+    </message>
+    <message>
         <source>Confirm wallet encryption</source>
         <translation>Confirmer le chiffrement du portefeuille</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR STG&lt;/b&gt;!</source>
-        <translation>Attention : si vous chiffrez votre portefeuille et perdez votre phrase de passe, vous &lt;b&gt;PERDREZ TOUS VOS STGS&lt;/b&gt; !</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SECURETAG&lt;/b&gt;!</source>
+        <translation>Attention : si vous chiffrez votre portefeuille et perdez votre phrase de passe, vous &lt;b&gt;PERDREZ TOUS VOS SECURETAGS&lt;/b&gt; !</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -184,12 +184,12 @@
         <translation>Portefeuille chiffré</translation>
     </message>
     <message>
-        <source>Enter the old passphrase and new passphrase to the wallet.</source>
-        <translation>Saisissez l'ancienne phrase de passe et la nouvelle phrase de passe du portefeuille.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your funds from being stolen by malware infecting your computer.</source>
+        <translation>%1 va maintenant être fermé afin de terminer le processus de chiffrage. Pour mémoire, le chiffrage de votre portefeuille ne peut protéger entièrement vos fonds d'être volés par un logiciel malveillant qui serait installé sur votre ordinateur.</translation>
     </message>
     <message>
-        <source>SecureTag will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your securetags from being stolen by malware infecting your computer.</source>
-        <translation>SecureTag va maintenant se fermer pour que le chiffrage soit terminé. N'oubliez pas : chiffrer votre portefeuille n'empêcherait pas vos securetags d'être volés par un logiciel malveillant qui infecterait votre ordinateur.</translation>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. Previous backups of the unencrypted wallet file contain the same HD seed and still have full access to all your funds just like the new, encrypted wallet.</source>
+        <translation>IMPORTANT : il convient que toutes les sauvegardes que vous avez faites précédemment de votre portefeuille soient remplacées par le fichier chiffré nouvellement créé. En effet, ces sauvegardes précédentes (non chiffrées) contiennent la même graine HD et ont un plein accès à tous vos fonds, tout comme le nouveau portefeuille chiffré.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -242,8 +242,12 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
+        <source>A fatal error occurred. SecureTag Core can no longer continue safely and will quit.</source>
+        <translation>Une erreur fatale est survenue. SecureTag ne peut plus continuer de façon sûre et va s'arrêter.</translation>
+    </message>
+    <message>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -302,12 +306,8 @@
         <translation>Quitter l’application</translation>
     </message>
     <message>
-        <source>&amp;About SecureTag</source>
-        <translation>À propos de SecureTag</translation>
-    </message>
-    <message>
-        <source>Show information about SecureTag</source>
-        <translation>Affichez des informations à propos de  SecureTag</translation>
+        <source>Show information about SecureTag Core</source>
+        <translation>Affichez des informations à propos de  SecureTag Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -320,6 +320,14 @@
     <message>
         <source>&amp;Options...</source>
         <translation>&amp;Options...</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>À &amp;propos de %1</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Modifier les options de configuration de %1</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -422,8 +430,20 @@
         <translation>Afficher les options de réparation du  portefeuille</translation>
     </message>
     <message>
+        <source>Open Wallet &amp;Configuration File</source>
+        <translation>Ouvrir le fichier de &amp;configuration du portefeuille</translation>
+    </message>
+    <message>
         <source>Open configuration file</source>
         <translation>Ouvrir le fichier de configuration</translation>
+    </message>
+    <message>
+        <source>Open &amp;Masternode Configuration File</source>
+        <translation>Ouvrir le fichier de configuration des &amp;masternodes</translation>
+    </message>
+    <message>
+        <source>Open Masternode configuration file</source>
+        <translation>Ouvrir le fichier de configuration des masternodes</translation>
     </message>
     <message>
         <source>Show Automatic &amp;Backups</source>
@@ -462,12 +482,20 @@
         <translation>Options de ligne de &amp;commande</translation>
     </message>
     <message>
-        <source>SecureTag client</source>
-        <translation>Client SecureTag </translation>
+        <source>Show the %1 help message to get a list with possible SecureTag command-line options</source>
+        <translation>Afficher le message d’aide de %1 pour obtenir la liste des options de ligne de commande SecureTag possibles.</translation>
     </message>
     <message>
-        <source>Synchronizing additional data: %p%</source>
-        <translation>Synchronisation des données additionnelles : %p%</translation>
+        <source>%1 client</source>
+        <translation>Client %1</translation>
+    </message>
+    <message>
+        <source>&amp;PrivateSend information</source>
+        <translation>Information &amp;PrivateSend</translation>
+    </message>
+    <message>
+        <source>Show the PrivateSend basic information</source>
+        <translation>Afficher les informations de base PrivateSend</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -494,76 +522,36 @@
         <translation><numerusform>%n connexion active au réseau SecureTag </numerusform><numerusform>%n connexions actives au réseau SecureTag </numerusform></translation>
     </message>
     <message>
+        <source>Network activity disabled</source>
+        <translation>Activité réseau désactivée</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Synchronisation des en-têtes (%1%)...</translation>
+    </message>
+    <message>
         <source>Synchronizing with network...</source>
         <translation>Synchronisation avec le réseau en cours...</translation>
     </message>
     <message>
-        <source>Importing blocks from disk...</source>
-        <translation>Importation des blocs depuis le disque...</translation>
+        <source>Indexing blocks on disk...</source>
+        <translation>Indexation des blocs sur le disque...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Traitement des blocs sur le disque...</translation>
     </message>
     <message>
         <source>Reindexing blocks on disk...</source>
         <translation>Réindexation des blocs sur le disque...</translation>
     </message>
     <message>
-        <source>No block source available...</source>
-        <translation>Aucune source de blocs disponible...</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>À jour</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n heures</numerusform><numerusform>%n heures</numerusform></translation>
-    </message>
-    <message>
-        <source>Modify configuration options for SecureTag</source>
-        <translation>Modifier les options de configuration de SecureTag</translation>
-    </message>
-    <message>
-        <source>Open Wallet &amp;Configuration File</source>
-        <translation>Ouvrir le fichier de &amp;configuration du portefeuille</translation>
-    </message>
-    <message>
-        <source>Open &amp;Masternode Configuration File</source>
-        <translation>Ouvrir le fichier de configuration des &amp;masternodes</translation>
-    </message>
-    <message>
-        <source>Open Masternode configuration file</source>
-        <translation>Ouvrir le fichier de configuration des masternodes</translation>
-    </message>
-    <message>
-        <source>Show the SecureTag help message to get a list with possible SecureTag command-line options</source>
-        <translation>Afficher l'aide SecureTag pour voir une liste des options possibles en ligne de commande</translation>
-    </message>
-    <message>
-        <source>&amp;PrivateSend information</source>
-        <translation>Information &amp;PrivateSend</translation>
-    </message>
-    <message>
-        <source>Show the PrivateSend basic information</source>
-        <translation>Afficher les informations de base PrivateSend</translation>
+        <source>Connecting to peers...</source>
+        <translation>Connexion aux pairs...</translation>
     </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation><numerusform> Traités %n bloc(s) de l'historique des transactions.</numerusform><numerusform> Traités %n bloc(s) de l'historique des transactions.</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n jours</numerusform><numerusform>%n jours</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n semaines</numerusform><numerusform>%n semaines</numerusform></translation>
-    </message>
-    <message>
-        <source>%1 and %2</source>
-        <translation>%1 et %2</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n année(s)</numerusform><numerusform>%n années</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -580,6 +568,14 @@
     <message>
         <source>Transactions after this will not yet be visible.</source>
         <translation>Les transactions ultérieures ne sont pas encore visibles.</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>À jour</translation>
+    </message>
+    <message>
+        <source>Synchronizing additional data: %p%</source>
+        <translation>Synchronisation des données additionnelles : %p%</translation>
     </message>
     <message>
         <source>Error</source>
@@ -632,12 +628,20 @@
         <translation>Transaction entrante</translation>
     </message>
     <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</source>
-        <translation>Le portefeuille est &lt;b&gt;chiffré&lt;/b&gt; et est actuellement &lt;b&gt;déverrouillé&lt;/b&gt; uniquement pour le mélange</translation>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>La génération de clef HD est &lt;b&gt;activée&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>La génération de clef HD est &lt;b&gt;désactivée&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Le portefeuille est &lt;b&gt;chiffré&lt;/b&gt; et est actuellement &lt;b&gt;déverrouillé&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for mixing only</source>
+        <translation>Le portefeuille est &lt;b&gt;chiffré&lt;/b&gt; et est actuellement &lt;b&gt;déverrouillé&lt;/b&gt; uniquement pour le mélange</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
@@ -668,10 +672,6 @@
     <message>
         <source>Amount:</source>
         <translation>Montant :</translation>
-    </message>
-    <message>
-        <source>Priority:</source>
-        <translation>Priorité :</translation>
     </message>
     <message>
         <source>Fee:</source>
@@ -742,10 +742,6 @@
         <translation>Confirmée</translation>
     </message>
     <message>
-        <source>Priority</source>
-        <translation>Priorité</translation>
-    </message>
-    <message>
         <source>Copy address</source>
         <translation>Copier l’adresse</translation>
     </message>
@@ -786,10 +782,6 @@
         <translation>Copier les octets</translation>
     </message>
     <message>
-        <source>Copy priority</source>
-        <translation>Copier la priorité</translation>
-    </message>
-    <message>
         <source>Copy dust</source>
         <translation>Copier la poussière</translation>
     </message>
@@ -806,68 +798,8 @@
         <translation>Éléments non-anonymisés sélectionnés. &lt;b&gt;PrivateSend sera désactivé.&lt;/b&gt;&lt;br&gt;&lt;br&gt;Si vous voulez quand même utiliser PrivateSend, veuillez d'abord désélectionner tous les éléments non-anonymisés, puis recochez la case PrivateSend.</translation>
     </message>
     <message>
-        <source>highest</source>
-        <translation>la plus élevée</translation>
-    </message>
-    <message>
-        <source>higher</source>
-        <translation>plus élevée</translation>
-    </message>
-    <message>
-        <source>high</source>
-        <translation>élevée</translation>
-    </message>
-    <message>
-        <source>medium-high</source>
-        <translation>moyenne-élevée</translation>
-    </message>
-    <message>
-        <source>This label turns red if the transaction size is greater than 1000 bytes.</source>
-        <translation>Cette étiquette devient rouge si la taille de la transaction dépasse 1000 octets.</translation>
-    </message>
-    <message>
-        <source>This label turns red if the priority is smaller than "medium".</source>
-        <translation>Cette étiquette devient rouge si la priorité est inférieure à “moyenne”.</translation>
-    </message>
-    <message>
-        <source>This label turns red if any recipient receives an amount smaller than %1.</source>
-        <translation>Cette étiquette devient rouge si l'un des destinataires reçoit un montant inférieur à %1.</translation>
-    </message>
-    <message>
-        <source>Can vary +/- %1 duff(s) per input.</source>
-        <translation>Peut varier de ± %1 duff(s) par entrée.</translation>
-    </message>
-    <message>
-        <source>n/a</source>
-        <translation>n/a</translation>
-    </message>
-    <message>
-        <source>medium</source>
-        <translation>moyenne</translation>
-    </message>
-    <message>
-        <source>low-medium</source>
-        <translation>moyenne-basse</translation>
-    </message>
-    <message>
-        <source>low</source>
-        <translation>basse</translation>
-    </message>
-    <message>
-        <source>lower</source>
-        <translation>plus basse</translation>
-    </message>
-    <message>
-        <source>lowest</source>
-        <translation>la plus basse</translation>
-    </message>
-    <message>
         <source>(%1 locked)</source>
-        <translation>(%1 verrouillé)</translation>
-    </message>
-    <message>
-        <source>none</source>
-        <translation>aucun</translation>
+        <translation>(%1 verrouillés)</translation>
     </message>
     <message>
         <source>yes</source>
@@ -878,16 +810,12 @@
         <translation>non</translation>
     </message>
     <message>
-        <source>This means a fee of at least %1 per kB is required.</source>
-        <translation>Cela signifie qu'une taxe d'au moins %1 par Ko est nécessaire.</translation>
+        <source>This label turns red if any recipient receives an amount smaller than the current dust threshold.</source>
+        <translation>Cette étiquette devient rouge si l'un des destinataires reçoit un montant inférieur au niveau de "poussière".</translation>
     </message>
     <message>
-        <source>Can vary +/- 1 byte per input.</source>
-        <translation>Peut varier ± 1 octet par entrée.</translation>
-    </message>
-    <message>
-        <source>Transactions with higher priority are more likely to get included into a block.</source>
-        <translation>Les transactions à priorité supérieure sont plus à même d'être incluses dans un bloc.</translation>
+        <source>Can vary +/- %1 politoshi(s) per input.</source>
+        <translation>Peut varier de ± %1 politoshi(s) par entrée.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -900,6 +828,10 @@
     <message>
         <source>(change)</source>
         <translation>(monnaie)</translation>
+    </message>
+    <message>
+        <source>n/a</source>
+        <translation>n/a</translation>
     </message>
 </context>
 <context>
@@ -925,28 +857,28 @@
         <translation>Veuillez choisir un niveau de confidentialité.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Utiliser 2 masternodes pour mélanger jusqu'à 1000 STG</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Utiliser 2 masternodes distincts pour mélanger jusqu'à 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 STG</source>
-        <translation>Utiliser 8 masternodes pour mélanger jusqu'à 1000 STG</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 SECURETAG</source>
+        <translation>Utiliser 8 masternodes distincts pour mélanger jusqu'à 1000 SECURETAG</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
-        <translation>Utiliser 16 masternodes</translation>
+        <translation>Utiliser 16 masternodes distincts</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 STG to anonymize 1000 STG</source>
-        <translation>Cette option est la plus rapide et coûtera environ 0,025 STG pour anonymiser 1000 STG</translation>
+        <source>This option is the quickest and will cost about ~0.025 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>Cette option est la plus rapide et coûtera environ 0,025 SECURETAG pour anonymiser 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 STG to anonymize 1000 STG</source>
-        <translation>Cette option est un peu moins rapide et coûtera environ 0,05 STG pour anonymiser 1000 STG</translation>
+        <source>This option is moderately fast and will cost about 0.05 SECURETAG to anonymize 1000 SECURETAG</source>
+        <translation>Cette option est un peu moins rapide et coûtera environ 0,05 SECURETAG pour anonymiser 1000 SECURETAG</translation>
     </message>
     <message>
-        <source>0.1 STG per 1000 STG you anonymize.</source>
-        <translation>0,1 STG par 1000 STG anonymisés.</translation>
+        <source>0.1 SECURETAG per 1000 SECURETAG you anonymize.</source>
+        <translation>0,1 SECURETAG par 1000 SECURETAG anonymisés.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1050,10 +982,6 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
-    </message>
-    <message>
         <source>version</source>
         <translation>version</translation>
     </message>
@@ -1062,8 +990,8 @@
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About SecureTag</source>
-        <translation>À propos de SecureTag</translation>
+        <source>About %1</source>
+        <translation>À propos de %1</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1086,22 +1014,6 @@
         <translation>Choisir le répertoire de données au démarrage (par défaut : %u)</translation>
     </message>
     <message>
-        <source>Show splash screen on startup (default: %u)</source>
-        <translation>Afficher l'écran de démarrage (défaut : %u)</translation>
-    </message>
-    <message>
-        <source>Reset all settings changes made over the GUI</source>
-        <translation>Réinitialiser tous les changements faits à l'interface utilisateur</translation>
-    </message>
-    <message>
-        <source>PrivateSend information</source>
-        <translation>Information PrivateSend</translation>
-    </message>
-    <message>
-        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times..&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 STG, 0.1 STG, 1 STG and 10 STG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
-        <translation>&lt;h3&gt;Ce qu'il faut savoir sur PrivateSend&lt;/h3&gt; PrivateSend vous donne une véritable confidentialité financière en obscurcissant l'origine de vos fonds. Tous les securetags de votre portefeuille sont répartis en différentes "entrées", qu'on peut se représenter comme des pièces distinctes.&lt;br&gt; PrivateSend utilise une procédure innovante pour mélanger vos entrées avec les entrées de deux autres personnes, sans que vos fonds ne quittent jamais votre portefeuille. Vous gardez le contrôle de votre argent à tout moment.&lt;hr&gt; &lt;b&gt;La procédure PrivateSend fonctionne comme ceci :&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend commence par diviser vos entrées de transaction en coupures standard. Ces coupures sont de 0.01 STG, 0.1 STG, 1 STG et 10 STG -- un peu comme pour les billets de banque que vous utilisez tous les jours.&lt;/li&gt; &lt;li&gt;Votre portefeuille envoie alors des requêtes à des serveurs spécifiques sur le réseau, appelés "masternodes". Ces masternodes sont informés que vous souhaiteriez mélanger certaines coupures. Aucune information permettant de vous identifier n'est envoyée aux masternodes, qui ne savent donc jamais "qui" vous êtes.&lt;/li&gt; &lt;li&gt;Quand deux autres personnes envoient des requêtes similaires, indiquant qu'elles veulent mélanger les mêmes coupures, alors commence une session de mélange. Le masternode mélange les entrées et demande aux portefeuilles des trois utilisateurs de payer l'entrée, désormais transformée, à eux-mêmes. Votre portefeuille paie cette coupure directement à lui-même, mais à une adresse différente (appelée une adresse de monnaie rendue).&lt;/li&gt; &lt;li&gt;Afin d'obscurcir complètement vos fonds, votre portefeuille doit répéter cette procédure un certain nombre de fois avec chaque coupure. Une procédure terminée s'appelle un "cycle". Chaque cycle PrivateSend rend exponentiellement plus difficile de déterminer d'où viennent vos fonds.&lt;/li&gt; &lt;li&gt;Cette procédure de mélange intervient en arrière-plan, sans aucune intervention de votre part. Quand vous souhaiterez faire une transaction, vos fonds seront déjà anonymisés. Aucune autre attente ne sera nécessaire.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT :&lt;/b&gt; Votre portefeuille ne contient que 1000 de ces "adresses de monnaie rendue". À chaque opération de mélange, jusqu'à 9 de ces adresses sont utilisées. Cela signifie que ces 1000 adresses couvrent environ 100 opérations de mélange. Quand 900 d'entre elles sont utilisées, votre portefeuille doit créer de nouvelles adresses. Cependant il ne peut le faire que si vous avez activé les sauvegardes automatiques.&lt;br&gt; En conséquence, les utilisateurs qui ont désactivé les sauvegardes ont aussi PrivateSend désactivé. &lt;hr&gt;Pour en savoir plus, voir &lt;a href="https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagcoin.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
-    </message>
-    <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
         <translation>Définir la langue, par exemple « fr_FR » (par défaut : la langue du système)</translation>
     </message>
@@ -1113,6 +1025,22 @@
         <source>Set SSL root certificates for payment request (default: -system-)</source>
         <translation>Définir les certificats SSL racine pour les requêtes de paiement (par défaut : -system-)</translation>
     </message>
+    <message>
+        <source>Show splash screen on startup (default: %u)</source>
+        <translation>Afficher l'écran de démarrage (défaut : %u)</translation>
+    </message>
+    <message>
+        <source>Reset all settings changed in the GUI</source>
+        <translation>Réinitialiser tous les réglages modifiés de l'interface utilisateur</translation>
+    </message>
+    <message>
+        <source>PrivateSend information</source>
+        <translation>Information PrivateSend</translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;PrivateSend Basics&lt;/h3&gt; PrivateSend gives you true financial privacy by obscuring the origins of your funds. All the SecureTag in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The PrivateSend process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.01 SECURETAG, 0.1 SECURETAG, 1 SECURETAG and 10 SECURETAG -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "masternodes." These masternodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the masternodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The masternode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have PrivateSend disabled. &lt;hr&gt;For more info see &lt;a href="https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </source>
+        <translation>&lt;h3&gt;Ce qu'il faut savoir sur PrivateSend&lt;/h3&gt; PrivateSend vous offre une véritable confidentialité financière en obscurcissant l'origine de vos fonds. Tous les securetags de votre portefeuille sont répartis en différentes "entrées", qu'on peut se représenter comme des pièces distinctes.&lt;br&gt; PrivateSend est un procédé innovant qui mélange vos entrées avec les entrées de deux autres personnes, sans que vos fonds ne quittent jamais votre portefeuille. Vous gardez le contrôle de votre argent à tout moment.&lt;hr&gt; &lt;b&gt;La procédure PrivateSend fonctionne comme ceci :&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;PrivateSend commence par diviser vos entrées de transaction en coupures standard. Ces coupures sont de 0.01 SECURETAG, 0.1 SECURETAG, 1 SECURETAG et 10 SECURETAG -- un peu comme pour les billets de banque que vous utilisez tous les jours.&lt;/li&gt; &lt;li&gt;Votre portefeuille envoie alors des requêtes à des serveurs spécifiques sur le réseau, appelés "masternodes". Ces masternodes sont informés que vous souhaiteriez mélanger certaines coupures. Aucune information permettant de vous identifier n'est envoyée aux masternodes, qui ne savent donc jamais "qui" vous êtes.&lt;/li&gt; &lt;li&gt;Quand deux autres personnes envoient des requêtes similaires, indiquant qu'elles veulent mélanger les mêmes coupures, alors commence une session de mélange. Le masternode mélange les entrées et demande aux portefeuilles des trois utilisateurs de payer l'entrée, désormais transformée, à eux-mêmes. Votre portefeuille paie cette coupure directement à lui-même, mais à une adresse différente (appelée adresse de monnaie rendue).&lt;/li&gt; &lt;li&gt;Afin d'obscurcir complètement vos fonds, votre portefeuille doit répéter cette procédure un certain nombre de fois avec chaque coupure. Une procédure terminée s'appelle un "cycle". Chaque cycle PrivateSend rend exponentiellement plus difficile de savoir d'où viennent vos fonds.&lt;/li&gt; &lt;li&gt;Cette procédure de mélange intervient en arrière-plan, sans aucune intervention de votre part. Quand vous souhaiterez faire une transaction, vos fonds seront déjà anonymisés. Aucune autre attente ne sera nécessaire.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT :&lt;/b&gt; Votre portefeuille ne contient que 1000 de ces "adresses de monnaie rendue". À chaque opération de mélange, jusqu'à 9 de ces adresses sont utilisées. Cela signifie que ces 1000 adresses couvrent environ 100 opérations de mélange. Quand 900 d'entre elles sont utilisées, votre portefeuille doit créer de nouvelles adresses. Cependant il ne peut le faire que si vous avez activé les sauvegardes automatiques.&lt;br&gt; En conséquence, les utilisateurs qui ont désactivé les sauvegardes ont aussi PrivateSend désactivé. &lt;hr&gt;Pour en savoir plus, voir &lt;a href="https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend"&gt;https://securetagpay.atlassian.net/wiki/display/DOC/PrivateSend&lt;/a&gt;         </translation>
+    </message>
 </context>
 <context>
     <name>Intro</name>
@@ -1121,16 +1049,16 @@
         <translation>Bienvenue</translation>
     </message>
     <message>
-        <source>Welcome to SecureTag.</source>
-        <translation>Bienvenue dans SecureTag</translation>
+        <source>Welcome to %1.</source>
+        <translation>Bienvenue à %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where SecureTag will store its data.</source>
-        <translation>Comme il s'agit du premier lancement du logiciel, vous pouvez choisir l'emplacement où SecureTag sauvegardera ses données.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Puisque c’est la première fois que le logiciel est lancé, vous pouvez choisir où %1 stockera ses données.</translation>
     </message>
     <message>
-        <source>SecureTag will download and store a copy of the SecureTag block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>SecureTag téléchargera et sauvegardera une copie de la chaîne de blocs SecureTag. Au moins %1 Go de données seront sauvegardés dans ce répertoire, et cette taille augmentera avec le temps. Le portefeuille sera aussi sauvegardé dans ce répertoire.</translation>
+        <source>%1 will download and store a copy of the SecureTag block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 va maintenant télécharger et stocker une copie de la blockchain SecureTag.  Au moins %2GB de données seront stockés dans ce répertoire, et il grossira avec le temps. Le portefeuille sera également stocké dans ce répertoire.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1139,10 +1067,6 @@
     <message>
         <source>Use a custom data directory:</source>
         <translation>Utiliser un répertoire de données personnalisé :</translation>
-    </message>
-    <message>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1173,7 +1097,7 @@
     </message>
     <message>
         <source>Note: Status of your masternodes in local wallet can potentially be slightly incorrect.&lt;br /&gt;Always wait for wallet to sync additional data and then double check from another node&lt;br /&gt;if your masternode should be running but you still do not see "ENABLED" in "Status" field.</source>
-        <translation>Note : l'état de vos masternodes dans cette portefeuille locale peut être légèrement incorrect.&lt;br /&gt;Veuillez toujours attendre que votre portefeuille soit synchronisé au réseau, et vérifiez depuis un autre nœud&lt;br /&gt;si votre masternode est censé tourner mais que vous ne voyez toujours pas "ENABLED" dans le champ "État".</translation>
+        <translation>À noter : l'état de vos masternodes dans ce portefeuille local peut être légèrement erroné.&lt;br /&gt;Veuillez toujours attendre que votre portefeuille soit synchronisé au réseau, et vérifiez votre masternode depuis un autre nœud&lt;br /&gt;s'il est censé tourner mais que vous ne voyez toujours pas "ENABLED" dans le champ "État".</translation>
     </message>
     <message>
         <source>Alias</source>
@@ -1218,6 +1142,14 @@
     <message>
         <source>&amp;Update status</source>
         <translation>Rafraîchir l'état</translation>
+    </message>
+    <message>
+        <source>Show additional Masternode information</source>
+        <translation>Afficher des infos supplémentaires sur le masternode</translation>
+    </message>
+    <message>
+        <source>Show &amp;Info...</source>
+        <translation>Afficher des &amp;Informations...</translation>
     </message>
     <message>
         <source>Status will be updated automatically in (sec):</source>
@@ -1279,6 +1211,89 @@
         <source>Are you sure you want to start MISSING masternodes?</source>
         <translation>Êtes-vous certain de vouloir démarrer les masternodes MANQUANTS ?</translation>
     </message>
+    <message>
+        <source>Additional information for Masternode %1</source>
+        <translation>Informations supplémentaires sur le masternode %1</translation>
+    </message>
+    <message>
+        <source>Masternode Private Key</source>
+        <translation>Clé privée du masternode</translation>
+    </message>
+    <message>
+        <source>Private Key</source>
+        <translation>Clé privée</translation>
+    </message>
+    <message>
+        <source>Collateral</source>
+        <translation>Caution</translation>
+    </message>
+    <message>
+        <source>IP</source>
+        <translation>IP</translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation>Version</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Inconnu</translation>
+    </message>
+    <message>
+        <source>Sentinel</source>
+        <translation>Sentinel</translation>
+    </message>
+</context>
+<context>
+    <name>ModalOverlay</name>
+    <message>
+        <source>Form</source>
+        <translation>Formulaire</translation>
+    </message>
+    <message>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the SecureTag network, as detailed below.</source>
+        <translation>Les transactions récentes ne sont peut-être pas encore visibles ; le solde de votre portefeuille peut donc être incorrect. Ces informations seront correctes dès que votre portefeuille aura terminé sa synchronisation avec le réseau SecureTag, comme précisé ci-dessous.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend SecureTag that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Les tentatives de dépenser des securetags affectés par des transactions non encore affichées seront rejetées par le réseau.</translation>
+    </message>
+    <message>
+        <source>Number of blocks left</source>
+        <translation>Nombre de blocs restants</translation>
+    </message>
+    <message>
+        <source>Unknown...</source>
+        <translation>Inconnu...</translation>
+    </message>
+    <message>
+        <source>Last block time</source>
+        <translation>Horodatage du dernier bloc</translation>
+    </message>
+    <message>
+        <source>Progress</source>
+        <translation>Avancement</translation>
+    </message>
+    <message>
+        <source>Progress increase per hour</source>
+        <translation>Avancement par heure</translation>
+    </message>
+    <message>
+        <source>calculating...</source>
+        <translation>en cours de calcul...</translation>
+    </message>
+    <message>
+        <source>Estimated time left until synced</source>
+        <translation>Temps restant estimé avant synchronisation</translation>
+    </message>
+    <message>
+        <source>Hide</source>
+        <translation>Masquer</translation>
+    </message>
+    <message>
+        <source>Unknown. Syncing Headers (%1)...</source>
+        <translation>Inconnu. Synchronisation des en-têtes (%1)...</translation>
+    </message>
 </context>
 <context>
     <name>OpenURIDialog</name>
@@ -1338,20 +1353,16 @@
         <translation>&amp;Portefeuille</translation>
     </message>
     <message>
-        <source>Automatically start SecureTag after logging in to the system.</source>
-        <translation>Lancer automatiquement SecureTag après connexion à cet ordinateur.</translation>
-    </message>
-    <message>
-        <source>&amp;Start SecureTag on system login</source>
-        <translation>&amp;Lancer SecureTag au démarrage</translation>
-    </message>
-    <message>
         <source>Show additional tab listing all your masternodes in first sub-tab&lt;br/&gt;and all masternodes on the network in second sub-tab.</source>
         <translation>Ajouter un onglet montrant tous vos masternodes dans le premier sous-onglet&lt;br/&gt;et tous les masternodes du réseau dans le second.</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
         <translation>Afficher l'onglet Masternodes</translation>
+    </message>
+    <message>
+        <source>Show Governance Tab</source>
+        <translation>Afficher l'onglet Governance</translation>
     </message>
     <message>
         <source>Show additional information and buttons for PrivateSend on overview screen.</source>
@@ -1363,11 +1374,11 @@
     </message>
     <message>
         <source>Show warning dialog when PrivateSend detects that wallet has very low number of keys left.</source>
-        <translation>Afficher un message d'avertissement quand PrivateSend détecte qu'il reste très peu de clés dans votre portefeuille.</translation>
+        <translation>Afficher un message d'avertissement quand PrivateSend détecte qu'il reste très peu de clefs dans votre portefeuille.</translation>
     </message>
     <message>
         <source>Warn if PrivateSend is running out of keys</source>
-        <translation>Avertir si PrivateSend manque bientôt de clés</translation>
+        <translation>Avertir si PrivateSend manque bientôt de clefs</translation>
     </message>
     <message>
         <source>Whether to use experimental PrivateSend mode with multiple mixing sessions per block.&lt;br/&gt;Note: You must use this feature carefully.&lt;br/&gt;Make sure you always have recent wallet (auto)backup in a safe place!</source>
@@ -1390,8 +1401,8 @@
         <translation>Ce montant agit comme seuil de désactivation de PrivateSend, une fois atteint.</translation>
     </message>
     <message>
-        <source>Automatically open the SecureTag client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir automatiquement le port du client SecureTag sur le routeur. Cela ne fonctionne que si votre routeur supporte UPnP et est activé.</translation>
+        <source>Automatically open the SecureTag Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouvrir automatiquement le port du client SecureTag Core sur le routeur. Cela ne fonctionne que si votre routeur supporte UPnP et est activé.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1414,10 +1425,6 @@
         <translation>Minimiser l'application (au lieu de la quitter) quand la fenêtre est fermée. Si cette option est activée, l'application se fermera uniquement en passant par le menu Quitter.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting SecureTag.</source>
-        <translation>La langue de l'interface peut être choisie ici. Ce réglage prendra effet après le redémarrage de SecureTag.</translation>
-    </message>
-    <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items.&lt;br/&gt;%s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URLs de tierce partie (par ex. : un explorateur de blocs) affichées dans l'onglet Transactions comme menu contextuel.&lt;br/&gt;%s dans l'URL est remplacé par le hash de transaction. Les URLs multiples sont séparées par une barre verticale |.</translation>
     </message>
@@ -1432,6 +1439,14 @@
     <message>
         <source>Whether to show coin control features or not.</source>
         <translation>Afficher ou non les fonctions de contrôle des pièces.</translation>
+    </message>
+    <message>
+        <source>Automatically start %1 after logging in to the system.</source>
+        <translation>Démarrer %1 automatiquement après avoir ouvert une session sur l’ordinateur.</translation>
+    </message>
+    <message>
+        <source>&amp;Start %1 on system login</source>
+        <translation>&amp;Démarrer %1 lors de l’ouverture d’une session</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1498,6 +1513,14 @@
         <translation>&amp;Fenêtre</translation>
     </message>
     <message>
+        <source>&amp;Hide the icon from the system tray.</source>
+        <translation>Masquer l'icône de la barre d'état système.</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>Masque l'icône de la barre d'état</translation>
+    </message>
+    <message>
         <source>Show only a tray icon after minimizing the window.</source>
         <translation>Afficher uniquement une icône système après minimisation.</translation>
     </message>
@@ -1516,6 +1539,10 @@
     <message>
         <source>User Interface &amp;language:</source>
         <translation>&amp;Langue de l'interface utilisateur :</translation>
+    </message>
+    <message>
+        <source>The user interface language can be set here. This setting will take effect after restarting %1.</source>
+        <translation>La langue de l’interface utilisateur peut être définie ici. Ce réglage sera pris en compte après redémarrage de %1.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1699,8 +1726,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Montant et cycles :</translation>
     </message>
     <message>
-        <source>0 STG / 0 Rounds</source>
-        <translation>0 STG / 0 cycles</translation>
+        <source>0 SECURETAG / 0 Rounds</source>
+        <translation>0 SECURETAG / 0 cycles</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -1743,8 +1770,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>désynchronisé</translation>
     </message>
     <message>
-        <source>Disabled</source>
-        <translation>Désactivé</translation>
+        <source>Automatic backups are disabled, no mixing available!</source>
+        <translation>Les sauvegardes automatiques sont désactivées, le mélange n'est pas possible !</translation>
+    </message>
+    <message>
+        <source>Start Mixing</source>
+        <translation>Commencer le mélange</translation>
+    </message>
+    <message>
+        <source>Stop Mixing</source>
+        <translation>Arrêter le mélange</translation>
     </message>
     <message>
         <source>No inputs detected</source>
@@ -1753,6 +1788,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message numerus="yes">
         <source>%n Rounds</source>
         <translation><numerusform>%n Cycle</numerusform><numerusform>%n cycles</numerusform></translation>
+    </message>
+    <message>
+        <source>Found enough compatible inputs to anonymize %1</source>
+        <translation>Trouvé assez d'entrées compatibles pour anonymiser %1</translation>
     </message>
     <message>
         <source>Not enough compatible inputs to anonymize &lt;span style='color:red;'&gt;%1&lt;/span&gt;,&lt;br&gt;will anonymize &lt;span style='color:red;'&gt;%2&lt;/span&gt; instead</source>
@@ -1767,6 +1806,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Coupures</translation>
     </message>
     <message>
+        <source>Mixed</source>
+        <translation>Mélangés</translation>
+    </message>
+    <message>
         <source>Anonymized</source>
         <translation>Anonymisés</translation>
     </message>
@@ -1775,39 +1818,23 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation><numerusform>Les coupures en entrée ont en moyenne %5 sur %n cycles</numerusform><numerusform>Les coupures en entrée ont en moyenne %5 sur %n cycles</numerusform></translation>
     </message>
     <message>
-        <source>Found enough compatible inputs to anonymize %1</source>
-        <translation>Trouvé assez d'entrées compatibles pour anonymiser %1</translation>
-    </message>
-    <message>
-        <source>Automatic backups are disabled, no mixing available!</source>
-        <translation>Les sauvegardes automatiques sont désactivées, le mélange n'est pas possible !</translation>
-    </message>
-    <message>
-        <source>Start Mixing</source>
-        <translation>Commencer le mélange</translation>
-    </message>
-    <message>
-        <source>Stop Mixing</source>
-        <translation>Arrêter le mélange</translation>
-    </message>
-    <message>
-        <source>Mixed</source>
-        <translation>Mélangés</translation>
-    </message>
-    <message>
         <source>keys left: %1</source>
-        <translation>clés restantes : %1</translation>
+        <translation>clefs restantes : %1</translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translation>Désactivé</translation>
     </message>
     <message>
         <source>Very low number of keys left since last automatic backup!</source>
-        <translation>Il reste très peu de clés depuis la dernière sauvegarde automatique !</translation>
+        <translation>Il reste très peu de clefs depuis la dernière sauvegarde automatique !</translation>
     </message>
     <message>
         <source>We are about to create a new automatic backup for you, however &lt;span style='color:red;'&gt; you should always make sure you have backups saved in some safe place&lt;/span&gt;!</source>
         <translation>Une nouvelle sauvegarde automatique est sur le point d'être créée pour vous, cependant &lt;span style='color:red;'&gt;assurez-vous toujours d'avoir des sauvegardes en lieu sûr&lt;/span&gt; !</translation>
     </message>
     <message>
-        <source>Note: You turn this message off in options.</source>
+        <source>Note: You can turn this message off in options.</source>
         <translation>Note : masquez ce message dans Options.</translation>
     </message>
     <message>
@@ -1832,13 +1859,17 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>WARNING! Failed to replenish keypool, please unlock your wallet to do so.</source>
-        <translation>ATTENTION ! Impossible de réalimenter la série de clés. Veuillez déverrouiller votre portefeuille pour cela.</translation>
+        <translation>ATTENTION ! Impossible de réalimenter la série de clefs. Veuillez déverrouiller votre portefeuille pour cela.</translation>
     </message>
     <message>
         <source>Last PrivateSend message:
 </source>
         <translation>Dernier message PrivateSend :
 </translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>n.d.</translation>
     </message>
     <message>
         <source>PrivateSend was successfully reset.</source>
@@ -1855,10 +1886,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Wallet is locked and user declined to unlock. Disabling PrivateSend.</source>
         <translation>Le portefeuille est verrouillé et l'utilisateur a refusé de le déverrouiller. PrivateSend est donc désactivé.</translation>
-    </message>
-    <message>
-        <source>N/A</source>
-        <translation>n.d.</translation>
     </message>
 </context>
 <context>
@@ -1880,20 +1907,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>L'URL de récupération de la demande de paiement est invalide : %1</translation>
     </message>
     <message>
-        <source>Payment request file handling</source>
-        <translation>Gestion des fichiers de demande de paiement</translation>
-    </message>
-    <message>
-        <source>Payment request expired.</source>
-        <translation>La demande de paiement a expiré.</translation>
-    </message>
-    <message>
         <source>Invalid payment address %1</source>
         <translation>Adresse de paiement %1 invalide</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid SecureTag address or malformed URI parameters.</source>
         <translation>L'URI ne peut être analysée ! Cela peut provenir d'une adresse SecureTag invalide, ou de paramètres d'URI mal composés.</translation>
+    </message>
+    <message>
+        <source>Payment request file handling</source>
+        <translation>Gestion des fichiers de demande de paiement</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -1906,6 +1929,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Payment request network doesn't match client network.</source>
         <translation>Le réseau de la demande de paiement ne correspond pas au réseau du client</translation>
+    </message>
+    <message>
+        <source>Payment request expired.</source>
+        <translation>La demande de paiement a expiré.</translation>
     </message>
     <message>
         <source>Payment request is not initialized.</source>
@@ -1955,20 +1982,36 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>PeerTableModel</name>
     <message>
-        <source>User Agent</source>
-        <translation>Agent utilisateur</translation>
-    </message>
-    <message>
-        <source>Ping Time</source>
-        <translation>Temps de ping</translation>
+        <source>NodeId</source>
+        <translation>Id nœud</translation>
     </message>
     <message>
         <source>Node/Service</source>
         <translation>Nœud/service</translation>
     </message>
+    <message>
+        <source>User Agent</source>
+        <translation>Agent utilisateur</translation>
+    </message>
+    <message>
+        <source>Ping</source>
+        <translation>Ping</translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
+    <message>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
+    </message>
+    <message>
+        <source>%1 didn't yet exit safely...</source>
+        <translation>%1 ne s’est pas encore arrêté en toute sécurité...</translation>
+    </message>
+    <message>
+        <source>Error reading masternode configuration file: %1</source>
+        <translation>Erreur de lecture du fichier de configuration du masternode : %1</translation>
+    </message>
     <message>
         <source>Amount</source>
         <translation>Montant</translation>
@@ -2004,6 +2047,91 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>%1 ms</source>
         <translation>%1 ms</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n second(s)</source>
+        <translation><numerusform>%n seconde</numerusform><numerusform>%n secondes</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n minute</numerusform><numerusform>%n minutes</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n heure</numerusform><numerusform>%n heures</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n day(s)</source>
+        <translation><numerusform>%n jour</numerusform><numerusform>%n jours</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n week(s)</source>
+        <translation><numerusform>%n semaine</numerusform><numerusform>%n semaines</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n year(s)</source>
+        <translation><numerusform>%n année</numerusform><numerusform>%n années</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 and %2</source>
+        <translation>%1 et %2</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>inconnu</translation>
+    </message>
+</context>
+<context>
+    <name>QObject::QObject</name>
+    <message>
+        <source>Error: Specified data directory "%1" does not exist.</source>
+        <translation>Erreur : le répertoire de données indiqué « %1 » n’existe pas.</translation>
+    </message>
+    <message>
+        <source>Error: Cannot parse configuration file: %1. Only use key=value syntax.</source>
+        <translation>Erreur : impossible d’analyser le fichier de configuration : %1. N’utiliser que la syntaxe clef=valeur.</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>Erreur : %1</translation>
+    </message>
+</context>
+<context>
+    <name>QRDialog</name>
+    <message>
+        <source>QR-Code Title</source>
+        <translation>Titre QR-code</translation>
+    </message>
+    <message>
+        <source>QR Code</source>
+        <translation>Code QR</translation>
+    </message>
+    <message>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Enregistrer l’image...</translation>
+    </message>
+    <message>
+        <source>Error creating QR Code.</source>
+        <translation>Erreur à la création du QR-code.</translation>
+    </message>
+</context>
+<context>
+    <name>QRGeneralImageWidget</name>
+    <message>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Enregistrer l’image...</translation>
+    </message>
+    <message>
+        <source>&amp;Copy Image</source>
+        <translation>&amp;Copier l'image</translation>
+    </message>
+    <message>
+        <source>Save QR Code</source>
+        <translation>Enregistrer le code QR</translation>
+    </message>
+    <message>
+        <source>PNG Image (*.png)</source>
+        <translation>Image PNG (*.png)</translation>
     </message>
 </context>
 <context>
@@ -2044,10 +2172,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Nom</translation>
     </message>
     <message>
-        <source>Client name</source>
-        <translation>Nom du client</translation>
-    </message>
-    <message>
         <source>N/A</source>
         <translation>n.d.</translation>
     </message>
@@ -2074,10 +2198,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Debug log file</source>
         <translation>Journal de débogage</translation>
-    </message>
-    <message>
-        <source>Build date</source>
-        <translation>Date de compilation</translation>
     </message>
     <message>
         <source>Current number of blocks</source>
@@ -2110,10 +2230,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Memory usage</source>
         <translation>Utilisation mémoire</translation>
-    </message>
-    <message>
-        <source>Open the SecureTag debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Ouvre le fichier de debug SecureTag depuis le répertoire de données actuel. Cela peut prendre plusieurs secondes si le fichier de debug est volumineux.</translation>
     </message>
     <message>
         <source>&amp;Console</source>
@@ -2188,6 +2304,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Agent utilisateur</translation>
     </message>
     <message>
+        <source>Datadir</source>
+        <translation>Rép. de données</translation>
+    </message>
+    <message>
+        <source>Open the %1 debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Ouvrir le fichier journal de débogage de %1 à partir du répertoire de données actuel. Cela peut prendre quelques secondes pour les fichiers journaux de grande taille.</translation>
+    </message>
+    <message>
+        <source>Decrease font size</source>
+        <translation>Diminuer la taille des caractères</translation>
+    </message>
+    <message>
+        <source>Increase font size</source>
+        <translation>Augmenter la taille des caractères</translation>
+    </message>
+    <message>
         <source>Services</source>
         <translation>Services</translation>
     </message>
@@ -2218,6 +2350,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Ping Wait</source>
         <translation>Attente du ping</translation>
+    </message>
+    <message>
+        <source>Min Ping</source>
+        <translation>Ping min.</translation>
     </message>
     <message>
         <source>Time Offset</source>
@@ -2253,23 +2389,23 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>-salvagewallet: Attempt to recover private keys from a corrupt wallet.dat.</source>
-        <translation>-salvagewallet: Tente de récupérer les clés privées d'un fichier wallet.dat corrompu.</translation>
+        <translation>-salvagewallet : Tente de récupérer les clefs privées d'un fichier "wallet.dat" corrompu.</translation>
     </message>
     <message>
         <source>-rescan: Rescan the block chain for missing wallet transactions.</source>
-        <translation>-rescan: Réanalyse la chaîne de blocs pour les transactions de portefeuille manquantes.</translation>
+        <translation>-rescan : Réanalyse la chaîne de blocs pour les transactions de portefeuille manquantes.</translation>
     </message>
     <message>
         <source>-zapwallettxes=1: Recover transactions from blockchain (keep meta-data, e.g. account owner).</source>
-        <translation>-zapwallettxes=1: Récupère les transactions depuis la chaîne de blocs (en gardant les métadonnées, par ex. le nom du compte).</translation>
+        <translation>-zapwallettxes=1 : Récupère les transactions depuis la chaîne de blocs (en gardant les métadonnées, par ex. le nom du compte).</translation>
     </message>
     <message>
         <source>-zapwallettxes=2: Recover transactions from blockchain (drop meta-data).</source>
-        <translation>-zapwallettxes=2: Récupère les transactions depuis la chaîne de blocs (sans garder les métadonnées).</translation>
+        <translation>-zapwallettxes=2 : Récupère les transactions depuis la chaîne de blocs (sans garder les métadonnées).</translation>
     </message>
     <message>
         <source>-upgradewallet: Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself!)</source>
-        <translation>-upgradewallet: Mise à jour du format du fichier wallet.dat vers la dernière version au démarrage. (Note : ce n'est PAS une mise à jour du logiciel portefeuille !)</translation>
+        <translation>-upgradewallet : Mise à jour du format du fichier wallet.dat vers la dernière version au démarrage. (Note : ce n'est PAS une mise à jour du logiciel portefeuille !)</translation>
     </message>
     <message>
         <source>Wallet repair options.</source>
@@ -2284,20 +2420,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>-reindex: Reconstruit l'index de la chaîne de blocs à partir des fichiers blk000??.dat actuels.</translation>
     </message>
     <message>
-        <source>In:</source>
-        <translation>Entrant :</translation>
+        <source>&amp;Disconnect</source>
+        <translation>&amp;Déconnecter</translation>
     </message>
     <message>
-        <source>Out:</source>
-        <translation>Sortant :</translation>
-    </message>
-    <message>
-        <source>&amp;Disconnect Node</source>
-        <translation>&amp;Déconnecter le nœud</translation>
-    </message>
-    <message>
-        <source>Ban Node for</source>
-        <translation>Bannir le nœud pour</translation>
+        <source>Ban for</source>
+        <translation>Bannir pour</translation>
     </message>
     <message>
         <source>1 &amp;hour</source>
@@ -2316,12 +2444,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>1 &amp;an</translation>
     </message>
     <message>
-        <source>&amp;Unban Node</source>
-        <translation>Dé&amp;bannir le nœud</translation>
+        <source>&amp;Unban</source>
+        <translation>Dé&amp;bannir</translation>
     </message>
     <message>
-        <source>Welcome to the SecureTag RPC console.</source>
-        <translation>Bienvenue sur la console RPC de SecureTag.</translation>
+        <source>Welcome to the %1 RPC console.</source>
+        <translation>Bienvenue sur la console RPC de %1.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -2330,6 +2458,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Tapez &lt;b&gt;help&lt;/b&gt; pour afficher une vue générale des commandes disponibles.</translation>
+    </message>
+    <message>
+        <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramification of a command.</source>
+        <translation>AVERTISSEMENT : des escrocs ont déjà tenté d'inciter des utilisateurs à saisir des commandes ici même, pour voler le contenu de leur portefeuille. N'utilisez pas cette console sans comprendre exactement la portée d'une commande.</translation>
+    </message>
+    <message>
+        <source>In:</source>
+        <translation>Entrant :</translation>
+    </message>
+    <message>
+        <source>Out:</source>
+        <translation>Sortant :</translation>
+    </message>
+    <message>
+        <source>Network activity disabled</source>
+        <translation>Activité réseau désactivée</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -2384,7 +2528,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>Reuse one of the previously used receiving addresses.&lt;br&gt;Reusing addresses has security and privacy issues.&lt;br&gt;Do not use this unless re-generating a payment request made before.</source>
-        <translation>Réutilise une adresse de réception précédemment utilisée.&lt;br&gt;Réutiliser une adresse pose des problèmes de sécurité et de vie privée.&lt;br&gt;N'utilisez pas cette option sauf si vous générez à nouveau une demande de paiement déjà faite.</translation>
+        <translation>Réutilise une adresse de réception précédemment utilisée.&lt;br&gt;Réutiliser une adresse pose des problèmes de sécurité et de vie privée.&lt;br&gt;N'utilisez pas cette option, sauf si vous générez à nouveau une demande de paiement déjà faite.</translation>
     </message>
     <message>
         <source>R&amp;euse an existing receiving address (not recommended)</source>
@@ -2436,7 +2580,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Request InstantSend</source>
-        <translation>Requête InstantSend</translation>
+        <translation>Demander un paiement InstantSend</translation>
     </message>
     <message>
         <source>Requested payments history</source>
@@ -2457,6 +2601,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Remove</source>
         <translation>Enlever</translation>
+    </message>
+    <message>
+        <source>Copy URI</source>
+        <translation>Copier l'&amp;URI</translation>
     </message>
     <message>
         <source>Copy label</source>
@@ -2522,6 +2670,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>InstantSend</translation>
     </message>
     <message>
+        <source>Yes</source>
+        <translation>Oui</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Non</translation>
+    </message>
+    <message>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
         <translation>L'URI résultante est trop longue. Essayez de réduire le texte d'étiquette ou de message.</translation>
     </message>
@@ -2545,10 +2701,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Message</translation>
     </message>
     <message>
-        <source>Amount</source>
-        <translation>Montant</translation>
-    </message>
-    <message>
         <source>(no label)</source>
         <translation>(pas d'étiquette)</translation>
     </message>
@@ -2557,8 +2709,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(pas de message)</translation>
     </message>
     <message>
-        <source>(no amount)</source>
-        <translation>(aucun montant)</translation>
+        <source>(no amount requested)</source>
+        <translation>(aucun montant demandé)</translation>
+    </message>
+    <message>
+        <source>Requested</source>
+        <translation>Demandée</translation>
     </message>
 </context>
 <context>
@@ -2596,24 +2752,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Montant :</translation>
     </message>
     <message>
-        <source>Priority:</source>
-        <translation>Priorité :</translation>
-    </message>
-    <message>
-        <source>medium</source>
-        <translation>moyen</translation>
-    </message>
-    <message>
         <source>Fee:</source>
         <translation>Frais :</translation>
     </message>
     <message>
         <source>Dust:</source>
         <translation>Poussière:</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation>non</translation>
     </message>
     <message>
         <source>After Fee:</source>
@@ -2633,15 +2777,27 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
-        <translation>Frais de Transaction:</translation>
+        <translation>Frais de transaction :</translation>
     </message>
     <message>
         <source>Choose...</source>
         <translation>Choisissez...</translation>
     </message>
     <message>
+        <source>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until your have validated the complete chain.</source>
+        <translation>Utiliser les frais de repli peut allonger le temps de confirmation d'une transaction (jusqu'à plusieurs heures, ou jours, voire jamais). Envisagez de choisir vos frais manuellement, ou bien attendez la validation complète de la blockchain.</translation>
+    </message>
+    <message>
+        <source>Warning: Fee estimation is currently not possible.</source>
+        <translation>Avertissement : l’estimation des frais n’est actuellement pas possible.</translation>
+    </message>
+    <message>
         <source>collapse fee-settings</source>
         <translation>replier les paramètres de frais</translation>
+    </message>
+    <message>
+        <source>Confirmation time target:</source>
+        <translation>Estimation du délai de confirmation :</translation>
     </message>
     <message>
         <source>PrivateSend</source>
@@ -2652,16 +2808,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>InstantSend</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 duffs in fee,&lt;br /&gt;while "at least" pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si les frais personnalisés sont à 1000 duffs et que la transaction fait seulement 250 octets, alors "par kilooctet" payera seulement 250 duffs de frais,&lt;br /&gt;alors que "au moins" payera 1000 duffs. Pour les transactions de plus d'un kilooctet les deux payeront par kilooctet.</translation>
+        <source>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then "per kilobyte" only pays 250 tags in fee,&lt;br /&gt;while "at least" pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si les frais personnalisés sont à 1000 tags et que la transaction fait seulement 250 octets, alors "par kilooctet" coûtera seulement 250 tags de frais,&lt;br /&gt;alors que "au moins" coûtera 1000 tags. Pour les transactions de plus d'un kilooctet, les deux coûts seront calculés au kilooctet.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 duffs in fee,&lt;br /&gt;while "total at least" pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si les frais personnalisés sont à 1000 duffs et que la transaction fait seulement 250 octets, alors "par kilooctet" payera seulement 250 duffs de frais,&lt;br /&gt;alors que "total au moins" payera 1000 duffs. Pour les transactions de plus d'un kilooctet les deux payeront par kilooctet.</translation>
+        <source>If the custom fee is set to 1000 tags and the transaction is only 250 bytes, then "per kilobyte" only pays 250 tags in fee,&lt;br /&gt;while "total at least" pays 1000 tags. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si les frais personnalisés sont à 1000 tags et que la transaction fait seulement 250 octets, alors "par kilooctet" coûtera seulement 250 tags de frais,&lt;br /&gt;alors que "total au moins" coûtera 1000 tags. Pour les transactions de plus d'un kilooctet, les deux coûts seront calculés au kilooctet.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for securetag transactions than the network can process.</source>
-        <translation>Payer les frais minimums fonctionne tant qu'il y a moins de volume de transactions que de place dans les blocs.&lt;br/&gt;Mais soyez conscients que ceci peut amener a des transactions qui ne seront jamais confirmées lorsqu'il y aura plus de demande que la capacité du réseau.</translation>
+        <translation>Payer les frais minimaux fonctionne tant que le volume des transactions est inférieur à l'espace libre dans les blocs.&lt;br/&gt;Gardez à l'esprit que cette option peut entraîner des transactions qui ne seront jamais confirmées si la demande excède la capacité du réseau.</translation>
     </message>
     <message>
         <source>per kilobyte</source>
@@ -2681,19 +2837,15 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Recommended:</source>
-        <translation>Recommandé:</translation>
+        <translation>Recommandé :</translation>
     </message>
     <message>
         <source>Custom:</source>
-        <translation>Personnalisé:</translation>
+        <translation>Personnalisé :</translation>
     </message>
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
-        <translation>(Les frais intelligents ne sont pas encore initialisés . Ceci nécessite quelques blocs généralement...)</translation>
-    </message>
-    <message>
-        <source>Confirmation time:</source>
-        <translation>Temps de Confirmation:</translation>
+        <translation>(Les frais intelligents ne sont pas encore disponibles. Cette fonction apparaît d'habitude après quelques blocs...)</translation>
     </message>
     <message>
         <source>normal</source>
@@ -2702,14 +2854,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>fast</source>
         <translation>rapide</translation>
-    </message>
-    <message>
-        <source>Send as zero-fee transaction if possible</source>
-        <translation>Envoyé en tant que transaction sans frais si possible</translation>
-    </message>
-    <message>
-        <source>(confirmation may take longer)</source>
-        <translation>(la confirmation pourra prendre plus de temps)</translation>
     </message>
     <message>
         <source>Confirm the send action</source>
@@ -2760,10 +2904,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Copier les octets</translation>
     </message>
     <message>
-        <source>Copy priority</source>
-        <translation>Copier la priorité</translation>
-    </message>
-    <message>
         <source>Copy dust</source>
         <translation>Copier poussière</translation>
     </message>
@@ -2785,27 +2925,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>any available funds (not anonymous)</source>
-        <translation>tout fonds disponible (pas anonyme)</translation>
+        <translation>tous fonds disponibles (pas d'anonymat)</translation>
     </message>
     <message>
         <source>and InstantSend</source>
         <translation>et InstantSend</translation>
-    </message>
-    <message>
-        <source>Duplicate address found: addresses should only be used once each.</source>
-        <translation>Adresse en déjà utilisée: chaque adresse devrait n'être utilisée qu'une seule fois.</translation>
-    </message>
-    <message>
-        <source>A fee higher than %1 is considered an absurdly high fee.</source>
-        <translation>Des frais plus grands que %1 sont considérés comme ridiculement élevées.</translation>
-    </message>
-    <message>
-        <source>Payment request expired.</source>
-        <translation>La demande de paiement a expirée.</translation>
-    </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Payer seulement les frais requis de %1</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -2817,27 +2941,23 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>are added as transaction fee</source>
-        <translation>ajouté en tant que frais de transaction</translation>
+        <translation>ajoutés en tant que frais de transaction</translation>
     </message>
     <message>
         <source>Total Amount = &lt;b&gt;%1&lt;/b&gt;&lt;br /&gt;= %2</source>
-        <translation>Montant Total = &lt;b&gt;%1&lt;/b&gt;&lt;br /&gt;= %2</translation>
-    </message>
-    <message>
-        <source>Confirm send coins</source>
-        <translation>Confirmer l’envoi des pièces</translation>
-    </message>
-    <message numerus="yes">
-        <source>Estimated to begin confirmation within %n block(s).</source>
-        <translation><numerusform>Le début de confirmation est estimé dans %n bloc.</numerusform><numerusform>Le début de confirmation est estimé dans les %n blocs.</numerusform></translation>
+        <translation>Montant total = &lt;b&gt;%1&lt;/b&gt;&lt;br /&gt;= %2</translation>
     </message>
     <message>
         <source>&lt;b&gt;(%1 of %2 entries displayed)&lt;/b&gt;</source>
         <translation>&lt;b&gt;(%1 sur %2 entrées affichées)&lt;/b&gt;</translation>
     </message>
     <message>
+        <source>Confirm send coins</source>
+        <translation>Confirmer l’envoi des fonds</translation>
+    </message>
+    <message>
         <source>The recipient address is not valid. Please recheck.</source>
-        <translation>L'adresse du destinataire n’est pas valide. Veuillez vérifier.</translation>
+        <translation>L'adresse du destinataire n’est pas valide. Veuillez la vérifier.</translation>
     </message>
     <message>
         <source>The amount to pay must be larger than 0.</source>
@@ -2852,20 +2972,52 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Le montant dépasse votre solde lorsque les frais de transaction de %1 sont inclus.</translation>
     </message>
     <message>
+        <source>Duplicate address found: addresses should only be used once each.</source>
+        <translation>Adresse déjà utilisée : chaque adresse devrait n'être utilisée qu'une seule fois.</translation>
+    </message>
+    <message>
         <source>Transaction creation failed!</source>
         <translation>La création de la transaction a échoué !</translation>
     </message>
     <message>
-        <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>La transaction a été rejetée ! Ceci peut arriver si certaines pièces de votre portefeuille étaient déjà dépensées, par exemple si vous avez utilisé une copie de wallet.dat et que des pièces ont été dépensées dans la copie sans être marquées comme telles ici.</translation>
+        <source>The transaction was rejected with the following reason: %1</source>
+        <translation>La transaction a été rejetée pour la raison suivante : %1</translation>
+    </message>
+    <message>
+        <source>A fee higher than %1 is considered an absurdly high fee.</source>
+        <translation>Des frais plus grands que %1 sont considérés comme ridiculement élevées.</translation>
+    </message>
+    <message>
+        <source>Payment request expired.</source>
+        <translation>La demande de paiement a expiré.</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n block(s)</source>
+        <translation><numerusform>%n bloc</numerusform><numerusform>%n blocs</numerusform></translation>
+    </message>
+    <message>
+        <source>Pay only the required fee of %1</source>
+        <translation>Payer seulement les frais requis de %1</translation>
+    </message>
+    <message numerus="yes">
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation><numerusform>Le début de confirmation est estimé dans %n bloc.</numerusform><numerusform>Le début de confirmation est estimé dans les %n blocs.</numerusform></translation>
     </message>
     <message>
         <source>Warning: Invalid SecureTag address</source>
-        <translation>Attention: adresse SecureTag invalide</translation>
+        <translation>Attention : adresse SecureTag invalide</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
         <translation>Attention : adresse de monnaie rendue inconnue</translation>
+    </message>
+    <message>
+        <source>Confirm custom change address</source>
+        <translation>Confimer l’adresse personnalisée de monnaie</translation>
+    </message>
+    <message>
+        <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
+        <translation>L’adresse que vous avez sélectionnée pour la monnaie ne fait pas partie de ce porte-monnaie. Les fonds de ce porte-monnaie peuvent en partie ou en totalité être envoyés vers cette adresse. Êtes-vous certain ?</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2920,7 +3072,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of SecureTag than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Les frais vont être déduits du montant envoyé. Le destinataire recevra moins de SecureTag que ce que vous avez indiqué dans la case montant. S'il y a de multiples destinataires, les frais seront partagés équitablements.</translation>
+        <translation>Les frais vont être déduits du montant envoyé. Le destinataire recevra moins de securetags que ce que vous avez indiqué dans la case montant. S'il y a plusieurs destinataires, les frais seront partagés équitablement.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2932,15 +3084,15 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>A message that was attached to the securetag: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the SecureTag network.</source>
-        <translation>Un message qui était joint au SecureTag : URI qui sera sauvegardée avec la transaction pour référence. Note : Ce message ne sera pas envoyé à travers le réseau SecureTag.</translation>
+        <translation>Un message joint à l'URI SecureTag qui sera sauvegardé avec la transaction pour référence. Note : ce message ne sera pas envoyé à travers le réseau SecureTag.</translation>
     </message>
     <message>
         <source>This is an unauthenticated payment request.</source>
-        <translation>Ceci est une demande de paiement non certifiée.</translation>
+        <translation>Ceci est une demande de paiement non authentifiée.</translation>
     </message>
     <message>
         <source>This is an authenticated payment request.</source>
-        <translation>Ceci est une demande de paiement certifiée.</translation>
+        <translation>Ceci est une demande de paiement authentifiée.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2952,18 +3104,25 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>Saisir une étiquette pour cette adresse afin de l’ajouter à votre carnet d’adresses</translation>
+        <translation>Donner une étiquette à cette adresse afin de l’ajouter à votre carnet d’adresses</translation>
+    </message>
+</context>
+<context>
+    <name>SendConfirmationDialog</name>
+    <message>
+        <source>Yes</source>
+        <translation>Oui</translation>
     </message>
 </context>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>SecureTag is shutting down...</source>
-        <translation>Arrêt de SecureTag...</translation>
+        <source>%1 is shutting down...</source>
+        <translation>Arrêt de %1...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
-        <translation>Ne pas fermer l'ordinateur jusqu'à la disparition de cette fenêtre.</translation>
+        <translation>Ne pas éteindre votre ordinateur avant disparition de cette fenêtre.</translation>
     </message>
 </context>
 <context>
@@ -2978,7 +3137,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive SecureTag sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Vous pouvez signer des messages/accords avec vos adresses pour prouver que vous pouvez recevoir des SecureTag avec. Faites attention de ne pas signer n'importe quoi de vague/aléatoire car des attaques d'hameçonnage peuvent essayer d'usurper votre identité par votre signature. Ne signez que des déclarations entièrement détaillées et avec lesquelles vous êtes d'accord.</translation>
+        <translation>Vous pouvez signer des messages ou contrats avec vos adresses, et ainsi prouver que vous pouvez y recevoir des securetags. Faites attention de ne pas signer quoi que ce soit de vague ou d'aléatoire, car des attaques d'hameçonnage peuvent essayer d'usurper votre identité en utilisant votre signature. Ne signez que des déclarations très détaillées et avec lesquelles vous êtes entièrement d'accord.</translation>
     </message>
     <message>
         <source>The SecureTag address to sign the message with</source>
@@ -3034,7 +3193,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</source>
-        <translation>Saisir ci-dessous l'adresse du destinataire, le message (assurez-vous d'avoir copié exactement les retours à la ligne, les espaces, tabulations etc.) et la signature pour vérifier le message. Faire attention à ne pas déduire davantage de la signature que ce qui est contenu dans le message signé lui-même pour éviter d'être trompé par une attaque d'homme au milieu. Notez que cela prouve uniquement que le destinataire peut recevoir avec l'adresse, cela ne prouve pas l'expéditeur d'aucune transaction !</translation>
+        <translation>Saisir ci-dessous l'adresse du destinataire, le message (assurez-vous d'avoir copié exactement les retours à la ligne, les espaces, tabulations, etc.) et la signature pour vérifier le message. Faites attention à ne pas déduire davantage de la signature que ce qui est contenu dans le message signé lui-même, pour éviter d'être trompé par une attaque "man in the middle". Gardez à l'esprit que cette opération prouve uniquement que le destinataire peut recevoir des fonds dans l'adresse donnée, cela ne prouve pas l'identité de l'expéditeur d'une transaction !</translation>
     </message>
     <message>
         <source>The SecureTag address the message was signed with</source>
@@ -3108,24 +3267,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>SecureTag</source>
-        <translation>SecureTag</translation>
+        <source>[testnet]</source>
+        <translation>[réseau de test]</translation>
     </message>
     <message>
         <source>Version %1</source>
         <translation>Version %1</translation>
-    </message>
-    <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Les développeurs Bitcoin Core</translation>
-    </message>
-    <message>
-        <source>The SecureTag developers</source>
-        <translation>Les développeurs SecureTag</translation>
-    </message>
-    <message>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
     </message>
 </context>
 <context>
@@ -3152,6 +3299,22 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>%1/offline</source>
         <translation>%1/déconnecté</translation>
+    </message>
+    <message>
+        <source>0/unconfirmed, %1</source>
+        <translation>0/non confirmée, %1</translation>
+    </message>
+    <message>
+        <source>in memory pool</source>
+        <translation>dans la zone mémoire</translation>
+    </message>
+    <message>
+        <source>not in memory pool</source>
+        <translation>hors de la zone mémoire</translation>
+    </message>
+    <message>
+        <source>abandoned</source>
+        <translation>abandonné</translation>
     </message>
     <message>
         <source>%1/unconfirmed</source>
@@ -3227,7 +3390,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message numerus="yes">
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>arrive à maturité dans %n bloc de plus</numerusform><numerusform>arrive à maturité dans %n blocs de plus</numerusform></translation>
+        <translation><numerusform>arrive à maturité dans %n bloc de plus</numerusform><numerusform>arrivera à maturité dans %n blocs</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -3239,11 +3402,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Total debit</source>
-        <translation>Total débit</translation>
+        <translation>Débit total</translation>
     </message>
     <message>
         <source>Total credit</source>
-        <translation>Total crédit</translation>
+        <translation>Crédit total</translation>
     </message>
     <message>
         <source>Transaction fee</source>
@@ -3266,12 +3429,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>ID de la transaction</translation>
     </message>
     <message>
+        <source>Output index</source>
+        <translation>Index de sorties</translation>
+    </message>
+    <message>
+        <source>Transaction total size</source>
+        <translation>Taille totale de la transaction</translation>
+    </message>
+    <message>
         <source>Merchant</source>
         <translation>Marchand</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Les pièces générées doivent mûrir pendant %1 blocs avant de pouvoir être dépensées. Lorsque vous avez généré ce bloc, il a été diffusé sur le réseau pour être ajouté à la chaîne de blocs. S’il échoue a intégrer la chaîne, son état sera modifié en « non accepté » et il ne sera pas possible de le dépenser. Ceci peut arriver occasionnellement si un autre nœud génère un bloc à quelques secondes du votre.</translation>
+        <translation>Les pièces générées doivent mûrir pendant %1 blocs avant de pouvoir être dépensées. Lorsque vous avez généré ce bloc, il a été diffusé sur le réseau pour être ajouté à la chaîne de blocs. S’il échoue à intégrer la chaîne, son état sera modifié en « non accepté » et il ne sera pas possible de le dépenser. Ceci peut arriver occasionnellement si un autre nœud génère un bloc à quelques secondes du vôtre.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3301,12 +3472,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
 <context>
     <name>TransactionDescDialog</name>
     <message>
-        <source>Transaction details</source>
-        <translation>Détails de la transaction</translation>
-    </message>
-    <message>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Ce panneau affiche une description détaillée de la transaction</translation>
+    </message>
+    <message>
+        <source>Details for %1</source>
+        <translation>Détails de %1</translation>
     </message>
 </context>
 <context>
@@ -3321,7 +3492,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Address / Label</source>
-        <translation>Adresse / Libelé</translation>
+        <translation>Adresse / Étiquette</translation>
     </message>
     <message numerus="yes">
         <source>Open for %n more block(s)</source>
@@ -3338,6 +3509,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Unconfirmed</source>
         <translation>Non confirmé</translation>
+    </message>
+    <message>
+        <source>Abandoned</source>
+        <translation>Abandonné</translation>
     </message>
     <message>
         <source>Confirming (%1 of %2 recommended confirmations)</source>
@@ -3357,7 +3532,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Ce bloc n’a été reçu par aucun autre nœud et ne sera probablement pas accepté !</translation>
+        <translation>Ce bloc n’a été reçu par aucun autre nœud et sera probablement rejeté !</translation>
     </message>
     <message>
         <source>Generated but not accepted</source>
@@ -3376,30 +3551,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Reçu par PrivateSend</translation>
     </message>
     <message>
-        <source>PrivateSend Denominate</source>
-        <translation>Dénomination PrivateSend</translation>
-    </message>
-    <message>
-        <source>PrivateSend Collateral Payment</source>
-        <translation>Paiement PrivateSend Collatéral</translation>
-    </message>
-    <message>
-        <source>PrivateSend Make Collateral Inputs</source>
-        <translation>PrivateSend Création d'Entrées Collatérales</translation>
-    </message>
-    <message>
-        <source>PrivateSend Create Denominations</source>
-        <translation>PrivateSend Création de Dénominations</translation>
-    </message>
-    <message>
-        <source>PrivateSend</source>
-        <translation>PrivateSend</translation>
-    </message>
-    <message>
-        <source>User-defined intent/purpose of the transaction.</source>
-        <translation>Intention/raison de la transaction définie par l'utilisateur</translation>
-    </message>
-    <message>
         <source>Sent to</source>
         <translation>Envoyée à</translation>
     </message>
@@ -3412,12 +3563,36 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Miné</translation>
     </message>
     <message>
+        <source>PrivateSend Denominate</source>
+        <translation>Coupure PrivateSend</translation>
+    </message>
+    <message>
+        <source>PrivateSend Collateral Payment</source>
+        <translation>Paiement de caution PrivateSend</translation>
+    </message>
+    <message>
+        <source>PrivateSend Make Collateral Inputs</source>
+        <translation>Création d'entrées de caution PrivateSend</translation>
+    </message>
+    <message>
+        <source>PrivateSend Create Denominations</source>
+        <translation>Création de coupures PrivateSend</translation>
+    </message>
+    <message>
+        <source>PrivateSend</source>
+        <translation>PrivateSend</translation>
+    </message>
+    <message>
         <source>watch-only</source>
         <translation>lecture seule</translation>
     </message>
     <message>
         <source>(n/a)</source>
         <translation>(n.d)</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(pas d'étiquette)</translation>
     </message>
     <message>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
@@ -3434,6 +3609,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Whether or not a watch-only address is involved in this transaction.</source>
         <translation>Si une adresse en lecture seule est impliquée dans cette transaction.</translation>
+    </message>
+    <message>
+        <source>User-defined intent/purpose of the transaction.</source>
+        <translation>Intention/raison de la transaction définie par l'utilisateur</translation>
     </message>
     <message>
         <source>Amount removed from or added to balance.</source>
@@ -3472,7 +3651,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Most Common</source>
-        <translation>Les Plus Courants</translation>
+        <translation>Les plus courants</translation>
     </message>
     <message>
         <source>Received with</source>
@@ -3488,19 +3667,19 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>PrivateSend Make Collateral Inputs</source>
-        <translation>PrivateSend Création d'Entrées Collatérales</translation>
+        <translation>Création d'entrées de caution PrivateSend</translation>
     </message>
     <message>
         <source>PrivateSend Create Denominations</source>
-        <translation>PrivateSend Création de Dénominations</translation>
+        <translation>Création de coupures PrivateSend</translation>
     </message>
     <message>
         <source>PrivateSend Denominate</source>
-        <translation>Dénomination PrivateSend</translation>
+        <translation>Coupure PrivateSend</translation>
     </message>
     <message>
         <source>PrivateSend Collateral Payment</source>
-        <translation>Paiement PrivateSend Collatéral</translation>
+        <translation>Paiement de caution PrivateSend</translation>
     </message>
     <message>
         <source>To yourself</source>
@@ -3523,6 +3702,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Montant min.</translation>
     </message>
     <message>
+        <source>Abandon transaction</source>
+        <translation>Abandonner la transaction</translation>
+    </message>
+    <message>
         <source>Copy address</source>
         <translation>Copier l’adresse</translation>
     </message>
@@ -3541,6 +3724,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Copy raw transaction</source>
         <translation>Copier la transaction brute</translation>
+    </message>
+    <message>
+        <source>Copy full transaction details</source>
+        <translation>Copier les détails complets de la transaction</translation>
     </message>
     <message>
         <source>Edit label</source>
@@ -3615,25 +3802,25 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <name>UnitDisplayStatusBarControl</name>
     <message>
         <source>Unit to show amounts in. Click to select another unit.</source>
-        <translation>Unité utilisée pour montrer les montants. Cliquez pour choisir une autre unité.</translation>
+        <translation>Unité utilisée pour l'affichage des montants. Cliquez pour choisir une autre unité.</translation>
     </message>
 </context>
 <context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
-        <translation>Aucun portefeuille de chargé.</translation>
+        <translation>Aucun portefeuille chargé.</translation>
     </message>
 </context>
 <context>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Envoyer des pièces</translation>
+        <translation>Envoyer des fonds</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 STG.</source>
-        <translation>InstantSend ne supporte pas des transferts aussi élevés. Les transactions sont pour le moment limitées à %1 STG.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</source>
+        <translation>InstantSend ne supporte pas des transferts aussi élevés. Les transactions sont pour le moment limitées à %1 SECURETAG.</translation>
     </message>
     <message>
         <source>Used way too many inputs (&gt;%1) for this InstantSend transaction, fees could be huge.</source>
@@ -3652,7 +3839,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Selected amount:</source>
-        <translation>Montant sélectionné:</translation>
+        <translation>Montant sélectionné :</translation>
     </message>
     <message>
         <source>Backup Wallet</source>
@@ -3686,12 +3873,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Se lier à l'adresse donnée et toujours l'écouter. Utilisez la notation [host]:port pour l'IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. SecureTag is probably already running.</source>
-        <translation>Impossible d’obtenir un verrou sur le répertoire de données %s. SecureTag fonctionne probablement déjà.</translation>
-    </message>
-    <message>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>
-        <translation>Erreur: L'écoute de connections entrantes a échouée (erreur retournée: %s)</translation>
+        <translation>Erreur : l'écoute des connexions entrantes a échoué (erreur retournée : %s)</translation>
     </message>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
@@ -3710,10 +3893,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Nom pour construire l'URL pour l'entrée KeePass qui conserve la phrase de passe du portefeuille</translation>
     </message>
     <message>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>Requête pour adresses de pairs via recherche DNS, si peu d'adresses (par défaut: 1 sauf si -connect)</translation>
-    </message>
-    <message>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
         <translation>Définir la taille maximale en octets des transactions prioritaires/à frais modiques (par défaut : %d)</translation>
     </message>
@@ -3723,35 +3902,23 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Ceci est une pré-version de test - l'utiliser à vos risques et périls - ne pas l'utiliser pour miner ou pour des applications marchandes</translation>
-    </message>
-    <message>
-        <source>Unable to bind to %s on this computer. SecureTag is probably already running.</source>
-        <translation>Impossible de se lier à %s sur cet ordinateur. SecureTag fonctionne probablement déjà.</translation>
+        <translation>Ceci est une pré-version de test - Veuillez l'utiliser à vos risques et périls - Ne pas l'utiliser pour miner ou pour des applications marchandes</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
-        <translation>Attention : Le réseau ne semble pas totalement d'accord ! Quelques mineurs semblent éprouver des difficultés.</translation>
+        <translation>Attention : le réseau ne paraît pas totalement d'accord ! Quelques mineurs semblent éprouver des difficultés.</translation>
     </message>
     <message>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
-        <translation>Attention : Nous ne semblons pas être en accord complet avec nos pairs ! Vous pourriez avoir besoin d'effectuer une mise à niveau, ou d'autres nœuds du réseau pourraient avoir besoin d'effectuer une mise à niveau.</translation>
-    </message>
-    <message>
-        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Avertissement : wallet.dat corrompu, données récupérées ! Le fichier wallet.dat original a été enregistré en tant que wallet.{timestamp}.bak dans %s ; si votre solde ou transactions sont incorrects vous devriez effectuer une restauration depuis une sauvegarde.</translation>
+        <translation>Attention : nous ne semblons pas être en accord complet avec nos pairs ! Peut-être devez-vous faire une mise à jour, ou d'autres nœuds du réseau ont besoin de faire une mise à jour.</translation>
     </message>
     <message>
         <source>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</source>
-        <translation>Vous devez définir masternodeprivkey dans la configuration. Veuillez consulter la documentation pour plus d'aide.</translation>
+        <translation>Vous devez définir "masternodeprivkey" dans la configuration. Veuillez consulter la documentation pour obtenir plus d'aide.</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accepter les commandes de JSON-RPC et de la ligne de commande</translation>
-    </message>
-    <message>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Accepter les connexions entrantes (par défaut : 1 si aucun -proxy ou -connect )</translation>
     </message>
     <message>
         <source>Add a node to connect to and attempt to keep the connection open</source>
@@ -3770,20 +3937,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Options de création de bloc :</translation>
     </message>
     <message>
-        <source>Can't denominate: no compatible inputs left.</source>
-        <translation>Ne peux pas dénommée: pas d'entrées compatibles restantes.</translation>
-    </message>
-    <message>
         <source>Cannot downgrade wallet</source>
         <translation>Impossible de revenir à une version inférieure du portefeuille</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -bind address: '%s'</source>
-        <translation>Impossible de résoudre l'adresse -bind : « %s »</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -externalip address: '%s'</source>
-        <translation>Impossible de résoudre l'adresse -externalip : « %s »</translation>
     </message>
     <message>
         <source>Cannot write default address</source>
@@ -3791,15 +3946,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Collateral not valid.</source>
-        <translation>Collatéral invalide.</translation>
-    </message>
-    <message>
-        <source>Connect only to the specified node(s)</source>
-        <translation>Ne se connecter qu'au(x) nœud(s) spécifié(s)</translation>
+        <translation>Caution invalide.</translation>
     </message>
     <message>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation>Se connecter à un nœud pour obtenir des adresses de pairs puis se déconnecter</translation>
+        <translation>Se connecter à un nœud pour obtenir des adresses de pairs, puis se déconnecter</translation>
     </message>
     <message>
         <source>Connection options:</source>
@@ -3807,7 +3958,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
-        <translation>Base corrompue de données des blocs détectée</translation>
+        <translation>Détection d'une corruption de la base de données des blocs</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>
@@ -3842,14 +3993,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Erreur du chargement de la base de données des blocs</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat</source>
-        <translation>Erreur lors du chargement de wallet.dat</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Erreur lors du chargement de wallet.dat : portefeuille corrompu</translation>
-    </message>
-    <message>
         <source>Error opening block database</source>
         <translation>Erreur lors de l'ouverture de la base de données des blocs</translation>
     </message>
@@ -3863,7 +4006,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Error: Disk space is low!</source>
-        <translation>Erreur : l'espace disque est faible !</translation>
+        <translation>Erreur : l'espace disque restant est faible !</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -3874,16 +4017,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>(1 = garder les méta-données de tx, par ex nom de compte et infos de paiements, 2 = supprimer méta-données)</translation>
     </message>
     <message>
-        <source>-fallbackfee is set very high! This is the transaction fee you may pay when fee estimates are not available.</source>
-        <translation>-fallbackfee est réglée sur un montant très élevé ! Il s'agit des frais de transaction que vous pouvez payer quand l'estimation des frais est indisponible.</translation>
-    </message>
-    <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>-maxtxfee est réglée sur un montant très élevé ! Ces frais aussi élevés peuvent être payés sur une transaction unique.</translation>
-    </message>
-    <message>
-        <source>-paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>-paytxfee est réglée sur un montant très élevé ! Il s'agit des frais de transaction que vous payerez si vous envoyez une transaction.</translation>
     </message>
     <message>
         <source>A fee rate (in %s/kB) that will be used when fee estimation has insufficient data (default: %s)</source>
@@ -3907,19 +4042,19 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
-        <translation>Créer les nouveaux fichiers avec les permissions systèmes par défaut, au lieu du umask 077 (utile seulement si le wallet est désactivé)</translation>
+        <translation>Créer les nouveaux fichiers avec les permissions systèmes par défaut, au lieu du umask 077 (utile seulement si le portefeuille est désactivé)</translation>
     </message>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
-        <translation>Effacer toutes les transactions du portefeuille et récupère celle qui font partie de la chaine de blocs via -rescan au démarrage</translation>
+        <translation>Effacer toutes les transactions du portefeuille et récupérer celles qui font partie de la chaîne de blocs par un -rescan au démarrage</translation>
     </message>
     <message>
-        <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
-        <translation>Distribué sous la licence logicielle MIT, voir le fichier joint COPYING ou &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
+        <source>Error loading %s: You can't enable HD on a already existing non-HD wallet</source>
+        <translation>Erreur en chargeant %s : Impossible d'activer HD sur un portefeuille non-HD déjà existant</translation>
     </message>
     <message>
         <source>Found unconfirmed denominated outputs, will wait till they confirm to continue.</source>
-        <translation>Détection de sorties dénominées non confirmées, attente de leur confirmation pour continuer.</translation>
+        <translation>Détection de sorties de coupures non confirmées, attente de leur confirmation pour continuer.</translation>
     </message>
     <message>
         <source>How thorough the block verification of -checkblocks is (0-4, default: %u)</source>
@@ -3930,12 +4065,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Si paytxfee n'est pas indiqué, inclure assez de frais pour que les transactions commencent leur confirmation en moyenne dans les n blocs (par défaut : %u)</translation>
     </message>
     <message>
+        <source>If this block is in the chain assume that it and its ancestors are valid and potentially skip their script verification (0 to verify all, default: %s, testnet: %s)</source>
+        <translation>Si ce bloc est dans la chaîne, considérer que lui et ses parents sont valides et omettre éventuellement la vérification de script (0 pour les vérifier tous, par défaut : %s, réseau de test : %s)</translation>
+    </message>
+    <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation>Montant invalide pour -maxtxfee=&lt;montant&gt; : « %s » (doit être au moins du montant de frais minrelay de %s pour éviter des transactions bloquées)</translation>
     </message>
     <message>
         <source>Maintain a full transaction index, used by the getrawtransaction rpc call (default: %u)</source>
         <translation>Maintenir un index complet des transactions, utilisé par l'appel rpc getrawtransaction (par défaut : %u)</translation>
+    </message>
+    <message>
+        <source>Make sure to encrypt your wallet and delete all non-encrypted backups after you verified that wallet works!</source>
+        <translation>Assurez-vous de chiffrer votre portefeuille, et effacez toutes vos sauvegardes non chiffrées après avoir vérifié que ce portefeuille marche !</translation>
     </message>
     <message>
         <source>Maximum size of data in data carrier transactions we relay and mine (default: %u)</source>
@@ -3950,32 +4093,24 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Extraire les informations de débogage (par défaut : %u, fournir &lt;category&gt; est optionnel)</translation>
     </message>
     <message>
-        <source>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</source>
-        <translation>Définir la limite processeur définissant quand la génération est en fonction (-1 = illimité, par défaut : %d)</translation>
-    </message>
-    <message>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
-        <translation>Afficher N confirmations for une transaction verrouillée réussie (0-9999, default : %u)</translation>
-    </message>
-    <message>
-        <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>Ce produit comprend des logiciels développés par le projet OpenSSL afin d'être utilisés dans la boîte à outils OpenSSL &lt;https://www.openssl.org/&gt;, un logiciel de chiffrement écrit par Eric Young et un logiciel UPnP développé par Thomas Bernard.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 STG.</source>
-        <translation>Impossible de localiser suffisamment de fonds pour cette transaction qui ne sont pas égaux à 1000 STG.</translation>
-    </message>
-    <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
         <translation>Utiliser un serveur proxy SOCKS5 séparé pour atteindre les pairs par les services cachés de Tor (par défaut : %s)</translation>
     </message>
     <message>
-        <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
-        <translation>Pairs en liste blanche qui se connectent via le masque réseau ou adresse IP. Peut être spécifié de multiples fois.</translation>
+        <source>User defined mnemonic for HD wallet (bip39). Only has effect during wallet creation/first start (default: randomly generated)</source>
+        <translation>Mnémonique défini par l'utilisateur pour le portefeuille HD (bip39). N'a d'effet que durant la création ou le premier lancement du portefeuille (défaut : généré aléatoirement)</translation>
+    </message>
+    <message>
+        <source>User defined seed for HD wallet (should be in hex). Only has effect during wallet creation/first start (default: randomly generated)</source>
+        <translation>Graine définie par l'utilisateur pour le portefeuille HD (devrait être en hexadécimal). N'a d'effet que durant la création ou le premier lancement du portefeuille (défaut : générée aléatoirement)</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
         <translation>Pairs en liste blanche ne peuvent être bannis pour DoS et leurs transactions sont toujours relayées, même si elles sont déjà en mémoire, utile par ex. pour une passerelle</translation>
+    </message>
+    <message>
+        <source>You need to rebuild the database using -reindex-chainstate to change -txindex</source>
+        <translation>Vous devez reconstruire la base de données en utilisant -reindex-chainstate pour modifier -txindex</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3990,8 +4125,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Toujours requêter via recherche DNS pour des adresses de pairs (par défaut: %u)</translation>
     </message>
     <message>
-        <source>Cannot resolve -whitebind address: '%s'</source>
-        <translation>Impossible de résoudre l'adresse -whitebind : « %s »</translation>
+        <source>Can't mix: no compatible inputs found!</source>
+        <translation>Impossible de mélanger : pas d'entrées compatibles trouvées !</translation>
+    </message>
+    <message>
+        <source>Chain selection options:</source>
+        <translation>Options de sélection de chaîne :</translation>
     </message>
     <message>
         <source>Connect through SOCKS5 proxy</source>
@@ -4002,24 +4141,32 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Connecter à KeePassHttp sur le port &lt;port&gt; (par défaut: %u)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
-    </message>
-    <message>
-        <source>Copyright (C) 2014-%i The SecureTag Developers</source>
-        <translation>Copyright (C) 2014-%i The SecureTag Developers</translation>
-    </message>
-    <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
         <translation>Autoriser le client à agir en tant que masternode (0-1, par défaut : %u)</translation>
     </message>
     <message>
-        <source>Error connecting to Masternode.</source>
-        <translation>Erreur de connexion au masternode.</translation>
+        <source>Entry exceeds maximum size.</source>
+        <translation>L'entrée dépasse la taille maximale.</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of SecureTag</source>
-        <translation>Erreur au chargement de wallet.dat : le Portefeuille nécessite une nouvelle version de SecureTag</translation>
+        <source>Error loading %s: You can't disable HD on a already existing HD wallet</source>
+        <translation>Erreur au chargement de %s : Impossible de désactiver HD sur un portefeuille HD déjà existant</translation>
+    </message>
+    <message>
+        <source>Failed to load fulfilled requests cache from</source>
+        <translation>Échec du chargement du cache des requêtes exécutées depuis</translation>
+    </message>
+    <message>
+        <source>Failed to load governance cache from</source>
+        <translation>Échec du chargement du cache de gouvernance depuis</translation>
+    </message>
+    <message>
+        <source>Failed to load masternode cache from</source>
+        <translation>Échec du chargement du cache des masternodes depuis</translation>
+    </message>
+    <message>
+        <source>Failed to load masternode payments cache from</source>
+        <translation>Échec du chargement du cache des paiements de masternode depuis</translation>
     </message>
     <message>
         <source>Found enough users, signing ( waiting %s )</source>
@@ -4028,10 +4175,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Found enough users, signing ...</source>
         <translation>Nombre suffisant d'utilisateurs trouvé, signature ...</translation>
-    </message>
-    <message>
-        <source>Generate coins (default: %u)</source>
-        <translation>Générer des pièces (défaut : %u)</translation>
     </message>
     <message>
         <source>How many blocks to check at startup (default: %u, 0 = all)</source>
@@ -4062,10 +4205,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Informations</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. SecureTag is shutting down.</source>
-        <translation>Les tests de cohérences lors de l'initialisation ont échoués. SecureTag est en cours de fermeture.</translation>
-    </message>
-    <message>
         <source>Input is not valid.</source>
         <translation>L'entrée est invalide.</translation>
     </message>
@@ -4082,24 +4221,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Adresse -proxy invalide : « %s »</translation>
     </message>
     <message>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Montant invalide pour -maxtxfee=&lt;montant&gt; : « %s »</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Montant invalide pour -minrelayfee=&lt;montant&gt; : « %s »</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Montant invalide pour -mintxfee=&lt;montant&gt; : « %s »</translation>
-    </message>
-    <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
         <translation>Montant invalide pour -paytxfee=&lt;montant&gt; : « %s » (minimum possible: %s)</translation>
     </message>
     <message>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Montant invalide pour -paytxfee=&lt;montant&gt; : « %s »</translation>
+        <source>Keypool ran out, please call keypoolrefill first</source>
+        <translation>La réserve de clefs est épuisée, veuillez d'abord utiliser keypoolrefill</translation>
     </message>
     <message>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
@@ -4108,6 +4235,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Listen for connections on &lt;port&gt; (default: %u or testnet: %u)</source>
         <translation>Écouter les connexions sur &lt;port&gt; (par défaut: %u ou testnet: %u)</translation>
+    </message>
+    <message>
+        <source>Loading banlist...</source>
+        <translation>Chargement de la liste de bannissement...</translation>
+    </message>
+    <message>
+        <source>Loading fulfilled requests cache...</source>
+        <translation>Chargement du cache des requêtes exécutées...</translation>
     </message>
     <message>
         <source>Loading masternode cache...</source>
@@ -4138,20 +4273,24 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Mélange en cours...</translation>
     </message>
     <message>
+        <source>Mnemonic passphrase is too long, must be at most 256 characters</source>
+        <translation>La phrase de passe mnémonique est trop longue, elle ne peut dépasser 256 caractères</translation>
+    </message>
+    <message>
         <source>Need to specify a port with -whitebind: '%s'</source>
         <translation>Un port doit être spécifié avec -whitebind: '%s'</translation>
     </message>
     <message>
         <source>No Masternodes detected.</source>
-        <translation>Aucun Masternode détecté.</translation>
+        <translation>Aucun masternode détecté.</translation>
     </message>
     <message>
         <source>No compatible Masternode found.</source>
-        <translation>Aucun Masternode compatible trouvé.</translation>
+        <translation>Aucun masternode compatible trouvé.</translation>
     </message>
     <message>
         <source>Not in the Masternode list.</source>
-        <translation>Absent de la liste des Masternodes.</translation>
+        <translation>Absent de la liste des masternodes.</translation>
     </message>
     <message>
         <source>Only connect to nodes in network &lt;net&gt; (ipv4, ipv6 or onion)</source>
@@ -4166,6 +4305,14 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Ajouter l'horodatage au début de la sortie de débogage (par défaut : %u)</translation>
     </message>
     <message>
+        <source>Rebuild chain state and block index from the blk*.dat files on disk</source>
+        <translation>Reconstruire l'état de chaîne et l'index de bloc à partir des fichiers blk*.dat sur le disque</translation>
+    </message>
+    <message>
+        <source>Rebuild chain state from the currently indexed blocks</source>
+        <translation>Reconstruire l'état de chaîne à partir des blocs actuellement indexés</translation>
+    </message>
+    <message>
         <source>Send trace/debug info to debug.log file (default: %u)</source>
         <translation>Envoyer les informations de débogage/trace au fichier debug.log (par défaut: %u)</translation>
     </message>
@@ -4176,10 +4323,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Set key pool size to &lt;n&gt; (default: %u)</source>
         <translation>Définir la taille de la réserve de clefs à &lt;n&gt; (par défaut : %u)</translation>
-    </message>
-    <message>
-        <source>Set minimum block size in bytes (default: %u)</source>
-        <translation>Définir la taille de bloc minimale en octets (par défaut : %u)</translation>
     </message>
     <message>
         <source>Set the number of threads to service RPC calls (default: %d)</source>
@@ -4218,8 +4361,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Soumis au masternode, dans la file d'attente %s</translation>
     </message>
     <message>
+        <source>Synchroning blockchain...</source>
+        <translation>Synchronisation de la chaîne de blocs...</translation>
+    </message>
+    <message>
         <source>Synchronization failed</source>
-        <translation>La synchronisation a échouée</translation>
+        <translation>La synchronisation a échoué</translation>
     </message>
     <message>
         <source>Synchronization finished</source>
@@ -4228,10 +4375,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Synchronizing masternodes...</source>
         <translation>Synchronisation des masternodes...</translation>
-    </message>
-    <message>
-        <source>Synchronizing sporks...</source>
-        <translation>Synchronisation des sporks...</translation>
     </message>
     <message>
         <source>This is not a Masternode.</source>
@@ -4243,7 +4386,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Too many %f denominations, removing.</source>
-        <translation>Trop de dénominations %f, suppression.</translation>
+        <translation>Trop de coupures %f, suppression en cours.</translation>
     </message>
     <message>
         <source>Tor control port password (default: empty)</source>
@@ -4275,7 +4418,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format on startup</source>
-        <translation>Mettre à niveau le portefeuille vers le format le plus récent au démarrage</translation>
+        <translation>Mettre à jour le portefeuille vers le format le plus récent au démarrage</translation>
     </message>
     <message>
         <source>Use KeePass 2 integration using KeePassHttp plugin (default: %u)</source>
@@ -4286,16 +4429,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Utiliser l'UPnP pour mapper le port d'écoute (par défaut : %u)</translation>
     </message>
     <message>
+        <source>Use the test chain</source>
+        <translation>Utiliser la chaîne de test</translation>
+    </message>
+    <message>
         <source>User Agent comment (%s) contains unsafe characters.</source>
         <translation>Le commentaire User Agent (%s) contient des caractères dangereux.</translation>
-    </message>
-    <message>
-        <source>Value more than PrivateSend pool maximum allows.</source>
-        <translation>Valeur supérieure au maximum autorisé par la zone PrivateSend.</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart SecureTag to complete</source>
-        <translation>Le portefeuille devait être réécrit : redémarrer SecureTag pour terminer l'opération.</translation>
     </message>
     <message>
         <source>Will retry...</source>
@@ -4311,7 +4450,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Can't mix while sync in progress.</source>
-        <translation>Ne peux pas mélanger pendant la synchronisation.</translation>
+        <translation>Impossible de mélanger pendant la synchronisation.</translation>
     </message>
     <message>
         <source>Could not parse masternode.conf</source>
@@ -4323,7 +4462,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Invalid port detected in masternode.conf</source>
-        <translation>Port non valide détecté dans masternode.conf</translation>
+        <translation>Port invalide détecté dans masternode.conf</translation>
     </message>
     <message>
         <source>Invalid script detected.</source>
@@ -4335,11 +4474,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>KeePassHttp key for AES encrypted communication with KeePass</source>
-        <translation>Clé KeePassHttp pour la communication chiffrée AES avec KeePass</translation>
-    </message>
-    <message>
-        <source>Keep N STG anonymized (default: %u)</source>
-        <translation>Maintenir N securetag anonymisé en permanence (défaut: %u)</translation>
+        <translation>Clef KeePassHttp pour la communication chiffrée AES avec KeePass</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
@@ -4347,7 +4482,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Disable all SecureTag specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: %u)</source>
-        <translation>Désactivez toutes les fonctionnalités liées à SecureTag (Masternode, PrivateSend, InstantSend, Gouvernance) (0-1, par défaut : %u)</translation>
+        <translation>Désactiver toutes les fonctionnalités liées à SecureTag (masternodes, PrivateSend, InstantSend, gouvernance) (0-1, par défaut : %u)</translation>
     </message>
     <message>
         <source>Discover own IP addresses (default: 1 when listening and no -externalip or -proxy)</source>
@@ -4370,16 +4505,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Activer l'utilisation automatique de PrivateSend pour les fonds stockés dans ce portefeuille (0-1, par défaut : %u)</translation>
     </message>
     <message>
-        <source>Error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Une erreur est survenue lors de la lecture de wallet.dat ! Toutes les clefs ont été lues correctement mais les données de transaction ou les entrées du carnet d'adresses sont peut-être incorrectes ou manquantes.</translation>
-    </message>
-    <message>
         <source>Execute command when a wallet InstantSend transaction is successfully locked (%s in cmd is replaced by TxID)</source>
         <translation>Exécuter la commande lorsqu'une transaction InstantSend de portefeuille est bloquée avec succès (%s dans la commande est remplacée par TxID)</translation>
     </message>
     <message>
         <source>Failed to create backup, file already exists! This could happen if you restarted wallet in less than 60 seconds. You can continue if you are ok with this.</source>
-        <translation>La création de la sauvegarde a échouée, le fichier existe déjà ! Cela peut arriver si vous avez redémarré `le portefeuille il y a moins de 60 secondes. Vous pouvez continuer si cela est ok pour vous.</translation>
+        <translation>La création de la sauvegarde a échoué, le fichier existe déjà ! Cela peut arriver si vous avez redémarré le portefeuille il y a moins de 60 secondes. Vous pouvez continuer si cela ne vous pose pas de problème.</translation>
     </message>
     <message>
         <source>Fees (in %s/kB) smaller than this are considered zero fee for relaying, mining and transaction creation (default: %s)</source>
@@ -4390,20 +4521,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Les frais (en %s/ko) inférieurs à ce seuil sont considérés comme nuls pour la création de transactions (par défaut : %s)</translation>
     </message>
     <message>
-        <source>Force relay of transactions from whitelisted peers even they violate local relay policy (default: %d)</source>
-        <translation>Forcer la retransmission des transactions de pairs en liste blanche, même s'ils violent nos politiques locales de retransmissions (par défaut : %d)</translation>
-    </message>
-    <message>
         <source>If &lt;category&gt; is not supplied or if &lt;category&gt; = 1, output all debugging information.</source>
         <translation>Si &lt;category&gt; n'est pas indiqué ou si &lt;category&gt; = 1, extraire toutes les données de débogage.</translation>
     </message>
     <message>
-        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 STG.</source>
-        <translation>InstantSend ne supporte pas encore des transferts aussi élevés. Les transactions sont pour le moment limitées à %1 STG.</translation>
+        <source>InstantSend doesn't support sending values that high yet. Transactions are currently limited to %1 SECURETAG.</source>
+        <translation>InstantSend ne supporte pas encore des transferts aussi élevés. Les transactions sont pour le moment limitées à %1 SECURETAG.</translation>
     </message>
     <message>
         <source>InstantSend requires inputs with at least %d confirmations, you might need to wait a few minutes and try again.</source>
-        <translation>InstantSend nécessite des entrées avec au moins %d confirmations, vous devriez attendre quelques minutes avant de réessayer.</translation>
+        <translation>InstantSend nécessite des entrées avec au moins %d confirmations. Vous devriez attendre quelques minutes avant de réessayer.</translation>
     </message>
     <message>
         <source>Maintain a full address index, used to query for the balance, txids and unspent outputs for addresses (default: %u)</source>
@@ -4422,36 +4549,20 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Garder au plus &lt;n&gt; connexions avec les pairs (services temporaires de connexions exclus) (par défaut : %u)</translation>
     </message>
     <message>
-        <source>Maximum total fees (in %s) to use in a single wallet transaction; setting this too low may abort large transactions (default: %s)</source>
-        <translation>Frais totaux maximum (en %s) pour une transaction portefeuille unique; si trop bas, risque d'annulation pour transactions trop volumineuses (par défaut : %s)</translation>
-    </message>
-    <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong SecureTag will not work properly.</source>
-        <translation>Veuillez vérifier que la date et l'heure de votre ordinateur sont justes ! Si votre horloge n'est pas à l'heure, SecureTag ne fonctionnera pas correctement.</translation>
-    </message>
-    <message>
         <source>PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>PrivateSend utilise des montants libellés exacts pour envoyer des fonds, vous pourriez simplement avoir besoin d'anonymiser plus de pièces.</translation>
-    </message>
-    <message>
-        <source>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Fournir des liquidités à PrivateSend en mélangeant occasionnellement mais régulièrement des pièces (0-100, par défaut : %u, 1=très fréquent, frais élevés, 100=très rare, frais bas)</translation>
+        <translation>PrivateSend utilise des montants libellés exacts pour envoyer des fonds, vous pourriez simplement avoir besoin d'anonymiser plus de fonds.</translation>
     </message>
     <message>
         <source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
-        <translation>Elagage configuré sous le minimum de %d Mio. Veuillez s'il vous plaît utiliser une valeur supérieure.</translation>
+        <translation>Élagage configuré sous le minimum de %d Mio. Veuillez s'il vous plaît utiliser une valeur supérieure.</translation>
     </message>
     <message>
         <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
-        <translation>Elagage : la dernière synchronisation de portefeuille va au delà des données élaguées. Vous devez -reindex er (téllécharger la chaîne complète de nouveau dans le cas d'un noeud élagué)</translation>
+        <translation>Élagage : la dernière synchronisation de portefeuille va au-delà des données élaguées. Vous devez -reindex er (télécharger la chaîne complète de nouveau dans le cas d'un nœud élagué)</translation>
     </message>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
         <translation>Rendre les Identifiant aléatoires pour chaque connection au proxy. Ceci active l'isolation de flux Tor (par défaut : %u)</translation>
-    </message>
-    <message>
-        <source>Reduce storage requirements by pruning (deleting) old blocks. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, &gt;%u = target size in MiB to use for block files)</source>
-        <translation>Réduire le stockage nécessaire en élagant (suppression) des vieux blocs. Ce mode est incompatible avec -txindex et -rescan. Attention : annuler ce paramètre signifie télécharger de nouveau la chaîne de blocs complète. (par défaut : 0 = désactive l'élagage, &gt;%u = taille cible en Mio d'utilisation des fichiers de blocs)</translation>
     </message>
     <message>
         <source>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
@@ -4467,11 +4578,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
-        <translation>La base de données de blocs semble contenir un bloc du futur. C'est peut être car la date et heure de votre ordinateur est incorrecte. Ne reconstruisez la base de donnée de blocs que si vous êtes sûr que la date et l'heure de votre ordinateur sont correctes.</translation>
+        <translation>La base de données de blocs semble contenir un bloc du futur. Cela signifie peut-être que la date et l'heure de votre ordinateur sont incorrectes. Ne reconstruisez la base de données des blocs que si vous êtes sûr que la date et l'heure de votre ordinateur sont correctes.</translation>
     </message>
     <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
-        <translation>Le montant de la transaction est trop bas pour être envoyée après avoir déduit les frais</translation>
+        <translation>Le montant de la transaction est trop bas pour qu'elle soit envoyée après déduction des frais</translation>
     </message>
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
@@ -4479,15 +4590,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = no limit (default: %d)</source>
-        <translation>Essaye de limiter le trafic sortant sous la cible indiquée (en Mio par 24h), 0 = sans limite (par défaut : %d)</translation>
+        <translation>Essaie de limiter le trafic sortant sous la cible indiquée (en Mio par 24h), 0 = sans limite (par défaut : %d)</translation>
     </message>
     <message>
         <source>Unable to locate enough PrivateSend denominated funds for this transaction.</source>
-        <translation>Impossible de localiser suffisamment de fonds PrivateSend labellisés pour cette transaction.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 1000 STG.</source>
-        <translation>Impossible de localiser suffisamment de fonds non-labellisés PrivateSend pour cette transaction qui ne sont pas égaux à 1000 STG.</translation>
+        <translation>Impossible de trouver suffisamment de fonds PrivateSend pour cette transaction.</translation>
     </message>
     <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
@@ -4498,48 +4605,24 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Paramètre obsolète -whitelistalwaysrelay ignoré, utilisez -whitelistrelay et/ou -whitelistforcerelay.</translation>
     </message>
     <message>
-        <source>Use N separate masternodes for each denominated input to mix funds (2-16, default: %u)</source>
-        <translation>Utiliser N masternodes différents pour chaque entrée labellisé pour mélanger les fonds (2-16, par défaut : %u)</translation>
-    </message>
-    <message>
         <source>Use UPnP to map the listening port (default: 1 when listening and no -proxy)</source>
         <translation>Utiliser l'UPnP pour mapper le port d'écoute (par défaut : 1 lors de l'écoute et pas de -proxy)</translation>
     </message>
     <message>
-        <source>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. This option can be specified multiple times</source>
-        <translation>Utilisateur et mot de passe haché pour les connections JSON-RPC. Le champs &lt;userpw&gt; est au format : &lt;UTILISATEUR&gt;:&lt;SEL&gt;$&lt;HACHAGE&gt;. Un script python canonique est inclus dans share/rpcuser. Cette option peut être spécifiée de multiples fois.</translation>
-    </message>
-    <message>
         <source>WARNING! Failed to replenish keypool, please unlock your wallet to do so.</source>
-        <translation>ATTENTION ! Impossible de réalimenter la série de clés. Veuillez déverrouiller votre portefeuille pour cela.</translation>
-    </message>
-    <message>
-        <source>WARNING: abnormally high number of blocks generated, %d blocks received in the last %d hours (%d expected)</source>
-        <translation>ATTENTION : fort taux anormal de blocs générés, %d blocs recus pendant les %d dernières heures (%d attendus).</translation>
-    </message>
-    <message>
-        <source>WARNING: check your network connection, %d blocks received in the last %d hours (%d expected)</source>
-        <translation>ATTENTION : vérifiez votre connexion réseau, %d blocs reçus lors des %d dernières heures (%d attendus).</translation>
+        <translation>ATTENTION ! Impossible de réalimenter la série de clefs. Veuillez déverrouiller votre portefeuille pour cela.</translation>
     </message>
     <message>
         <source>Wallet is locked, can't replenish keypool! Automatic backups and mixing are disabled, please unlock your wallet to replenish keypool.</source>
-        <translation>Le portefeuille est vérouillé, impossible de réalimenter la série de clés ! La sauvegarde automatique et le mélange sont désactivés, veuillez déverrouiller votre portefeuille pour la réalimenter.</translation>
+        <translation>Le portefeuille est verrouillé, impossible de réalimenter la série de clefs ! La sauvegarde automatique et le mélange sont désactivés, veuillez déverrouiller votre portefeuille pour la réalimenter.</translation>
     </message>
     <message>
         <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Attention : Une version inconnue de bloc est en train d'être miné ! Il est possible que des règles inconnues soient en cours.</translation>
+        <translation>Attention : un bloc de version inconnue est en train d'être miné ! Il est possible que des règles inconnues soient en vigueur.</translation>
     </message>
     <message>
         <source>You need to rebuild the database using -reindex to go back to unpruned mode.  This will redownload the entire blockchain</source>
-        <translation>Vous devez reconstruire la base de données en utilisant -reindex pour retourner en mode non-élagué. Ceci aura pour effet de télécharger la chaîne de blocs complète de nouveau.</translation>
-    </message>
-    <message>
-        <source>masternodeaddr option is deprecated. Please use masternode.conf to manage your remote masternodes.</source>
-        <translation>L'option masternodeaddr est obsolète. Veuillez utiliser masternode.conf pour gérer vos masternodes distantes.</translation>
-    </message>
-    <message>
-        <source>%s - %d confirmations</source>
-        <translation>%s - %d confirmations</translation>
+        <translation>Vous devez reconstruire la base de données en utilisant -reindex pour retourner en mode non-élagué. Ceci aura pour effet de télécharger à nouveau la chaîne de blocs complète.</translation>
     </message>
     <message>
         <source>(%d could be used only on mainnet)</source>
@@ -4562,16 +4645,8 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>&lt;category&gt; peut être :</translation>
     </message>
     <message>
-        <source>Activating best chain...</source>
-        <translation>Activation de la meilleure chaîne...</translation>
-    </message>
-    <message>
         <source>Append comment to the user agent string</source>
         <translation>Apposer un commentaire à la chaîne d'agent utilisateur</translation>
-    </message>
-    <message>
-        <source>Attempt to recover private keys from a corrupt wallet.dat on startup</source>
-        <translation>Tenter de récupérer les clefs privées d'un wallet.dat corrompu au démarrage</translation>
     </message>
     <message>
         <source>Automatic backups disabled</source>
@@ -4619,19 +4694,19 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Failed to create backup %s!</source>
-        <translation>La création de la sauvegarde %s a échouée !</translation>
+        <translation>La création de la sauvegarde %s a échoué !</translation>
     </message>
     <message>
         <source>Failed to create backup, error: %s</source>
-        <translation>La création de la sauvegarde a échouée, erreur : %s !</translation>
+        <translation>La création de la sauvegarde a échoué, erreur : %s !</translation>
     </message>
     <message>
         <source>Failed to delete backup, error: %s</source>
-        <translation>La suppression de la sauvegarde a échouée, erreur : %s !</translation>
+        <translation>La suppression de la sauvegarde a échoué, erreur : %s !</translation>
     </message>
     <message>
         <source>Failed to parse host:port string</source>
-        <translation>L'analyse de la chaîne hôte:port a échouée</translation>
+        <translation>L'analyse de la chaîne hôte:port a échoué</translation>
     </message>
     <message>
         <source>Fee (in %s/kB) to add to transactions you send (default: %s)</source>
@@ -4651,19 +4726,19 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</source>
-        <translation>Garder la zone mémoire de transactions sous &lt;n&gt; megaoctets (par défaut : %u)</translation>
+        <translation>Garder la zone mémoire de transactions en-dessous de &lt;n&gt; Mo (par défaut : %u)</translation>
     </message>
     <message>
         <source>Last PrivateSend was too recent.</source>
-        <translation>Le dernier PrivateSend était trop récent.</translation>
+        <translation>Le dernier PrivateSend est trop récent.</translation>
     </message>
     <message>
         <source>Last successful PrivateSend action was too recent.</source>
-        <translation>La dernière action PrivateSend réussie était trop récente.</translation>
+        <translation>La dernière action PrivateSend réussie est trop récente.</translation>
     </message>
     <message>
         <source>Line: %d</source>
-        <translation>Ligne: %d</translation>
+        <translation>Ligne : %d</translation>
     </message>
     <message>
         <source>Loading addresses...</source>
@@ -4672,10 +4747,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Loading block index...</source>
         <translation>Chargement de l’index des blocs...</translation>
-    </message>
-    <message>
-        <source>Loading fullfiled requests cache...</source>
-        <translation>Chargement du cache de requêtes accompiies...</translation>
     </message>
     <message>
         <source>Loading governance cache...</source>
@@ -4695,15 +4766,15 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Make the wallet broadcast transactions</source>
-        <translation>Faire que le portefeuille transmette les transactions</translation>
+        <translation>Faire transmettre les transactions par le portefeuille</translation>
     </message>
     <message>
         <source>Masternode cache is empty, skipping payments and governance cache...</source>
-        <translation>Le cache de Masternode est vide, omettre le cache des paiements et de gouvernance...</translation>
+        <translation>Le cache de masternode est vide, omission du cache des paiements et de gouvernance...</translation>
     </message>
     <message>
         <source>Masternode options:</source>
-        <translation>Options Masternode :</translation>
+        <translation>Options masternode :</translation>
     </message>
     <message>
         <source>Masternode queue is full.</source>
@@ -4726,20 +4797,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Aucune erreur détectée.</translation>
     </message>
     <message>
-        <source>No funds detected in need of denominating.</source>
-        <translation>Aucuns fonds détectés nécessitant une dénomination.</translation>
-    </message>
-    <message>
         <source>No matching denominations found for mixing.</source>
-        <translation>Pas de dénominations équivalentes trouvées pour le mélange.</translation>
+        <translation>Pas de coupures équivalentes trouvées pour le mélange.</translation>
     </message>
     <message>
         <source>Node relay options:</source>
-        <translation>Options de noeud de relais:</translation>
+        <translation>Options de nœud de relais :</translation>
     </message>
     <message>
         <source>Non-standard public key detected.</source>
-        <translation>Clé publique non standard détectée.</translation>
+        <translation>Clef publique non standard détectée.</translation>
     </message>
     <message>
         <source>Not compatible with existing transactions.</source>
@@ -4747,11 +4814,11 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Not enough file descriptors available.</source>
-        <translation>Pas assez de descripteurs de fichiers de disponibles.</translation>
+        <translation>Pas assez de descripteurs de fichiers disponibles.</translation>
     </message>
     <message>
         <source>Not enough funds to anonymize.</source>
-        <translation>Pas assez de fonds pour anonimiser.</translation>
+        <translation>Pas assez de fonds pour anonymiser.</translation>
     </message>
     <message>
         <source>Number of automatic wallet backups (default: %u)</source>
@@ -4787,31 +4854,75 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Prune cannot be configured with a negative value.</source>
-        <translation>Elaguer ne peux être configuré avec une valeur négative.</translation>
+        <translation>L'élagage ne peut être configuré avec une valeur négative.</translation>
     </message>
     <message>
         <source>Prune mode is incompatible with -txindex.</source>
-        <translation>Le mode Elaguer est incompatible avec -txindex.</translation>
+        <translation>Le mode Élaguer est incompatible avec -txindex.</translation>
     </message>
     <message>
         <source>Pruning blockstore...</source>
         <translation>Élagage  du stockage de blocs...</translation>
     </message>
     <message>
-        <source>Rebuild block chain index from current blk000??.dat files on startup</source>
-        <translation>Reconstruire l'index de la chaîne de blocs à partir des fichiers blk000??.dat actuels au démarrage</translation>
-    </message>
-    <message>
         <source>Rescan the block chain for missing wallet transactions on startup</source>
         <translation>Réanalyser la chaîne de blocs au démarrage pour les transactions de portefeuille manquantes</translation>
     </message>
     <message>
+        <source>The wallet will avoid paying less than the minimum relay fee.</source>
+        <translation>Le porte-monnaie évitera de payer moins que les frais minimaux de relais. </translation>
+    </message>
+    <message>
+        <source>This is the minimum transaction fee you pay on every transaction.</source>
+        <translation>Il s’agit des frais minimaux que vous payez pour chaque transaction. </translation>
+    </message>
+    <message>
+        <source>This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Il s’agit des frais minimaux que vous payez si vous envoyez une transaction.</translation>
+    </message>
+    <message>
+        <source>Transaction amounts must not be negative</source>
+        <translation>Les montants transactionnels ne doivent pas être négatifs</translation>
+    </message>
+    <message>
+        <source>Transaction has too long of a mempool chain</source>
+        <translation>La chaîne de la réserve de mémoire de la transaction est trop longue</translation>
+    </message>
+    <message>
+        <source>Transaction must have at least one recipient</source>
+        <translation>La transaction doit comporter au moins un destinataire</translation>
+    </message>
+    <message>
+        <source>Trying to connect...</source>
+        <translation>Tentative de connexion...</translation>
+    </message>
+    <message>
+        <source>Unable to bind to %s on this computer. %s is probably already running.</source>
+        <translation>Impossible de se lier à %s sur cet ordinateur. %s fonctionne probablement déjà.</translation>
+    </message>
+    <message>
+        <source>Upgrading UTXO database</source>
+        <translation>Mise à niveau de la base de données UTXO</translation>
+    </message>
+    <message>
+        <source>Use devnet chain with provided name</source>
+        <translation>Utiliser la chaîne devnet avec le nom fourni</translation>
+    </message>
+    <message>
+        <source>Wallet debugging/testing options:</source>
+        <translation>Options de débogage/de test du porte-monnaie :</translation>
+    </message>
+    <message>
+        <source>Wallet needed to be rewritten: restart %s to complete</source>
+        <translation>Le porte-monnaie devait être réécrit : redémarrer %s pour terminer l’opération.</translation>
+    </message>
+    <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
-        <translation>Attention : nouvelles règles inconnues activé (versionbit %i)</translation>
+        <translation>Attention : nouvelles règles inconnues activées (versionbit %i)</translation>
     </message>
     <message>
         <source>Wasn't able to create wallet backup folder %s!</source>
-        <translation>La création du répertoire de sauvegarde du portefeuille %s a échouée !</translation>
+        <translation>La création du répertoire de sauvegarde du portefeuille %s a échoué !</translation>
     </message>
     <message>
         <source>Whether to operate in a blocks only mode (default: %u)</source>
@@ -4832,6 +4943,222 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>RPC server options:</source>
         <translation>Options du serveur RPC :</translation>
+    </message>
+    <message>
+        <source>SecureTag Core</source>
+        <translation>SecureTag Core</translation>
+    </message>
+    <message>
+        <source>The %s developers</source>
+        <translation>Les développeurs de %s</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</source>
+        <translation>Accepter les connexions de l'extérieur (par défaut : 1, si pas de -proxy ni de -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>
+        <translation>Impossible d’obtenir un verrou sur le répertoire de données %s. %s fonctionne probablement déjà.</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Se connecter seulement aux nœud(s) indiqués ; -noconnect ou -connect=0 seul pour désactiver les connexions automatiques</translation>
+    </message>
+    <message>
+        <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
+        <translation>Distribué sous la licence MIT d’utilisation d’un logiciel. Consulter le fichier joint %s ou %s</translation>
+    </message>
+    <message>
+        <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Erreur de lecture de %s ! Toutes les clés ont été lues correctement, mais les données transactionnelles ou les entrées du carnet d’adresses sont peut-être manquantes ou incorrectes.</translation>
+    </message>
+    <message>
+        <source>Force relay of transactions from whitelisted peers even if they violate local relay policy (default: %d)</source>
+        <translation>Forcer le relais de transactions des pairs de la liste blanche même s’ils transgressent la politique locale de relais (par défaut : %d)</translation>
+    </message>
+    <message>
+        <source>Incorrect or no devnet genesis block found. Wrong datadir for devnet specified?</source>
+        <translation>Le bloc de genèse devnet est incorrect ou introuvable. Mauvais répertoire de données pour devnet ?</translation>
+    </message>
+    <message>
+        <source>Maximum allowed median peer time offset adjustment. Local perspective of time may be influenced by peers forward or backward by this amount. (default: %u seconds)</source>
+        <translation>Réglage moyen maximal autorisé de décalage de l’heure d’un pair. La perspective locale du temps peut être influencée par les pairs, en avance ou en retard, de cette valeur. (Par défaut : %u secondes)</translation>
+    </message>
+    <message>
+        <source>Maximum total fees (in %s) to use in a single wallet transaction or raw transaction; setting this too low may abort large transactions (default: %s)</source>
+        <translation>Frais totaux maximaux (en %s) à utiliser en une seule transaction de porte-monnaie ou transaction brute ; les définir trop bas pourrait interrompre les grosses transactions (par défaut : %s)</translation>
+    </message>
+    <message>
+        <source>Override spork address. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.</source>
+        <translation>Ignorer l'adresse spork. Utile seulement pour regtest et devnet. L'utilisation sur mainnet ou testnet entraîne un banissement.</translation>
+    </message>
+    <message>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong, %s will not work properly.</source>
+        <translation>Veuillez vérifier que l’heure et la date de votre ordinateur sont justes ! Si votre horloge n’est pas à l’heure, %s ne fonctionnera pas correctement.</translation>
+    </message>
+    <message>
+        <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
+        <translation>Si vous trouvez %s utile, vous pouvez y contribuer. Vous trouverez davantage d’informations à propos du logiciel sur %s.</translation>
+    </message>
+    <message>
+        <source>Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (%u-%u, default: %u, 1=very frequent, high fees, %u=very infrequent, low fees)</source>
+        <translation>Fournir de la liquidité à PrivateSend par un mélange occasionnel ou continuel de pièces (%u-%u, par défaut : %u, 1=haute fréquence, frais élevés, %u=très occasionnel, frais bas)</translation>
+    </message>
+    <message>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Requête d'adresses de pairs par consultation DNS, en cas de pénurie d'adresses (par défaut : 1, sauf si -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Reduce storage requirements by enabling pruning (deleting) of old blocks. This allows the pruneblockchain RPC to be called to delete specific blocks, and enables automatic pruning of old blocks if a target size in MiB is provided. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, &gt;%u = automatically prune block files to stay under the specified target size in MiB)</source>
+        <translation>Réduire les exigences de stockage en activant l’élagage (suppression) des anciens blocs. Cela permet d’appeler le RPC « pruneblockchain » pour supprimer des blocs précis et active l’élagage automatique des anciens blocs si une taille cible en Mio est fournie. Ce mode n’est pas compatible avec -txindex et -rescan. Avertissement : ramener ce paramètre à sa valeur antérieure exige de retélécharger l’intégralité de la chaîne de blocs (par défaut : 0 = désactiver l’élagage des blocs, 1 = permettre l’élagage manuel par RPC, &gt;%u = élaguer automatiquement les fichiers de blocs pour rester en deçà de la taille cible précisée en Mio).</translation>
+    </message>
+    <message>
+        <source>Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)</source>
+        <translation>Définir le taux minimal de frais (en %s/Ko) pour les transactions à inclure dans la création de blocs (par défaut : %s)</translation>
+    </message>
+    <message>
+        <source>Show N confirmations for a successfully locked transaction (%u-%u, default: %u)</source>
+        <translation>Afficher N confirmations pour une transaction verrouillée avec succès (%u-%u, par défaut : %u)</translation>
+    </message>
+    <message>
+        <source>This is the transaction fee you may pay when fee estimates are not available.</source>
+        <translation>Il s’agit des frais de transaction que vous pourriez payer si aucune estimation de frais n’est proposée.</translation>
+    </message>
+    <message>
+        <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
+        <translation>Ce produit comprend des logiciels développés par le Projet OpenSSL pour être utilisés dans la boîte à outils OpenSSL %s, et un logiciel cryptographique écrit par Eric Young, ainsi qu’un logiciel UPnP écrit par Thomas Bernard.</translation>
+    </message>
+    <message>
+        <source>Unable to locate enough PrivateSend non-denominated funds for this transaction.</source>
+        <translation>Impossible de trouver pour cette transaction suffisamment de fonds PrivateSend non libellés.</translation>
+    </message>
+    <message>
+        <source>Use N separate masternodes for each denominated input to mix funds (%u-%u, default: %u)</source>
+        <translation>Utiliser N masternodes distincts pour chaque coupure pour mélanger les fonds (%u-%u, par défaut : %u)</translation>
+    </message>
+    <message>
+        <source>Use hierarchical deterministic key generation (HD) after BIP39/BIP44. Only has effect during wallet creation/first start</source>
+        <translation>Utiliser la génération de clé hiérarchique et déterministe (HD) conforme à BIP39/BIP44. N'a d'effet que lors de la création ou du premier lancement du portefeuille.</translation>
+    </message>
+    <message>
+        <source>User defined mnemonic passphrase for HD wallet (BIP39). Only has effect during wallet creation/first start (default: empty string)</source>
+        <translation>Utiliser une phrase de passe mnémonique définie par l'utilisateur pour le portefeuille HD (BIP39). N'a d'effet que lors de la création ou du premier lancement (par défaut : chaîne vide).</translation>
+    </message>
+    <message>
+        <source>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. The client then connects normally using the rpcuser=&lt;USERNAME&gt;/rpcpassword=&lt;PASSWORD&gt; pair of arguments. This option can be specified multiple times</source>
+        <translation>Nom d’utilisateur et mot de passe haché pour les connexions JSON-RPC. Le champ &lt;userpw&gt; est au format : &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. Un script python canonique est inclus dans share/rpcuser. Le client se connecte ensuite normalement en utilisant la paire d’arguments rpcuser=&lt;USERNAME&gt;/rpcpassword=&lt;PASSWORD&gt;. Cette option peut être précisée plusieurs fois.</translation>
+    </message>
+    <message>
+        <source>Wallet will not create transactions that violate mempool chain limits (default: %u)</source>
+        <translation>Un porte-monnaie ne créera aucune transaction qui enfreint les limites de chaîne de la réserve de mémoire (par défaut : %u)</translation>
+    </message>
+    <message>
+        <source>Warning: At least %d of %d masternodes are running on a newer software version. Please check latest releases, you might need to update too.</source>
+        <translation>Avertissement : au moins %d masternodes sur %d tournent sur une version logicielle plus récente. Veuillez vérifier les dernières mises à jour, car vous pourriez aussi avoir besoin de les appliquer.</translation>
+    </message>
+    <message>
+        <source>Warning: Every masternode (out of %d known ones) is running on a newer software version. Please check latest releases, it's very likely that you missed a major/critical update.</source>
+        <translation>Avertissement : chaque masternode (sur un total de %d connus) tourne sur une version logicielle plus récente. Veuillez vérifier les dernières mises à jour, car il est très probable que vous ayez manqué une mise à jour majeure ou critique.</translation>
+    </message>
+    <message>
+        <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Avertissement : le fichier du porte-monnaie est corrompu, les données ont été récupérées ! Le fichier %s original a été enregistré en tant que %s dans %s ; si votre solde ou vos transactions sont incorrects, vous devriez restaurer une sauvegarde.</translation>
+    </message>
+    <message>
+        <source>Whitelist peers connecting from the given IP address (e.g. 1.2.3.4) or CIDR notated network (e.g. 1.2.3.0/24). Can be specified multiple times.</source>
+        <translation>Pairs de la liste blanche se connectant à partir de l’adresse IP donnée (p. ex. 1.2.3.4) ou du réseau noté CIDR (p. ex. 1.2.3.0/24). Peut être précisé plusieurs fois.</translation>
+    </message>
+    <message>
+        <source>%s corrupt, salvage failed</source>
+        <translation>%s corrompu, la récupération a échoué</translation>
+    </message>
+    <message>
+        <source>%s is not a valid backup folder!</source>
+        <translation>%s n'est pas un répertoire de sauvegarde valide !</translation>
+    </message>
+    <message>
+        <source>%s is set very high!</source>
+        <translation>La valeur %s est très élevée !</translation>
+    </message>
+    <message>
+        <source>(press q to shutdown and continue later)</source>
+        <translation>(appuyez sur Q pour quitter et continuer plus tard)</translation>
+    </message>
+    <message>
+        <source>-devnet can only be specified once</source>
+        <translation>-devnet ne peut être spécifié qu'une seule fois</translation>
+    </message>
+    <message>
+        <source>-port must be specified when -devnet and -listen are specified</source>
+        <translation>-port doit être spécifié si -devnet et -listen le sont déjà</translation>
+    </message>
+    <message>
+        <source>-rpcport must be specified when -devnet and -server are specified</source>
+        <translation>-rpcport doit être spécifié si -devnet et -server le sont déjà</translation>
+    </message>
+    <message>
+        <source>Allow RFC1918 addresses to be relayed and connected to (default: %u)</source>
+        <translation>Autoriser les adresses RFC1918 à être relayées et pour la connexion (par défaut : %u)</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet on startup</source>
+        <translation>Tenter de récupérer les clés privées d’un porte-monnaie corrompu lors du démarrage</translation>
+    </message>
+    <message>
+        <source>Cannot resolve -%s address: '%s'</source>
+        <translation>Impossible de résoudre l’adresse -%s : « %s »</translation>
+    </message>
+    <message>
+        <source>Change index out of range</source>
+        <translation>L’index de changement est hors échelle</translation>
+    </message>
+    <message>
+        <source>Copyright (C)</source>
+        <translation>Copyright (c)</translation>
+    </message>
+    <message>
+        <source>Error loading %s</source>
+        <translation>Erreur de chargement de %s</translation>
+    </message>
+    <message>
+        <source>Error loading %s: Wallet corrupted</source>
+        <translation>Erreur de chargement de %s : porte-monnaie corrompu</translation>
+    </message>
+    <message>
+        <source>Error loading %s: Wallet requires newer version of %s</source>
+        <translation>Erreur de chargement de %s : le porte-monnaie exige une version plus récente de %s</translation>
+    </message>
+    <message>
+        <source>Error upgrading chainstate database</source>
+        <translation>Erreur de mise à niveau de la base de données d’état de la chaîne</translation>
+    </message>
+    <message>
+        <source>Failed to find mixing queue to join</source>
+        <translation>Impossible de trouver une file de mélange à rejoindre</translation>
+    </message>
+    <message>
+        <source>Failed to start a new mixing queue</source>
+        <translation>Impossible de démarrer une nouvelle file de mélange</translation>
+    </message>
+    <message>
+        <source>Initialization sanity check failed. %s is shutting down.</source>
+        <translation>L’initialisation du test de cohérence a échoué. %s est en cours de fermeture. </translation>
+    </message>
+    <message>
+        <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
+        <translation>Montant invalide pour -%s=&lt;amount&gt; : « %s »</translation>
+    </message>
+    <message>
+        <source>Invalid spork address specified with -sporkaddr</source>
+        <translation>L'adresse spork spécifiée avec -sporkaddr est invalide</translation>
+    </message>
+    <message>
+        <source>Keep N SECURETAG anonymized (%u-%u, default: %u)</source>
+        <translation>Conserver N securetags anonymisés (%u-%u, par défaut : %u)</translation>
+    </message>
+    <message>
+        <source>Print this help message and exit</source>
+        <translation>Imprimer ce message d’aide et quitter</translation>
     </message>
     <message>
         <source>Receive and display P2P network alerts (default: %u)</source>
@@ -4863,7 +5190,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Session not complete!</source>
-        <translation>Session incomplète!</translation>
+        <translation>Session incomplète !</translation>
     </message>
     <message>
         <source>Session timed out.</source>
@@ -4871,7 +5198,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
-        <translation>Définir la taille du cache de la base de données en mégaoctets (%d to %d, default: %d)</translation>
+        <translation>Définir la taille du cache de la base de données en Mo (%d to %d, default: %d)</translation>
     </message>
     <message>
         <source>Set maximum block size in bytes (default: %d)</source>
@@ -4879,7 +5206,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Set the masternode private key</source>
-        <translation>Définir la clé privée du masternode</translation>
+        <translation>Définir la clef privée du masternode</translation>
     </message>
     <message>
         <source>Show all debugging options (usage: --help -help-debug)</source>
@@ -4906,6 +5233,10 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Spécifier votre propre adresse publique</translation>
     </message>
     <message>
+        <source>Starting network threads...</source>
+        <translation>Démarrage des processus réseau...</translation>
+    </message>
+    <message>
         <source>Synchronization pending...</source>
         <translation>Synchronisation en suspens...</translation>
     </message>
@@ -4918,12 +5249,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Synchronisation du paiement des masternodes...</translation>
     </message>
     <message>
-        <source>The transaction amount is too small to pay the fee</source>
-        <translation>Le montant de la transaction est trop bas pour payer les frais</translation>
+        <source>The source code is available from %s.</source>
+        <translation>Le code source se trouve sur %s.</translation>
     </message>
     <message>
-        <source>This help message</source>
-        <translation>Ce message d'aide</translation>
+        <source>The transaction amount is too small to pay the fee</source>
+        <translation>Le montant de la transaction est trop bas pour payer les frais</translation>
     </message>
     <message>
         <source>This is experimental software.</source>
@@ -4932,10 +5263,6 @@ https://www.transifex.com/projects/p/securetag/</translation>
     <message>
         <source>Transaction amount too small</source>
         <translation>Montant de la transaction trop bas</translation>
-    </message>
-    <message>
-        <source>Transaction amounts must be positive</source>
-        <translation>Les montants de transaction doivent être positifs</translation>
     </message>
     <message>
         <source>Transaction created successfully.</source>
@@ -4954,16 +5281,12 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>La transaction est trop volumineuse pour les règles de frais en vigueur</translation>
     </message>
     <message>
-        <source>Transaction too large</source>
-        <translation>Transaction trop volumineuse</translation>
-    </message>
-    <message>
         <source>Unable to bind to %s on this computer (bind returned error %s)</source>
         <translation>Impossible de se lier à %s sur cet ordinateur (erreur bind retournée %s)</translation>
     </message>
     <message>
         <source>Unable to sign spork message, wrong key?</source>
-        <translation>Impossible de signer le message spork, mauvaise clé?</translation>
+        <translation>Impossible de signer le message spork, mauvaise clef ?</translation>
     </message>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
@@ -4987,7 +5310,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Very low number of keys left: %d</source>
-        <translation>Très peu de clés restantes : %d</translation>
+        <translation>Très peu de clefs restantes : %d</translation>
     </message>
     <message>
         <source>Wallet %s resides outside data directory %s</source>
@@ -4995,7 +5318,7 @@ https://www.transifex.com/projects/p/securetag/</translation>
     </message>
     <message>
         <source>Wallet is locked.</source>
-        <translation>Le Portefeuille est verrouillé.</translation>
+        <translation>Le portefeuille est verrouillé.</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -5010,24 +5333,16 @@ https://www.transifex.com/projects/p/securetag/</translation>
         <translation>Avertissement</translation>
     </message>
     <message>
-        <source>You need to rebuild the database using -reindex to change -txindex</source>
-        <translation>Vous devez reconstruire la base de données en utilisant -reindex afin de modifier -txindex</translation>
-    </message>
-    <message>
         <source>Your entries added successfully.</source>
         <translation>Vos entrées ajoutées avec succès.</translation>
     </message>
     <message>
         <source>Your transaction was accepted into the pool!</source>
-        <translation>Votre transaction a été acceptée dans la pool!</translation>
+        <translation>Votre transaction a été acceptée dans le registre !</translation>
     </message>
     <message>
         <source>Zapping all transactions from wallet...</source>
         <translation>Supprimer toutes les transactions du portefeuille...</translation>
-    </message>
-    <message>
-        <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat corrompu, la récupération a échoué</translation>
     </message>
 </context>
 </TS>

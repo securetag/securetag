@@ -1,69 +1,84 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build securetagd (headless client) for OSX.
-
-Notes
------
-
-* Tested on OS X 10.7 through 10.11 on 64-bit Intel processors only.
-
-* All of the commands should be executed in a Terminal application. The
-built-in one is located in `/Applications/Utilities`.
+The commands in this guide should be executed in a Terminal application.
+The built-in one is located in `/Applications/Utilities/Terminal.app`.
 
 Preparation
 -----------
+Install the OS X command line tools:
 
-You need to install Xcode with all the options checked so that the compiler
-and everything is available in /usr not just /Developer. Xcode should be
-available on your OS X installation media, but if not, you can get the
-current version from https://developer.apple.com/xcode/. If you install
-Xcode 4.3 or later, you'll need to install its command line tools. This can
-be done in `Xcode > Preferences > Downloads > Components` and generally must
-be re-done or updated every time Xcode is updated.
+`xcode-select --install`
 
-You will also need to install [Homebrew](http://brew.sh) in order to install library
-dependencies.
+When the popup appears, click `Install`.
 
-The installation of the actual dependencies is covered in the instructions
-sections below.
+Then install [Homebrew](https://brew.sh).
 
-Instructions: Homebrew
+Dependencies
 ----------------------
 
-#### Install dependencies using Homebrew
+    brew install automake berkeley-db4 libtool boost --c++11 miniupnpc openssl pkg-config protobuf qt libevent
 
-    brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf libevent
+If you want to build the disk image with `make deploy` (.dmg / optional), you need RSVG
 
-NOTE: Building with Qt4 is still supported, however, could result in a broken UI. As such, building with Qt5 is recommended. Qt5 5.7 requires C++11 which SecureTag doesn't fully support yet, Qt5 5.6.2 has some other issues, so make sure to install Qt version < 5.6.2 (5.6.1-1 is recommended).
-    brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/e6d954bab88e89c5582498157077756900865070/Formula/qt5.rb
+    brew install librsvg
 
-### Building SecureTag
+NOTE: Building with Qt4 is still supported, however, doing so could result in a broken UI. Therefore, building with Qt5 is recommended.
 
-1. Clone the GitHub tree to get the source code and go into the directory.
+Build SecureTag Core
+------------------------
 
-        git clone https://github.com/securetagcoin/securetag.git
+1. Clone the SecureTag Core source code and cd into `securetag`
+
+        git clone https://github.com/securetagpay/securetag
         cd securetag
 
-2.  Build SecureTag:
-    This will configure and build the headless securetag binaries as well as the gui (if Qt is found).
-    You can disable the gui build by passing `--without-gui` to configure.
+2.  Build SecureTag Core:
+
+    Configure and build the headless securetag binaries as well as the GUI (if Qt is found).
+
+    You can disable the GUI build by passing `--without-gui` to configure.
 
         ./autogen.sh
         ./configure
         make
 
-3.  It is also a good idea to build and run the unit tests:
+3.  It is recommended to build and run the unit tests:
 
         make check
 
-4.  (Optional) You can also install securetagd to your path:
+4.  You can also create a .dmg that contains the .app bundle (optional):
 
-        make install
+        make deploy
 
-Use Qt Creator as IDE
+Running
+-------
+
+SecureTag Core is now available at `./src/securetagd`
+
+Before running, it's recommended you create an RPC configuration file.
+
+    echo -e "rpcuser=securetagrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/SecureTag/securetag.conf"
+
+    chmod 600 "/Users/${USER}/Library/Application Support/SecureTag/securetag.conf"
+
+The first time you run securetagd, it will start downloading the blockchain. This process could take several hours.
+
+You can monitor the download process by looking at the debug.log file:
+
+    tail -f $HOME/Library/Application\ Support/SecureTag/debug.log
+
+Other commands:
+-------
+
+    ./src/securetagd -daemon # Starts the securetag daemon.
+    ./src/securetag-cli --help # Outputs a list of command-line options.
+    ./src/securetag-cli help # Outputs a list of RPC commands when the daemon is running.
+
+Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as IDE, for debugging and for manipulating forms, etc.
-Download Qt Creator from https://www.qt.io/download/. Download the "community edition" and only install Qt Creator (uncheck the rest during the installation process).
+You can use Qt Creator as an IDE, for securetag development.
+Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
+Uncheck everything except Qt Creator during the installation process.
 
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
@@ -76,45 +91,9 @@ Download Qt Creator from https://www.qt.io/download/. Download the "community ed
 9. Select LLDB as debugger (you might need to set the path to your installation)
 10. Start debugging with Qt Creator
 
-Creating a release build
-------------------------
-You can ignore this section if you are building `securetagd` for your own use.
+Notes
+-----
 
-securetagd/securetag-cli binaries are not included in the SecureTag-Qt.app bundle.
+* Tested on OS X 10.8 through 10.12 on 64-bit Intel processors only.
 
-If you are building `securetagd` or `SecureTag` for others, your build machine should be set up
-as follows for maximum compatibility:
-
-All dependencies should be compiled with these flags:
-
- -mmacosx-version-min=10.7
- -arch x86_64
- -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-
-Once dependencies are compiled, see [doc/release-process.md](release-process.md) for how the SecureTag
-bundle is packaged and signed to create the .dmg disk image that is distributed.
-
-Running
--------
-
-It's now available at `./securetagd`, provided that you are still in the `src`
-directory. We have to first create the RPC configuration file, though.
-
-Run `./securetagd` to get the filename where it should be put, or just try these
-commands:
-
-    echo -e "rpcuser=securetagrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/SecureTagCore/securetag.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/SecureTagCore/securetag.conf"
-
-The next time you run it, it will start downloading the blockchain, but it won't
-output anything while it's doing this. This process may take several hours;
-you can monitor its process by looking at the debug.log file, like this:
-
-    tail -f $HOME/Library/Application\ Support/SecureTagCore/debug.log
-
-Other commands:
--------
-
-    ./securetagd -daemon # to start the securetag daemon.
-    ./securetag-cli --help  # for a list of command-line options.
-    ./securetag-cli help    # When the daemon is running, to get a list of RPC commands
+* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/bitcoin/bitcoin/issues/7714)

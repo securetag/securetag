@@ -35,6 +35,10 @@ const char *FILTERADD="filteradd";
 const char *FILTERCLEAR="filterclear";
 const char *REJECT="reject";
 const char *SENDHEADERS="sendheaders";
+const char *SENDCMPCT="sendcmpct";
+const char *CMPCTBLOCK="cmpctblock";
+const char *GETBLOCKTXN="getblocktxn";
+const char *BLOCKTXN="blocktxn";
 // SecureTag message types
 const char *TXLOCKREQUEST="ix";
 const char *TXLOCKVOTE="txlvote";
@@ -43,14 +47,19 @@ const char *GETSPORKS="getsporks";
 const char *MASTERNODEPAYMENTVOTE="mnw";
 const char *MASTERNODEPAYMENTBLOCK="mnwb";
 const char *MASTERNODEPAYMENTSYNC="mnget";
-const char *MNBUDGETSYNC="mnvs"; // depreciated since 12.1
-const char *MNBUDGETVOTE="mvote"; // depreciated since 12.1
-const char *MNBUDGETPROPOSAL="mprop"; // depreciated since 12.1
-const char *MNBUDGETFINAL="fbs"; // depreciated since 12.1
-const char *MNBUDGETFINALVOTE="fbvote"; // depreciated since 12.1
+const char *FUNDAMENTALNODEPAYMENTVOTE="fnw";
+const char *FUNDAMENTALNODEPAYMENTBLOCK="fnwb";
+const char *FUNDAMENTALNODEPAYMENTSYNC="fnget";
+const char *MNBUDGETSYNC="mnvs"; // deprecated since 12.1
+const char *MNBUDGETVOTE="mvote"; // deprecated since 12.1
+const char *MNBUDGETPROPOSAL="mprop"; // deprecated since 12.1
+const char *MNBUDGETFINAL="fbs"; // deprecated since 12.1
+const char *MNBUDGETFINALVOTE="fbvote"; // deprecated since 12.1
 const char *MNQUORUM="mn quorum"; // not implemented
 const char *MNANNOUNCE="mnb";
 const char *MNPING="mnp";
+const char *FNANNOUNCE="fnb";
+const char *FNPING="fnp";
 const char *DSACCEPT="dsa";
 const char *DSVIN="dsi";
 const char *DSFINALTX="dsf";
@@ -60,11 +69,14 @@ const char *DSSTATUSUPDATE="dssu";
 const char *DSTX="dstx";
 const char *DSQUEUE="dsq";
 const char *DSEG="dseg";
+const char *DSEGFN="dsegfn";
 const char *SYNCSTATUSCOUNT="ssc";
+const char *SYNCSTATUSCOUNTFN="sscfn";
 const char *MNGOVERNANCESYNC="govsync";
 const char *MNGOVERNANCEOBJECT="govobj";
 const char *MNGOVERNANCEOBJECTVOTE="govobjvote";
 const char *MNVERIFY="mnv";
+const char *FNVERIFY="fnv";
 };
 
 static const char* ppszTypeName[] =
@@ -79,18 +91,24 @@ static const char* ppszTypeName[] =
     NetMsgType::TXLOCKVOTE,
     NetMsgType::SPORK,
     NetMsgType::MASTERNODEPAYMENTVOTE,
-    NetMsgType::MASTERNODEPAYMENTBLOCK, // reusing, was MNSCANERROR previousely, was NOT used in 12.0, we need this for inv
-    NetMsgType::MNBUDGETVOTE, // depreciated since 12.1
-    NetMsgType::MNBUDGETPROPOSAL, // depreciated since 12.1
-    NetMsgType::MNBUDGETFINAL, // depreciated since 12.1
-    NetMsgType::MNBUDGETFINALVOTE, // depreciated since 12.1
+    NetMsgType::MASTERNODEPAYMENTBLOCK,
+    NetMsgType::FUNDAMENTALNODEPAYMENTVOTE,
+    NetMsgType::FUNDAMENTALNODEPAYMENTBLOCK, // reusing, was MNSCANERROR previousely, was NOT used in 12.0, we need this for inv
+    NetMsgType::MNBUDGETVOTE, // deprecated since 12.1
+    NetMsgType::MNBUDGETPROPOSAL, // deprecated since 12.1
+    NetMsgType::MNBUDGETFINAL, // deprecated since 12.1
+    NetMsgType::MNBUDGETFINALVOTE, // deprecated since 12.1
     NetMsgType::MNQUORUM, // not implemented
     NetMsgType::MNANNOUNCE,
     NetMsgType::MNPING,
+    NetMsgType::FNANNOUNCE,
+    NetMsgType::FNPING,
     NetMsgType::DSTX,
     NetMsgType::MNGOVERNANCEOBJECT,
     NetMsgType::MNGOVERNANCEOBJECTVOTE,
     NetMsgType::MNVERIFY,
+    NetMsgType::FNVERIFY,
+    "compact block", // Should never occur
 };
 
 /** All known message types. Keep this in the same order as the list of
@@ -119,6 +137,10 @@ const static std::string allNetMessageTypes[] = {
     NetMsgType::FILTERCLEAR,
     NetMsgType::REJECT,
     NetMsgType::SENDHEADERS,
+    NetMsgType::SENDCMPCT,
+    NetMsgType::CMPCTBLOCK,
+    NetMsgType::GETBLOCKTXN,
+    NetMsgType::BLOCKTXN,
     // SecureTag message types
     // NOTE: do NOT include non-implmented here, we want them to be "Unknown command" in ProcessMessage()
     NetMsgType::TXLOCKREQUEST,
@@ -126,10 +148,14 @@ const static std::string allNetMessageTypes[] = {
     NetMsgType::SPORK,
     NetMsgType::GETSPORKS,
     NetMsgType::MASTERNODEPAYMENTVOTE,
+    NetMsgType::FUNDAMENTALNODEPAYMENTVOTE,
     // NetMsgType::MASTERNODEPAYMENTBLOCK, // there is no message for this, only inventory
     NetMsgType::MASTERNODEPAYMENTSYNC,
+    NetMsgType::FUNDAMENTALNODEPAYMENTSYNC,
     NetMsgType::MNANNOUNCE,
     NetMsgType::MNPING,
+    NetMsgType::FNANNOUNCE,
+    NetMsgType::FNPING,
     NetMsgType::DSACCEPT,
     NetMsgType::DSVIN,
     NetMsgType::DSFINALTX,
@@ -139,11 +165,14 @@ const static std::string allNetMessageTypes[] = {
     NetMsgType::DSTX,
     NetMsgType::DSQUEUE,
     NetMsgType::DSEG,
+    NetMsgType::DSEGFN,
     NetMsgType::SYNCSTATUSCOUNT,
+    NetMsgType::SYNCSTATUSCOUNTFN,
     NetMsgType::MNGOVERNANCESYNC,
     NetMsgType::MNGOVERNANCEOBJECT,
     NetMsgType::MNGOVERNANCEOBJECTVOTE,
     NetMsgType::MNVERIFY,
+    NetMsgType::FNVERIFY,
 };
 const static std::vector<std::string> allNetMessageTypesVec(allNetMessageTypes, allNetMessageTypes+ARRAYLEN(allNetMessageTypes));
 
@@ -152,7 +181,7 @@ CMessageHeader::CMessageHeader(const MessageStartChars& pchMessageStartIn)
     memcpy(pchMessageStart, pchMessageStartIn, MESSAGE_START_SIZE);
     memset(pchCommand, 0, sizeof(pchCommand));
     nMessageSize = -1;
-    nChecksum = 0;
+    memset(pchChecksum, 0, CHECKSUM_SIZE);
 }
 
 CMessageHeader::CMessageHeader(const MessageStartChars& pchMessageStartIn, const char* pszCommand, unsigned int nMessageSizeIn)
@@ -161,7 +190,7 @@ CMessageHeader::CMessageHeader(const MessageStartChars& pchMessageStartIn, const
     memset(pchCommand, 0, sizeof(pchCommand));
     strncpy(pchCommand, pszCommand, COMMAND_SIZE);
     nMessageSize = nMessageSizeIn;
-    nChecksum = 0;
+    memset(pchChecksum, 0, CHECKSUM_SIZE);
 }
 
 std::string CMessageHeader::GetCommand() const
@@ -206,7 +235,7 @@ CAddress::CAddress() : CService()
     Init();
 }
 
-CAddress::CAddress(CService ipIn, uint64_t nServicesIn) : CService(ipIn)
+CAddress::CAddress(CService ipIn, ServiceFlags nServicesIn) : CService(ipIn)
 {
     Init();
     nServices = nServicesIn;
@@ -214,7 +243,7 @@ CAddress::CAddress(CService ipIn, uint64_t nServicesIn) : CService(ipIn)
 
 void CAddress::Init()
 {
-    nServices = NODE_NETWORK;
+    nServices = NODE_NONE;
     nTime = 100000000;
 }
 
@@ -265,7 +294,11 @@ const char* CInv::GetCommand() const
 
 std::string CInv::ToString() const
 {
-    return strprintf("%s %s", GetCommand(), hash.ToString());
+    try {
+        return strprintf("%s %s", GetCommand(), hash.ToString());
+    } catch(const std::out_of_range &) {
+        return strprintf("0x%08x %s", type, hash.ToString());
+    }
 }
 
 const std::vector<std::string> &getAllNetMessageTypes()
