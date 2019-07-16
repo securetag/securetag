@@ -118,11 +118,11 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
     }
 
     if (nHeight >= Params().GetConsensus().nLastPoWBlock) {
-        if(coin.out.nValue != 5000 * COIN) {
+        if(coin.out.nValue != 20000 * COIN) {
             return COLLATERAL_INVALID_AMOUNT;
         }
     } else {
-        if(coin.out.nValue != 20000 * COIN) {
+        if(coin.out.nValue != 5000 * COIN) {
             return COLLATERAL_INVALID_AMOUNT;
         }
     }

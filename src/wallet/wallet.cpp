@@ -3274,9 +3274,9 @@ bool CWallet::SelectCoinsGrouppedByAddresses(std::vector<CompactTallyItem>& vecT
                 // ignore collaterals
                 if(CPrivateSend::IsCollateralAmount(wtx.tx->vout[i].nValue)) continue;
                 if (nHeight >= Params().GetConsensus().nLastPoWBlock) {
-                    if(fMasternodeMode && wtx.tx->vout[i].nValue == 5000*COIN) continue;
-                } else {
                     if(fMasternodeMode && wtx.tx->vout[i].nValue == 20000*COIN) continue;
+                } else {
+                    if(fMasternodeMode && wtx.tx->vout[i].nValue == 5000*COIN) continue;
                 }
                 if(fFundamentalnodeMode && wtx.tx->vout[i].nValue == FN_MAGIC_AMOUNT) continue;
                 // ignore outputs that are 10 times smaller then the smallest denomination
